@@ -1,0 +1,190 @@
+// =============================================================================
+// BASE — Reset, Typography, Global Elements
+// =============================================================================
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-sans;
+  font-size: $fs-base;
+  font-weight: $fw-normal;
+  line-height: 1.7;
+  color: $text-primary;
+  background-color: $bg-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// ---- Selection ----
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: $text-primary;
+}
+
+// ---- Focus ----
+:focus-visible {
+  outline: 2px solid $accent-blue;
+  outline-offset: 3px;
+  border-radius: $radius-sm;
+}
+
+// ---- Scrollbar (WebKit) ----
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: $bg-primary; }
+::-webkit-scrollbar-thumb {
+  background: $border-light;
+  border-radius: $radius-full;
+  &:hover { background: $text-muted; }
+}
+
+// ---- Headings ----
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $fw-bold;
+  line-height: 1.25;
+  color: $text-primary;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: $fs-4xl; }
+h2 { font-size: $fs-3xl; }
+h3 { font-size: $fs-2xl; }
+h4 { font-size: $fs-xl; }
+h5 { font-size: $fs-lg; }
+h6 { font-size: $fs-md; }
+
+@media (max-width: $bp-md) {
+  h1 { font-size: $fs-3xl; }
+  h2 { font-size: $fs-2xl; }
+  h3 { font-size: $fs-xl; }
+}
+
+// ---- Links ----
+a {
+  color: $accent-cyan;
+  text-decoration: none;
+  transition: color $t-fast;
+
+  &:hover { color: $accent-blue; }
+}
+
+// ---- Paragraphs ----
+p { margin-bottom: $sp-4; }
+
+// ---- Lists ----
+ul, ol {
+  padding-left: $sp-6;
+  margin-bottom: $sp-4;
+
+  li { margin-bottom: $sp-2; }
+}
+
+// ---- Code ----
+code {
+  font-family: $font-mono;
+  font-size: 0.875em;
+  background: $bg-code;
+  color: $accent-cyan;
+  padding: 0.15em 0.4em;
+  border-radius: $radius-sm;
+  border: 1px solid $border;
+}
+
+pre {
+  font-family: $font-mono;
+  font-size: $fs-sm;
+  background: $bg-code;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: $sp-6;
+  overflow-x: auto;
+  margin-bottom: $sp-8;
+  line-height: 1.6;
+
+  code {
+    background: none;
+    color: $text-primary;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+  }
+}
+
+// ---- Blockquote ----
+blockquote {
+  margin: $sp-8 0;
+  padding: $sp-5 $sp-6;
+  border-left: 4px solid $accent-blue;
+  background: $bg-card;
+  border-radius: 0 $radius-md $radius-md 0;
+  color: $text-secondary;
+  font-size: $fs-md;
+  font-style: italic;
+
+  p:last-child { margin-bottom: 0; }
+  cite {
+    display: block;
+    margin-top: $sp-3;
+    font-size: $fs-sm;
+    font-style: normal;
+    color: $text-muted;
+    &::before { content: "— "; }
+  }
+}
+
+// ---- Horizontal Rule ----
+hr {
+  border: none;
+  border-top: 1px solid $border;
+  margin: $sp-12 0;
+}
+
+// ---- Images ----
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ---- Tables ----
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $sp-8;
+  font-size: $fs-sm;
+
+  th {
+    background: $bg-card;
+    color: $text-primary;
+    font-weight: $fw-semibold;
+    text-align: left;
+    padding: $sp-3 $sp-4;
+    border-bottom: 2px solid $border;
+  }
+
+  td {
+    padding: $sp-3 $sp-4;
+    border-bottom: 1px solid $border;
+    color: $text-secondary;
+  }
+
+  tr:hover td { background: $bg-card; }
+}
+
+// ---- Strong / Em ----
+strong { font-weight: $fw-bold; color: $text-primary; }
+
+// ---- Main content flex grow ----
+main { flex: 1; }

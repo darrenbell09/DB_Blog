@@ -1,0 +1,18 @@
+{% if page.comments and site.comments.provider == 'utterances' %}
+<div class="comments-section">
+  <h3>Discussion</h3>
+  <p style="font-size:0.875rem;color:#64748b;margin-bottom:1.5rem;">
+    Comments are powered by GitHub Issues via utterances.
+    A GitHub account is required to comment.
+  </p>
+  <script
+    src="https://utteranc.es/client.js"
+    repo="{{ site.comments.utterances.repo }}"
+    issue-term="{{ site.comments.utterances.issue_term }}"
+    theme="{{ site.comments.utterances.theme }}"
+    label="{{ site.comments.utterances.label }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
+{% endif %}

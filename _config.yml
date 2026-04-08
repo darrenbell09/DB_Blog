@@ -1,0 +1,117 @@
+# =============================================================================
+# SITE CONFIGURATION
+# =============================================================================
+
+# Core Identity
+title: Darren Bell
+tagline: Cloud Architect · Director of Infrastructure Operations
+description: >-
+  Practical insights on cloud architecture, enterprise infrastructure,
+  technology leadership, and building high-performing engineering teams—
+  written by a practitioner in the field.
+
+# Author
+author:
+  name: Darren Bell
+  title: Cloud Architect & Director of Infrastructure Operations
+  bio: >-
+    Cloud Architect and Director of Infrastructure Operations with deep experience
+    designing multi-cloud architectures, leading infrastructure teams, and driving
+    digital transformation at enterprise scale. I write about what actually works.
+  avatar: /assets/images/avatar.jpg
+  location: United States
+  email: ""
+  linkedin: "https://www.linkedin.com/in/darrenbell09"
+  github: "https://github.com/darrenbell09"
+  twitter: ""
+
+# URLs — adjust baseurl if you move to a custom domain or username repo
+url: "https://darrenbell09.github.io"
+baseurl: "/DB_Blog"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Sass
+sass:
+  style: compressed
+
+# Pagination (blog/index.html)
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Plugins (GitHub Pages whitelist compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# RSS Feed
+feed:
+  path: atom.xml
+  posts_limit: 20
+
+# SEO defaults
+twitter:
+  username: darrenbell09
+og_image: /assets/images/og-default.png
+
+# =============================================================================
+# INTEGRATIONS (fill in your own values)
+# =============================================================================
+
+# Google Analytics 4 — add your Measurement ID (e.g. G-XXXXXXXXXX)
+google_analytics: ""
+
+# utterances comments — uses GitHub Issues on this repo
+comments:
+  provider: utterances
+  utterances:
+    repo: "darrenbell09/DB_Blog"
+    issue_term: "pathname"
+    theme: "github-dark"
+    label: "blog-comment"
+
+# Formspree contact form — add your form ID
+formspree_id: ""
+
+# =============================================================================
+# POST DEFAULTS
+# =============================================================================
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      share: true
+      image: /assets/images/og-default.png
+
+# =============================================================================
+# BUILD EXCLUSIONS
+# =============================================================================
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - .jekyll-metadata
+  - README.md
+  - "*.sh"

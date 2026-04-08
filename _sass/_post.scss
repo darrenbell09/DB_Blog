@@ -1,0 +1,352 @@
+// =============================================================================
+// POST — Hero, Content, Meta, Share, Related Posts
+// =============================================================================
+
+// ============================================================================
+// POST HERO
+// =============================================================================
+
+.post-hero {
+  padding: ($nav-height + $sp-16) 0 $sp-16;
+  background: $gradient-hero-bg;
+  border-bottom: 1px solid $border;
+  position: relative;
+  overflow: hidden;
+
+  // Subtle grid overlay
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  // Glow blob
+  &::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(ellipse at center, rgba(59,130,246,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &__inner { position: relative; z-index: 1; }
+
+  &__category {
+    margin-bottom: $sp-5;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: $fw-extrabold;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: $text-primary;
+    margin-bottom: $sp-6;
+    max-width: 800px;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $sp-5;
+    color: $text-muted;
+    font-size: $fs-sm;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: $sp-3;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-full;
+    background: $gradient-brand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $fw-bold;
+    color: #fff;
+    font-size: $fs-sm;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img { width: 100%; height: 100%; object-fit: cover; }
+  }
+
+  &__author-name {
+    font-weight: $fw-semibold;
+    color: $text-secondary;
+  }
+
+  &__divider { color: $border-light; }
+
+  &__date, &__read-time {
+    display: flex;
+    align-items: center;
+    gap: $sp-2;
+  }
+}
+
+// ============================================================================
+// POST CONTENT
+// =============================================================================
+
+.post-content {
+  padding: $sp-16 0;
+
+  &__body {
+    font-size: $fs-md;
+    line-height: 1.8;
+    color: $text-secondary;
+
+    // Heading styles within posts
+    h2 {
+      font-size: $fs-2xl;
+      font-weight: $fw-bold;
+      color: $text-primary;
+      margin: $sp-12 0 $sp-5;
+      padding-top: $sp-4;
+      border-top: 1px solid $border;
+
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+    }
+
+    h3 {
+      font-size: $fs-xl;
+      font-weight: $fw-bold;
+      color: $text-primary;
+      margin: $sp-8 0 $sp-4;
+    }
+
+    h4 {
+      font-size: $fs-lg;
+      font-weight: $fw-semibold;
+      color: $text-primary;
+      margin: $sp-6 0 $sp-3;
+    }
+
+    p { margin-bottom: $sp-5; }
+
+    // Lead paragraph
+    p:first-of-type {
+      font-size: $fs-lg;
+      color: $text-primary;
+      font-weight: $fw-normal;
+      line-height: 1.75;
+    }
+
+    // Links within content
+    a {
+      color: $accent-cyan;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(6, 182, 212, 0.4);
+      transition: color $t-fast, text-decoration-color $t-fast;
+
+      &:hover {
+        color: $accent-blue;
+        text-decoration-color: $accent-blue;
+      }
+    }
+
+    // Lists
+    ul, ol {
+      padding-left: $sp-6;
+      margin: $sp-5 0;
+
+      li {
+        margin-bottom: $sp-2;
+        padding-left: $sp-2;
+      }
+    }
+
+    // Nested lists
+    ul ul, ol ol, ul ol, ol ul { margin: $sp-2 0; }
+
+    // Callout boxes
+    .callout {
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-left: 4px solid $accent-blue;
+      border-radius: 0 $radius-md $radius-md 0;
+      padding: $sp-5 $sp-6;
+      margin: $sp-8 0;
+      color: $text-primary;
+    }
+  }
+
+  // Table of Contents sidebar (optional, future feature)
+  &__toc {
+    position: sticky;
+    top: calc(#{$nav-height} + #{$sp-6});
+    max-height: calc(100vh - #{$nav-height} - #{$sp-12});
+    overflow-y: auto;
+    padding: $sp-5;
+    background: $bg-card;
+    border: 1px solid $border;
+    border-radius: $radius-lg;
+    font-size: $fs-sm;
+
+    h4 {
+      font-size: $fs-sm;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: $text-muted;
+      margin-bottom: $sp-4;
+    }
+
+    ul { padding-left: $sp-4; list-style: none; }
+    li { margin-bottom: $sp-2; }
+    a { color: $text-secondary; font-size: $fs-xs; &:hover { color: $accent-cyan; } }
+  }
+}
+
+// ============================================================================
+// POST TAGS (footer)
+// =============================================================================
+
+.post-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $sp-2;
+  padding: $sp-8 0;
+  border-top: 1px solid $border;
+  margin-bottom: $sp-8;
+
+  &__label {
+    font-size: $fs-sm;
+    font-weight: $fw-semibold;
+    color: $text-muted;
+    margin-right: $sp-2;
+  }
+}
+
+// ============================================================================
+// SOCIAL SHARE
+// ============================================================================
+
+.social-share {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $sp-3;
+  padding: $sp-6 0;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  margin-bottom: $sp-12;
+
+  &__label {
+    font-size: $fs-sm;
+    font-weight: $fw-semibold;
+    color: $text-muted;
+    margin-right: $sp-2;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $sp-2;
+    padding: $sp-2 $sp-4;
+    border-radius: $radius-md;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    text-decoration: none;
+    border: 1px solid $border;
+    transition: all $t-fast;
+    cursor: pointer;
+    background: $bg-card;
+    color: $text-secondary;
+
+    &:hover {
+      background: $bg-card-hover;
+      border-color: $border-light;
+      color: $text-primary;
+    }
+
+    &--twitter:hover { color: #1da1f2; border-color: rgba(29,161,242,0.3); }
+    &--linkedin:hover { color: #0077b5; border-color: rgba(0,119,181,0.3); }
+    &--copy { &:hover { color: $accent-green; border-color: rgba(16,185,129,0.3); } }
+  }
+}
+
+// ============================================================================
+// RELATED POSTS
+// ============================================================================
+
+.related-posts {
+  padding: $sp-12 0;
+  border-top: 1px solid $border;
+
+  h3 {
+    font-size: $fs-xl;
+    font-weight: $fw-bold;
+    margin-bottom: $sp-8;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $sp-4;
+
+    @media (max-width: $bp-md) { grid-template-columns: 1fr; }
+  }
+
+  &__card {
+    background: $bg-card;
+    border: 1px solid $border;
+    border-radius: $radius-lg;
+    padding: $sp-5;
+    transition: all $t-fast;
+
+    &:hover {
+      border-color: $border-light;
+      background: $bg-card-hover;
+    }
+
+    .cat { margin-bottom: $sp-3; }
+
+    h4 {
+      font-size: $fs-base;
+      font-weight: $fw-semibold;
+      margin-bottom: $sp-2;
+      a { color: $text-primary; &:hover { color: $accent-cyan; } }
+    }
+
+    .date {
+      font-size: $fs-xs;
+      color: $text-muted;
+    }
+  }
+}
+
+// ============================================================================
+// COMMENTS SECTION
+// ============================================================================
+
+.comments-section {
+  padding: $sp-12 0;
+  border-top: 1px solid $border;
+
+  h3 {
+    font-size: $fs-xl;
+    font-weight: $fw-bold;
+    margin-bottom: $sp-8;
+  }
+}

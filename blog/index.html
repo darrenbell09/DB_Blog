@@ -1,0 +1,62 @@
+---
+layout: default
+title: "Blog — All Posts"
+description: "All articles on cloud architecture, infrastructure operations, technology leadership, and DevOps."
+permalink: /blog/
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>The Blog</h1>
+    <p>Practical writing on cloud architecture, infrastructure operations, and technology leadership.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    {% if paginator.posts %}
+      <div class="post-grid">
+        {% for post in paginator.posts %}
+          {% include post-card.html post=post %}
+        {% endfor %}
+      </div>
+
+      <!-- Pagination -->
+      {% if paginator.total_pages > 1 %}
+      <nav class="pagination" aria-label="Post pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" aria-label="Previous page">← Newer</a>
+        {% else %}
+          <span class="disabled">← Newer</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <span class="current" aria-current="page">{{ page }}</span>
+          {% elsif page == 1 %}
+            <a href="{{ site.baseurl }}/blog/">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.baseurl }}/blog/page{{ page }}/">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" aria-label="Next page">Older →</a>
+        {% else %}
+          <span class="disabled">Older →</span>
+        {% endif %}
+      </nav>
+      {% endif %}
+
+    {% else %}
+      <!-- Fallback: show all posts without pagination -->
+      <div class="post-grid">
+        {% for post in site.posts %}
+          {% include post-card.html post=post %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+</section>

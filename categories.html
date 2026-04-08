@@ -1,0 +1,92 @@
+---
+layout: default
+title: "Topics"
+description: "Browse all blog topics — cloud architecture, infrastructure operations, technology leadership, DevOps, FinOps, and security."
+permalink: /categories/
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Topics</h1>
+    <p>Six focus areas spanning the full spectrum of enterprise infrastructure leadership.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    {% assign categories = site.posts | map: 'category' | uniq | compact | sort %}
+
+    {% if categories.size == 0 %}
+    <!-- Fallback: show predefined categories even if no posts yet -->
+    {% assign categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,DevOps,FinOps,Security" | split: "," %}
+    {% endif %}
+
+    <div class="category-list">
+
+      {% assign all_categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,DevOps,FinOps,Security" | split: "," %}
+
+      {% for cat in all_categories %}
+        {% assign cat_slug = cat | slugify %}
+        {% assign cat_posts = site.posts | where: "category", cat | sort: "date" | reverse %}
+
+        <div class="category-block" id="{{ cat_slug }}">
+          <div class="category-block__header">
+            <h2 class="category-block__title">
+              {% case cat %}
+                {% when 'Cloud Architecture' %}☁️&nbsp;
+                {% when 'Infrastructure Ops' %}⚙️&nbsp;
+                {% when 'Technology Leadership' %}🏛️&nbsp;
+                {% when 'DevOps' %}🔄&nbsp;
+                {% when 'FinOps' %}💰&nbsp;
+                {% when 'Security' %}🔒&nbsp;
+              {% endcase %}
+              {{ cat }}
+            </h2>
+            <span class="category-block__count">{{ cat_posts.size }} post{% if cat_posts.size != 1 %}s{% endif %}</span>
+          </div>
+
+          {% if cat_posts.size > 0 %}
+          <ul class="category-block__posts">
+            {% for post in cat_posts limit: 8 %}
+            <li>
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+                <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p style="font-size:0.875rem;color:#64748b;margin:0;">
+            Posts coming soon — check back shortly.
+          </p>
+          {% endif %}
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+<!-- All posts by category -->
+{% assign all_cats = "Cloud Architecture,Infrastructure Ops,Technology Leadership,DevOps,FinOps,Security" | split: "," %}
+{% for cat in all_cats %}
+  {% assign cat_posts = site.posts | where: "category", cat %}
+  {% if cat_posts.size > 0 %}
+<section class="section--sm" style="border-top:1px solid #1a2e4a;">
+  <div class="container">
+    <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:2rem;" id="{{ cat | slugify }}-posts">
+      All {{ cat }} Posts
+    </h2>
+    <div class="post-grid">
+      {% for post in cat_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+  {% endif %}
+{% endfor %}

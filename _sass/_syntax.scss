@@ -1,0 +1,111 @@
+// =============================================================================
+// SYNTAX HIGHLIGHTING — Rouge / GitHub Dark Theme
+// =============================================================================
+
+.highlight {
+  background: $bg-code !important;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  margin-bottom: $sp-8;
+  overflow: hidden;
+
+  // Code block header (language label via CSS attr)
+  &[data-lang]::before {
+    content: attr(data-lang);
+    display: block;
+    padding: $sp-2 $sp-5;
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid $border;
+    font-family: $font-mono;
+    font-size: $fs-xs;
+    color: $text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  pre {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: $sp-6;
+    overflow-x: auto;
+
+    // Line numbers
+    .lineno {
+      user-select: none;
+      color: $text-muted;
+      padding-right: $sp-5;
+      border-right: 1px solid $border;
+      margin-right: $sp-5;
+    }
+  }
+
+  // Token colors (GitHub Dark palette)
+  .c,  .cd { color: #8b949e; font-style: italic; }   // Comment
+  .cm      { color: #8b949e; }                        // Comment.Multiline
+  .c1      { color: #8b949e; }                        // Comment.Single
+  .cs      { color: #8b949e; font-weight: bold; }     // Comment.Special
+  .cp      { color: #f85149; }                        // Comment.Preproc
+
+  .k       { color: #ff7b72; }                        // Keyword
+  .kc      { color: #79c0ff; }                        // Keyword.Constant
+  .kd      { color: #ff7b72; }                        // Keyword.Declaration
+  .kn      { color: #ff7b72; }                        // Keyword.Namespace
+  .kp      { color: #ff7b72; }                        // Keyword.Pseudo
+  .kr      { color: #ff7b72; }                        // Keyword.Reserved
+  .kt      { color: #ff7b72; }                        // Keyword.Type
+
+  .n       { color: #e6edf3; }                        // Name
+  .na      { color: #79c0ff; }                        // Name.Attribute
+  .nb      { color: #e6edf3; }                        // Name.Builtin
+  .nc      { color: #f0883e; }                        // Name.Class
+  .nd      { color: #d2a8ff; }                        // Name.Decorator
+  .ni      { color: #ffa657; }                        // Name.Entity
+  .ne      { color: #f85149; }                        // Name.Exception
+  .nf      { color: #d2a8ff; }                        // Name.Function
+  .nl      { color: #e6edf3; }                        // Name.Label
+  .nn      { color: #e6edf3; }                        // Name.Namespace
+  .nt      { color: #7ee787; }                        // Name.Tag
+  .nv      { color: #e6edf3; }                        // Name.Variable
+
+  .o       { color: #ff7b72; }                        // Operator
+  .ow      { color: #ff7b72; }                        // Operator.Word
+
+  .p       { color: #e6edf3; }                        // Punctuation
+
+  .s, .sb, .sc, .sd, .s2, .sh, .si, .sx, .sr, .ss, .s1 {
+    color: #a5d6ff;                                   // String
+  }
+
+  .sa      { color: #ff7b72; }                        // String.Affix
+  .se      { color: #79c0ff; }                        // String.Escape
+  .dl      { color: #a5d6ff; }                        // String.Delimiter
+
+  .m, .mb, .mf, .mh, .mi, .mo { color: #79c0ff; }   // Number
+  .mx                           { color: #79c0ff; }
+
+  .l       { color: #79c0ff; }                        // Literal
+  .ld      { color: #a5d6ff; }                        // Literal.Date
+
+  .ge      { font-style: italic; }                    // Generic.Emph
+  .gs      { font-weight: bold; }                     // Generic.Strong
+  .gh      { color: #79c0ff; font-weight: bold; }     // Generic.Heading
+  .gu      { color: #8b949e; }                        // Generic.Subheading
+  .gd      { color: #f85149; background: rgba(248,81,73,0.1); } // Generic.Deleted
+  .gi      { color: #56d364; background: rgba(86,211,100,0.1); } // Generic.Inserted
+
+  .err     { color: #f85149; }                        // Error
+  .w       { color: #e6edf3; }                        // Text.Whitespace
+}
+
+// Inline code (non-highlighted)
+:not(pre) > code {
+  font-family: $font-mono;
+  font-size: 0.875em;
+  background: $bg-code;
+  color: $accent-cyan;
+  padding: 0.15em 0.4em;
+  border-radius: $radius-sm;
+  border: 1px solid $border;
+}

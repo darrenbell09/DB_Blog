@@ -1,0 +1,53 @@
+<header class="site-header" id="site-header">
+  <div class="container">
+    <!-- Brand -->
+    <a href="{{ site.baseurl }}/" class="nav-brand">
+      <div class="nav-brand__logo">DB</div>
+      <div class="nav-brand__text">
+        <span class="nav-brand__name">{{ site.author.name }}</span>
+        <span class="nav-brand__role">Cloud Architect &amp; Dir. Infrastructure</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ site.baseurl }}/blog/" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a></li>
+        <li><a href="{{ site.baseurl }}/categories/" {% if page.url contains '/categories' %}class="active"{% endif %}>Topics</a></li>
+        <li><a href="{{ site.baseurl }}/about/" {% if page.url contains '/about' %}class="active"{% endif %}>About</a></li>
+        <li><a href="{{ site.baseurl }}/contact/" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right-side actions -->
+    <div class="nav-cta">
+      <a href="{{ site.baseurl }}/search/" class="btn btn--ghost btn--sm" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" class="btn btn--secondary btn--sm" style="display:none" id="nav-linkedin">
+        LinkedIn
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+  <a href="{{ site.baseurl }}/blog/" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
+  <a href="{{ site.baseurl }}/categories/" {% if page.url contains '/categories' %}class="active"{% endif %}>Topics</a>
+  <a href="{{ site.baseurl }}/about/" {% if page.url contains '/about' %}class="active"{% endif %}>About</a>
+  <a href="{{ site.baseurl }}/contact/" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a>
+  <a href="{{ site.baseurl }}/search/">Search</a>
+  {% if site.author.linkedin %}
+  <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+  {% endif %}
+</div>

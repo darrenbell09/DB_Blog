@@ -1,0 +1,56 @@
+---
+layout: default
+title: "Tags"
+description: "Browse all post tags on the blog."
+permalink: /tags/
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Tags</h1>
+    <p>Browse posts by tag.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Tag cloud -->
+    {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | compact | uniq | sort %}
+
+    {% if all_tags.size > 0 %}
+    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:4rem;">
+      {% for tag in all_tags %}
+      <a href="#{{ tag | slugify }}" class="tag tag--blue" style="font-size:0.8125rem;padding:0.375rem 0.875rem;">
+        {{ tag }}
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- Posts by tag -->
+    {% for tag in all_tags %}
+      {% assign tag_posts = site.posts | where_exp: "p", "p.tags contains tag" %}
+      {% if tag_posts.size > 0 %}
+    <div style="margin-bottom:3rem;" id="{{ tag | slugify }}">
+      <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;">
+        <span class="tag tag--blue">{{ tag }}</span>
+        <span style="font-size:0.8125rem;color:#64748b;font-weight:400;">{{ tag_posts.size }} post{% if tag_posts.size != 1 %}s{% endif %}</span>
+      </h2>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        {% for post in tag_posts %}
+        <div style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;background:#0f1e35;border:1px solid #1a2e4a;border-radius:8px;">
+          <span style="font-size:0.75rem;color:#64748b;white-space:nowrap;">{{ post.date | date: "%b %Y" }}</span>
+          <a href="{{ post.url | prepend: site.baseurl }}" style="font-size:0.9375rem;color:#94a3b8;" onmouseover="this.style.color='#06b6d4'" onmouseout="this.style.color='#94a3b8'">{{ post.title }}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+      {% endif %}
+    {% endfor %}
+
+    {% else %}
+    <p style="color:#64748b;text-align:center;padding:4rem 0;">No tags yet. Posts are coming soon!</p>
+    {% endif %}
+
+  </div>
+</section>

@@ -1,0 +1,56 @@
+{% assign post = include.post %}
+{% assign featured = include.featured %}
+
+{% capture category_slug %}{{ post.category | default: post.categories[0] | slugify }}{% endcapture %}
+
+{% case category_slug %}
+  {% when 'cloud-architecture' %}
+    {% assign tag_color = 'blue' %}
+  {% when 'infrastructure-ops' %}
+    {% assign tag_color = 'green' %}
+  {% when 'technology-leadership' %}
+    {% assign tag_color = 'purple' %}
+  {% when 'devops' %}
+    {% assign tag_color = 'cyan' %}
+  {% when 'finops' %}
+    {% assign tag_color = 'amber' %}
+  {% when 'security' %}
+    {% assign tag_color = 'blue' %}
+  {% else %}
+    {% assign tag_color = 'blue' %}
+{% endcase %}
+
+{% assign words = post.content | strip_html | number_of_words %}
+{% assign read_time = words | divided_by: 200 | plus: 1 %}
+
+<article class="post-card{% if featured %} post-card--featured{% endif %} animate-in">
+  <div class="post-card__accent"></div>
+  <div class="post-card__body">
+    <div class="post-card__meta">
+      {% if post.category or post.categories[0] %}
+      <a href="{{ site.baseurl }}/categories/#{{ category_slug }}" class="tag tag--{{ tag_color }}">
+        {{ post.category | default: post.categories[0] }}
+      </a>
+      {% endif %}
+    </div>
+
+    <h2 class="post-card__title">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+
+    <p class="post-card__excerpt">
+      {{ post.excerpt | strip_html | truncatewords: 40 }}
+    </p>
+
+    <div class="post-card__footer">
+      <span class="post-card__date">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </span>
+      <span class="post-card__read-time">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        {{ read_time }} min read
+      </span>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__link">Read →</a>
+    </div>
+  </div>
+</article>

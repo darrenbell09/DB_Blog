@@ -1,0 +1,163 @@
+---
+layout: default
+---
+
+{% assign words = content | strip_html | number_of_words %}
+{% assign read_time = words | divided_by: 200 | plus: 1 %}
+
+{% capture category_slug %}{{ page.category | default: page.categories[0] | slugify }}{% endcapture %}
+
+{% case category_slug %}
+  {% when 'cloud-architecture' %}
+    {% assign tag_color = 'blue' %}
+  {% when 'infrastructure-ops' %}
+    {% assign tag_color = 'green' %}
+  {% when 'technology-leadership' %}
+    {% assign tag_color = 'purple' %}
+  {% when 'devops' %}
+    {% assign tag_color = 'cyan' %}
+  {% when 'finops' %}
+    {% assign tag_color = 'amber' %}
+  {% when 'security' %}
+    {% assign tag_color = 'blue' %}
+  {% else %}
+    {% assign tag_color = 'blue' %}
+{% endcase %}
+
+<!-- Post Hero -->
+<section class="post-hero">
+  <div class="container">
+    <div class="post-hero__inner">
+
+      {% if page.category or page.categories[0] %}
+      <div class="post-hero__category">
+        <a href="{{ site.baseurl }}/categories/#{{ category_slug }}" class="tag tag--{{ tag_color }}">
+          {{ page.category | default: page.categories[0] }}
+        </a>
+      </div>
+      {% endif %}
+
+      <h1 class="post-hero__title">{{ page.title }}</h1>
+
+      <div class="post-hero__meta">
+        <div class="post-hero__author">
+          <div class="post-hero__avatar">
+            {% if site.author.avatar %}
+            <img src="{{ site.author.avatar | prepend: site.baseurl }}" alt="{{ site.author.name }}" onerror="this.style.display='none';this.parentElement.textContent='DB'">
+            {% else %}
+            DB
+            {% endif %}
+          </div>
+          <div>
+            <div class="post-hero__author-name">{{ page.author | default: site.author.name }}</div>
+          </div>
+        </div>
+
+        <span class="post-hero__divider">·</span>
+
+        <span class="post-hero__date">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        </span>
+
+        <span class="post-hero__divider">·</span>
+
+        <span class="post-hero__read-time">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          {{ read_time }} min read
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Post Content -->
+<section class="post-content">
+  <div class="container--prose">
+    <div class="post-content__body">
+      {{ content }}
+    </div>
+
+    <!-- Tags -->
+    {% if page.tags and page.tags.size > 0 %}
+    <div class="post-tags">
+      <span class="post-tags__label">Tagged:</span>
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag tag--blue">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Social Share -->
+    {% if page.share %}
+    {% include social-share.html %}
+    {% endif %}
+
+    <!-- Author Bio -->
+    <div class="author-card">
+      <div class="author-card__avatar">
+        {% if site.author.avatar %}
+        <img src="{{ site.author.avatar | prepend: site.baseurl }}" alt="{{ site.author.name }}" onerror="this.style.display='none';this.parentElement.textContent='DB'">
+        {% else %}
+        DB
+        {% endif %}
+      </div>
+      <div class="author-card__info">
+        <div class="author-card__name">{{ site.author.name }}</div>
+        <div class="author-card__title">{{ site.author.title }}</div>
+        <p class="author-card__bio">{{ site.author.bio }}</p>
+        <div class="author-card__links">
+          {% if site.author.linkedin %}
+          <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn →</a>
+          {% endif %}
+          {% if site.author.github %}
+          <a href="{{ site.author.github }}" target="_blank" rel="noopener">GitHub →</a>
+          {% endif %}
+          <a href="{{ site.baseurl }}/about/">About Me →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.container--prose -->
+</section>
+
+<!-- Related Posts -->
+{% assign related_posts = site.posts | where_exp: "p", "p.url != page.url" %}
+{% assign category_related = related_posts | where: "category", page.category | limit: 3 %}
+{% if category_related.size == 0 %}
+  {% assign category_related = related_posts | limit: 3 %}
+{% endif %}
+
+{% if category_related.size > 0 %}
+<section class="section--sm">
+  <div class="container--prose">
+    <div class="related-posts">
+      <h3>More to Read</h3>
+      <div class="related-posts__grid">
+        {% for rpost in category_related %}
+        {% capture rcat_slug %}{{ rpost.category | default: rpost.categories[0] | slugify }}{% endcapture %}
+        {% case rcat_slug %}
+          {% when 'cloud-architecture' %}{% assign rc = 'blue' %}
+          {% when 'infrastructure-ops' %}{% assign rc = 'green' %}
+          {% when 'technology-leadership' %}{% assign rc = 'purple' %}
+          {% when 'devops' %}{% assign rc = 'cyan' %}
+          {% when 'finops' %}{% assign rc = 'amber' %}
+          {% else %}{% assign rc = 'blue' %}
+        {% endcase %}
+        <div class="related-posts__card">
+          <div class="cat">
+            <span class="tag tag--{{ rc }}">{{ rpost.category | default: rpost.categories[0] }}</span>
+          </div>
+          <h4><a href="{{ rpost.url | prepend: site.baseurl }}">{{ rpost.title }}</a></h4>
+          <p class="date">{{ rpost.date | date: "%b %-d, %Y" }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Comments -->
+{% include comments.html %}
