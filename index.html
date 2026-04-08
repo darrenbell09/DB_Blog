@@ -183,10 +183,21 @@ description: "Practical insights on cloud architecture, enterprise infrastructur
         New posts on cloud architecture, infrastructure leadership, and practical
         engineering — delivered directly to your inbox. No spam, unsubscribe anytime.
       </p>
-      <form class="newsletter__form" action="https://buttondown.email/api/emails/embed-subscribe/darrenbell" method="post" target="_blank">
+      {% if site.newsletter_url and site.newsletter_url != "" %}
+      <form class="newsletter__form" action="{{ site.newsletter_url }}" method="post" target="_blank">
         <input type="email" name="email" class="newsletter__input" placeholder="your@email.com" required>
         <button type="submit" class="btn btn--primary">Subscribe</button>
       </form>
+      {% else %}
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="{{ '/atom.xml' | prepend: site.baseurl }}" class="btn btn--primary">
+          Subscribe via RSS
+        </a>
+        <a href="{{ site.baseurl }}/contact/" class="btn btn--secondary">
+          Get in Touch
+        </a>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>

@@ -119,19 +119,15 @@
   }
 }
 
-// Category color mapping (used in post cards and post headers)
-$category-colors: (
-  "cloud-architecture":      "blue",
-  "infrastructure-ops":      "green",
-  "technology-leadership":   "purple",
-  "devops":                  "cyan",
-  "finops":                  "amber",
-  "security":                "blue",
-);
-
-@each $cat, $color in $category-colors {
-  .tag--#{$cat} { @extend .tag--#{$color}; }
-}
+// Category color aliases — maps slugified category names to colour variants
+// (Liquid in post-card.html / post.html resolves the right tag--<color> class,
+//  so we just document the mapping here for reference)
+// cloud-architecture  → tag--blue
+// infrastructure-ops  → tag--green
+// technology-leadership → tag--purple
+// devops              → tag--cyan
+// finops              → tag--amber
+// security            → tag--blue
 
 // ============================================================================
 // POST CARD

@@ -18,7 +18,7 @@ author:
     Cloud Architect and Director of Infrastructure Operations with deep experience
     designing multi-cloud architectures, leading infrastructure teams, and driving
     digital transformation at enterprise scale. I write about what actually works.
-  avatar: /assets/images/avatar.jpg
+  avatar: /assets/images/avatar.svg
   location: United States
   email: ""
   linkedin: "https://www.linkedin.com/in/darrenbell09"
@@ -68,7 +68,7 @@ feed:
 # SEO defaults
 twitter:
   username: darrenbell09
-og_image: /assets/images/og-default.png
+og_image: /assets/images/og-default.svg
 
 # =============================================================================
 # INTEGRATIONS (fill in your own values)
@@ -89,6 +89,10 @@ comments:
 # Formspree contact form — add your form ID
 formspree_id: ""
 
+# Newsletter — paste your Buttondown/ConvertKit/Mailchimp embed URL here
+# e.g. https://buttondown.email/api/emails/embed-subscribe/YOUR_USERNAME
+newsletter_url: ""
+
 # =============================================================================
 # POST DEFAULTS
 # =============================================================================
@@ -100,7 +104,7 @@ defaults:
       layout: post
       comments: true
       share: true
-      image: /assets/images/og-default.png
+      image: /assets/images/og-default.svg
 
 # =============================================================================
 # BUILD EXCLUSIONS

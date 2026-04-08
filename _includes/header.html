@@ -25,9 +25,11 @@
       <a href="{{ site.baseurl }}/search/" class="btn btn--ghost btn--sm" aria-label="Search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </a>
-      <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" class="btn btn--secondary btn--sm" style="display:none" id="nav-linkedin">
-        LinkedIn
+      {% if site.author.linkedin %}
+      <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" class="btn btn--secondary btn--sm nav-linkedin">
+        LinkedIn ↗
       </a>
+      {% endif %}
 
       <!-- Mobile toggle -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">

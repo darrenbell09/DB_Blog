@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://darrenbell09.github.io/DB_Blog/sitemap.xml

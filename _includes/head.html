@@ -12,7 +12,7 @@
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | prepend: site.baseurl }}">
-<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | prepend: site.baseurl }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/avatar.svg' | prepend: site.baseurl }}">
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
@@ -20,12 +20,6 @@
 <!-- Preconnect for Google Fonts (loaded in CSS) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Open Graph / Twitter Card extras not handled by jekyll-seo-tag -->
-{% if page.image %}
-<meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">
-<meta name="twitter:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">
-{% endif %}
 
 <!-- Google Analytics 4 -->
 {% if site.google_analytics and jekyll.environment == 'production' %}

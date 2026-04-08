@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060d1f"/>
+      <stop offset="50%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#060d1f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.04" stroke="#3b82f6" stroke-width="1">
+    <line x1="0" y1="63" x2="1200" y2="63"/>
+    <line x1="0" y1="126" x2="1200" y2="126"/>
+    <line x1="0" y1="189" x2="1200" y2="189"/>
+    <line x1="0" y1="252" x2="1200" y2="252"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/>
+    <line x1="0" y1="441" x2="1200" y2="441"/>
+    <line x1="0" y1="504" x2="1200" y2="504"/>
+    <line x1="0" y1="567" x2="1200" y2="567"/>
+    <line x1="120" y1="0" x2="120" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/>
+  </g>
+
+  <!-- Glow blob top right -->
+  <ellipse cx="1050" cy="120" rx="300" ry="200" fill="#3b82f6" opacity="0.05"/>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="180" width="6" height="270" rx="3" fill="url(#accent)"/>
+
+  <!-- Avatar / monogram -->
+  <rect x="110" y="195" width="80" height="80" rx="12" fill="url(#accent)" opacity="0.9"/>
+  <text x="150" y="251" font-family="Arial, sans-serif" font-size="36" font-weight="800" text-anchor="middle" fill="white">DB</text>
+
+  <!-- Name -->
+  <text x="210" y="238" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#e2e8f0">Darren Bell</text>
+  <text x="210" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#64748b" letter-spacing="1">CLOUD ARCHITECT  ·  DIRECTOR OF INFRASTRUCTURE OPERATIONS</text>
+
+  <!-- Divider -->
+  <rect x="110" y="300" width="900" height="1" fill="#1a2e4a"/>
+
+  <!-- Main tagline -->
+  <text x="110" y="360" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="url(#accent2)">Building Cloud Infrastructure</text>
+  <text x="110" y="415" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="#e2e8f0">at Enterprise Scale</text>
+
+  <!-- Description -->
+  <text x="110" y="468" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#94a3b8">
+    Cloud Architecture · Infrastructure Operations · Technology Leadership · FinOps
+  </text>
+
+  <!-- URL -->
+  <text x="110" y="560" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#3b82f6">darrenbell09.github.io/DB_Blog</text>
+</svg>
