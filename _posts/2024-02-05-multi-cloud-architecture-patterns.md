@@ -34,24 +34,6 @@ The identity architecture is where healthcare compliance either holds together o
 
 ---
 
-## Azure Synapse: The Case for Analytics Infrastructure
-
-One of the most impactful projects I delivered in a healthcare environment was implementing Azure Synapse Analytics for clinical data reporting.
-
-The business problem: clinical staff were waiting unacceptable amounts of time to generate reports that directly informed care decisions. The underlying cause was a combination of legacy on-premises reporting infrastructure and data spread across systems that didn't talk to each other efficiently.
-
-**The architecture case for Synapse in healthcare:**
-
-Synapse provides an integrated analytics platform — data ingestion, transformation, and query in a single service — that eliminates the operational overhead of managing separate pipeline, warehouse, and compute infrastructure. In a team without dedicated data engineers, that operational simplicity matters.
-
-From a compliance standpoint, Synapse in Azure inherits the Microsoft BAA coverage, supports encryption at rest and in transit, integrates with Entra ID for access control, and provides the audit logging that HIPAA requires. These aren't afterthoughts — they're table stakes built into the service.
-
-**The outcome:** 30% faster data decisions for clinical teams. That's not a technical metric — that's a patient care metric, and it's the number that mattered to clinical leadership.
-
-The lesson: in healthcare IT, the strongest case for a cloud investment is not the technical capability. It's the clinical or operational outcome it enables, expressed in terms that matter to the people approving the budget.
-
----
-
 ## Cold Storage and Data Tiering: Where the Savings Are
 
 Healthcare organizations accumulate data at scale. Clinical records, imaging, diagnostic data — retention requirements are long, access patterns are predictable, and storage costs compound over time.
