@@ -1,115 +1,127 @@
 ---
 layout: post
-title: "SRE in Practice: From Concepts to Culture"
-subtitle: "How to actually implement Site Reliability Engineering without turning it into a rebrand of your Ops team"
+title: "HIPAA in the Cloud: What Healthcare IT Actually Requires at the Operational Level"
+subtitle: "Compliance isn't an implementation project. It's an ongoing operational posture that lives or dies in the day-to-day decisions your team makes."
 date: 2024-02-26
-category: Infrastructure Ops
-tags: [SRE, reliability, SLOs, incident management, culture, on-call]
-excerpt: "Most SRE implementations fail not because of technology, but because organizations treat SRE as a title change rather than a discipline. Here's what the real transformation looks like."
+category: Healthcare IT
+tags: [HIPAA, healthcare IT, Microsoft 365, compliance, Azure, Entra ID, Conditional Access]
+excerpt: "Most healthcare IT compliance failures aren't technical failures. They're operational ones — gaps in process, gaps in documentation, and gaps in the daily discipline that keeps a compliance posture intact. Here's what it actually takes."
 ---
 
-In 2019, I was tasked with building an SRE practice from scratch at a company running a legacy infrastructure model: a traditional Ops team firefighting constantly, engineering teams that threw deployments over the wall, and a product organization that measured success in features shipped, not service reliability.
+HIPAA compliance failures rarely happen because the technology was wrong.
 
-Eighteen months later, we had reduced MTTR by 60%, established SLO-based reliability contracts with product teams, and—most importantly—the on-call rotation no longer felt like a slow-motion trauma. Engineers wanted to be on the SRE team.
+They happen because someone shared a file the wrong way. Because a terminated employee's account wasn't deprovisioned on the same day their badge was deactivated. Because a vendor relationship existed without a signed BAA because procurement didn't flag it. Because audit logs existed but no one was actually reviewing them.
 
-This is what I learned.
+The technology can be configured correctly, and an organization can still fail an audit — because the compliance posture is not the configuration. It's the operational discipline that keeps the configuration meaningful over time.
 
-## The Mistake Most Organizations Make
-
-When organizations decide to "adopt SRE," the most common implementation goes like this:
-
-1. Rename the Ops team to "SRE"
-2. Give everyone "Site Reliability Engineer" titles
-3. Hand them the Google SRE book
-4. Wonder why nothing changed six months later
-
-The problem is that SRE is not a job title—it's a discipline with specific practices, cultural norms, and organizational structures. Renaming your team doesn't make them SREs any more than giving someone a stethoscope makes them a doctor.
-
-Genuine SRE transformation requires changing *how work gets done*, not what it's called.
-
-## The Three Pillars of Real SRE
-
-In my experience, sustainable SRE practice rests on three interdependent pillars:
-
-### 1. SLOs as the Unit of Trust
-
-Service Level Objectives are the foundational mechanism of SRE. Everything else flows from them. But most organizations misunderstand what SLOs are for.
-
-SLOs are not a way to measure how reliable your system is (though they do that). They're a **shared language for having conversations about reliability tradeoffs**. An SLO lets your infrastructure team say to a product team: "We're consuming 40% of our error budget this month. If we keep shipping at this pace, we'll burn through it. What do you want to do about that?"
-
-Without SLOs, that conversation is a fight about feelings. With SLOs, it's a negotiation about tradeoffs—which is a much more productive conversation.
-
-Getting SLOs right requires:
-
-**Starting with the customer.** Your SLO should measure something that matters to the user, not an internal system metric. Availability of the API is a good SLO. CPU utilization of your web servers is not.
-
-**Setting realistic targets.** "99.99% availability" sounds great until you realize that's 52 minutes of downtime per year across all incidents, including your 4am deployments and your provider outages. Start where you are and get better over time.
-
-**Including the right stakeholders.** SLOs that engineering teams set without product input aren't contracts—they're wishes. SLOs need buy-in from whoever is defining what "good" looks like for users.
-
-### 2. Toil Elimination as Continuous Work
-
-Google defines toil as: manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly with service growth.
-
-Every SRE team will tell you they want to eliminate toil. Few actually track it systematically, which means they never actually eliminate it—they just complain about it.
-
-The practice I've implemented that actually works:
-
-**Track toil quantitatively.** Every time an engineer does toil work—restarts a service, manually rotates a credential, clears a queue, responds to a non-actionable alert—they log it. Category, time spent, estimated recurrence. This sounds annoying, but you only need to do it long enough to build a defensible picture.
-
-**Allocate explicit capacity for elimination.** SRE teams should spend at most 50% of their time on operational/toil work. The rest is engineering work that improves reliability. This ratio won't maintain itself—you need to protect it, which means having the organizational authority to say no to additional manual work.
-
-**Prioritize by recurrence.** A task that takes 30 minutes and happens daily is 180 hours per engineer per year. A task that takes 3 hours and happens once a quarter is 12 hours per year. Do the math. Automate the first one.
-
-### 3. Blameless Post-Mortems as Cultural Foundation
-
-This is the one that organizations get most wrong.
-
-"Blameless" post-mortems don't mean consequences-free. They mean that the **system** is the subject of investigation, not the individual. The question is never "who broke it?" but "how did the system allow this to happen?"
-
-The psychological safety required for genuine blameless post-mortems cannot be mandated from above. It has to be earned through consistent behavior over time. Every time a leader uses a post-mortem as evidence in a performance review, you've set the culture back six months.
-
-What I've found works:
-
-**Senior leaders participate visibly.** When the Director of Infrastructure sits in the post-mortem for a major incident and says "here's my part in why we didn't have better tooling to catch this"—that models the behavior you want.
-
-**Correct the external narrative actively.** When someone in product or marketing says "the engineering team broke the site last night," correct it publicly: "We had an incident with a complex root cause that our team worked through professionally. Here's what we learned." Protect your team from external blame.
-
-**Make follow-up items real commitments.** Nothing kills post-mortem culture faster than a list of action items that never get done. Treat post-mortem action items as high-priority bugs. Track their completion. Review them in the next incident review.
-
-## Building the On-Call Culture
-
-On-call is the acid test of SRE culture. A healthy on-call rotation is sustainable, educational, and produces engineers who feel competent and supported. An unhealthy one produces burnout, attrition, and engineers who dread their pager.
-
-Signs your on-call culture is broken:
-- Engineers dread being on-call and count down to rotation end
-- More than 2-3 pages per shift (overnight) is considered normal
-- Alert fatigue means engineers are trained to ignore pages until they escalate
-- Post-mortems aren't happening or aren't producing change
-- New engineers are afraid to deploy because of what might happen
-
-Things that have actually improved on-call cultures I've managed:
-
-**Eliminate noise before anything else.** Your first quarter as an SRE leader should be focused heavily on alert quality. Every alert should be actionable, have documented remediation steps, and have a clear owner. If it doesn't, fix or delete it. I've seen teams go from 40 alerts/night to 4 by doing nothing except deleting non-actionable alerts.
-
-**Make shadow on-call standard for new engineers.** No one joins on-call rotation without at least one rotation shadowing a senior engineer. This isn't just about safety—it's about confidence.
-
-**Publish on-call metrics.** How many pages per week? How long does it take to acknowledge and resolve? What's the distribution by time of day? Visibility creates accountability. When your CEO can see that the SRE team got paged 15 times last week between midnight and 6am, the conversation about investment priorities gets easier.
-
-## The Organizational Model That Actually Works
-
-SRE doesn't have a single organizational model, but I've found one pattern more successful than others for organizations that aren't Google:
-
-**Embedded SRE with a central platform practice.** 2-3 SREs embedded with product engineering teams, responsible for reliability of those teams' services. A central SRE team of 4-6 that owns the platform (observability, CI/CD, Kubernetes cluster operations, incident management tooling). The embedded SREs report to the central team, not the product teams.
-
-This model gives you:
-- SREs close enough to product engineering to influence architectural decisions early
-- A central team maintaining consistency in reliability practices and tooling
-- Clear career paths for SREs that don't require becoming a product engineering manager
-- Organizational leverage: a small central team can have outsized influence
+I spent six years owning the IT compliance posture in a healthcare environment. Here's what I learned about what it actually takes.
 
 ---
 
-SRE transformation is a 2-3 year journey, not a 6-month project. The organizations that succeed are the ones that commit to changing how reliability work happens, not just what it's called.
+## Compliance Is an Operational State, Not a Project Outcome
 
-If you're at the beginning of this journey, or stuck somewhere in the middle, I'm happy to compare notes. [Get in touch](/contact/).
+The most dangerous framing in healthcare IT compliance is treating it as a project.
+
+Projects have completion dates. You implement the controls, you document them, you pass the audit, you move on. But HIPAA doesn't have a completion date. The threat landscape changes. Personnel turn over. New systems get added. Vendors change their practices. Each of these events is a potential gap in your compliance posture if you're not actively maintaining it.
+
+The organizations that maintain clean compliance postures treat it as a continuous operational discipline:
+
+- **Access reviews happen on a schedule**, not just after incidents
+- **New vendor relationships trigger a BAA review process automatically**, not as an afterthought
+- **Terminated employees lose access same-day** because the process is automated, not because IT manually handles every offboarding
+- **Policy exceptions are documented** because the documentation requirement is built into the exception process
+
+None of these require expensive tooling. They require process discipline and the organizational authority to enforce it consistently.
+
+---
+
+## Microsoft 365 in Healthcare: What the Configuration Actually Needs to Include
+
+M365 is the dominant productivity suite in healthcare, and Microsoft's HIPAA BAA covers most M365 services. That coverage is meaningful — but it doesn't configure compliance for you.
+
+The M365 features that matter most for HIPAA operational compliance:
+
+**Data Loss Prevention (DLP) policies.** PHI takes many forms — patient names with diagnoses, dates of birth with account numbers, Social Security Numbers. DLP policies can detect and block sharing of PHI patterns through email, Teams, and SharePoint. The default policies Microsoft provides are a starting point; the policies that protect your specific organization require customization based on your data patterns.
+
+The critical configuration decision: **block vs. audit**. A block policy stops the sharing attempt. An audit policy logs it and notifies. In my experience, starting with audit-then-block gives you visibility into existing sharing patterns before enforcement, which prevents the operational disruption that comes from blocking workflows people didn't know were non-compliant.
+
+**Retention policies and litigation holds.** HIPAA requires specific retention periods for medical records. M365 retention policies enforce those periods automatically — preventing both premature deletion and indefinite accumulation. Litigation hold capability is essential for legal and compliance purposes and should be tested before it's needed.
+
+**Microsoft Defender for M365.** Phishing and business email compromise are the leading vectors for healthcare data breaches. Defender's anti-phishing, safe links, and safe attachments controls are not optional in a healthcare environment — they're table stakes. The configuration that matters most: impersonation protection for executive and clinical leadership, whose email accounts are the highest-value targets.
+
+**Communication Compliance.** For organizations subject to additional regulatory oversight or with specific compliance requirements, Communication Compliance provides the supervisory review capability that HIPAA-covered entities sometimes need. This is not a universal requirement, but it's one to understand before an auditor asks whether you have it.
+
+---
+
+## Conditional Access: The Identity Layer That Makes Everything Else Defensible
+
+The most important security control in a Microsoft-first healthcare environment is Conditional Access.
+
+A correctly configured Conditional Access policy answers the auditor's core access control questions: who can access clinical systems, from what devices, under what conditions, and what happens when those conditions aren't met?
+
+**The policies that matter most in a healthcare environment:**
+
+**Require MFA for all users accessing clinical systems.** This is not optional. The authentication event creates the audit record that demonstrates the person accessing the system was verified at the time of access. Multi-factor authentication is the most effective single control against credential-based compromise.
+
+**Require compliant or Hybrid Azure AD joined devices.** A compliant device policy ensures that devices accessing clinical systems meet a minimum security standard: encrypted, up to date, managed by Intune. This prevents the scenario where a personal device — potentially compromised, potentially shared — accesses patient data without any organizational visibility.
+
+**Block legacy authentication protocols.** Legacy authentication doesn't support MFA. Any device or application using Basic Auth, IMAP, or POP3 to authenticate is a gap in your MFA coverage, regardless of how well your Conditional Access policies are configured. Blocking legacy authentication closes that gap.
+
+**Implement risk-based Conditional Access for high-risk sign-ins.** Entra ID evaluates sign-in risk in real time based on factors like impossible travel, anonymous IP usage, and known malicious IP ranges. A risk-based policy that requires step-up verification for high-risk sign-ins catches credential compromise scenarios that static policies miss.
+
+The configuration of these policies is not the hard part. The hard part is maintaining them as the organization changes — new applications added to the tenant, new devices types introduced, new vendor access requirements. Conditional Access policy drift is a real operational risk.
+
+**Operational discipline required:** a quarterly policy review, documented, that verifies the policy set still matches the current environment and access requirements.
+
+---
+
+## The Vendor Management Problem
+
+Healthcare organizations work with dozens of vendors who have some level of access to systems containing or adjacent to PHI. Each of those relationships requires a Business Associate Agreement.
+
+The compliance failure mode I've seen most often: a vendor relationship exists without a current, signed BAA because the relationship predated the compliance program, or because procurement didn't understand the BAA requirement when the contract was signed.
+
+**The operational fix is process, not technology:**
+
+Every new vendor relationship involving access to organizational systems goes through a review that includes: does this vendor have access to PHI? If yes, is a BAA in place? If no BAA exists, the relationship doesn't proceed until one is executed.
+
+That process needs to exist independently of any individual's knowledge of the requirement — which means it needs to be documented, communicated to everyone involved in procurement and vendor onboarding, and owned by someone with the authority to stop a vendor relationship that hasn't met the requirement.
+
+At Premier Health, building that process into the vendor onboarding workflow eliminated the category of risk entirely. The BAA question became automatic, not exceptional.
+
+---
+
+## What Auditors Actually Look For
+
+HIPAA audits — whether OCR audits or third-party assessments — are fundamentally documentation reviews. The auditor wants to see:
+
+1. **That controls exist.** The policies, the configurations, the technical controls.
+2. **That controls are maintained.** Access reviews, policy updates, documentation that reflects the current state.
+3. **That incidents were handled appropriately.** Documentation of any security incidents, the assessment of whether PHI was affected, and the breach notification decision.
+4. **That training happened.** Evidence that employees received HIPAA training and understood their obligations.
+
+The organizations that struggle with audits are usually the ones where controls exist technically but aren't documented consistently, or where the documentation reflects an earlier state of the environment that doesn't match what's actually deployed.
+
+**The audit readiness discipline:** treat every control change as a documentation event. When a Conditional Access policy changes, document why. When an access review happens, document the results. When a vendor BAA is signed, file it. The documentation burden is light if you do it continuously; it's overwhelming if you try to reconstruct it before an audit.
+
+---
+
+## The Leadership Dimension
+
+Compliance is ultimately a leadership problem, not a technical one.
+
+Technical controls can be configured correctly and still fail if leadership doesn't enforce them consistently. If a senior clinical staff member is exempt from MFA because they complained loudly enough, the MFA policy has a hole. If a vendor relationship bypasses the BAA process because a department head wants to move fast, the vendor management process has a hole.
+
+The IT leader's job is to build the processes, configure the controls, and then hold the line when the organization pushes back — which it will.
+
+The most useful thing I've found for holding that line: framing compliance requirements as organizational protection, not IT bureaucracy. The controls exist to protect the organization, the patients, and the staff — not to create friction. When that framing is consistent and credible, the compliance culture develops. When it's absent, compliance becomes an adversarial relationship between IT and the rest of the organization.
+
+---
+
+**The bottom line:** HIPAA compliance in a cloud environment is achievable and maintainable. The technology — M365, Azure, Entra ID — provides the controls. What keeps those controls meaningful is the operational discipline to maintain them, the process to enforce them, and the leadership to make the organization take them seriously.
+
+Get the process right. The technical configuration is the easier part.
+
+---
+
+*Operating Microsoft 365 or Azure in a healthcare environment? The compliance requirements are real, but there are clear patterns that work. [I'm happy to talk through specifics.](/contact/)*

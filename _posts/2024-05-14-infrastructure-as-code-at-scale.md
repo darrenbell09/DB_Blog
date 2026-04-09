@@ -1,171 +1,103 @@
 ---
 layout: post
-title: "Infrastructure as Code at Scale: Lessons from Managing 100% Terraform Coverage"
-subtitle: "What happens when you actually commit to IaC — the good, the painful, and the patterns that make it sustainable"
+title: "PowerShell as Operational Discipline: Automation Lessons from MSP-Scale IT"
+subtitle: "Automation isn't a time-saving tactic — it's how you build operational consistency at scale. Here's what that looks like in a Microsoft-first environment."
 date: 2024-05-14
-category: DevOps
-tags: [Terraform, IaC, infrastructure as code, DevOps, platform engineering, GitOps]
-excerpt: "Getting to 100% Terraform coverage is a journey most teams abandon halfway through. Here's what the complete path looks like — including the parts nobody talks about."
+category: Cloud Architecture
+tags: [PowerShell, automation, Microsoft 365, Azure, MSP, operational discipline, Entra ID]
+excerpt: "The value of PowerShell automation in a Microsoft-first environment isn't the hours saved on individual tasks. It's the operational consistency it produces across every client and every environment you manage. Here's how to build it right."
 ---
 
-Three years ago, I made a commitment that seemed straightforward at the time: every piece of infrastructure in our AWS and Azure environments would be defined in Terraform. No console changes. No ClickOps. No infrastructure that exists outside the codebase.
+PowerShell gets underestimated.
 
-We achieved it. And I learned more in that process than in the preceding decade of infrastructure work.
+In conversations about automation and infrastructure as code, the tools that get attention are usually the ones with cloud-native integrations, declarative configurations, and CI/CD pipelines. PowerShell — the workhouse of Microsoft-first environments — tends to get positioned as a legacy automation tool rather than a strategic capability.
 
-This is what that journey actually looks like.
+That framing is wrong, and expensive.
 
-## Why "100% Terraform" Is Harder Than It Sounds
-
-The idea is simple: write Terraform, run `terraform apply`, infrastructure exists. The reality is a series of problems that compound as scale increases.
-
-The first problem most teams hit: **existing infrastructure**. Almost every organization has years of manually created resources. Cloud accounts full of VPCs, subnets, security groups, IAM roles, and RDS instances created through the console, from before IaC was a priority. Getting these into Terraform means either `terraform import` (tedious, error-prone at scale) or a migration strategy (destroys and recreates resources, which has downtime implications).
-
-The second problem: **state management**. Terraform state is the source of truth about what Terraform thinks exists. At scale, with many teams and many environments, state becomes a coordination problem. Who has the lock? Which team owns which resources? What happens when state drift occurs?
-
-The third problem: **the organizational challenge**. Engineers who've been spinning up infrastructure through the console for years need to change how they work. This is a cultural change, not a technical one, and cultural changes are always harder than technical ones.
-
-## The Architecture We Landed On
-
-After several iterations, here's the repository and state structure that's worked for us at scale:
-
-### Repository Structure
-
-We use a monorepo for infrastructure, organized by environment and then by service:
-
-```
-infrastructure/
-├── _modules/               # Reusable Terraform modules
-│   ├── networking/
-│   ├── compute/
-│   ├── database/
-│   ├── security/
-│   └── observability/
-├── environments/
-│   ├── production/
-│   │   ├── networking/
-│   │   ├── compute/
-│   │   ├── databases/
-│   │   └── services/
-│   │       ├── api/
-│   │       ├── workers/
-│   │       └── ...
-│   ├── staging/
-│   └── development/
-├── accounts/               # Account-level resources (IAM, etc.)
-│   ├── aws-prod/
-│   ├── aws-staging/
-│   └── azure-prod/
-└── .github/
-    └── workflows/
-```
-
-The key design decisions:
-
-**Modules own the patterns, root modules own the configurations.** Our modules define *how* we build networking, compute, and databases. The environment root modules define *what* we build—specific VPC CIDRs, instance counts, database sizes. This separation prevents modules from becoming configuration files.
-
-**Small blast radius per state file.** Each directory that contains `main.tf` has its own state file. A change to production networking doesn't risk production compute. This matters when someone on your team runs `terraform apply` and it touches more than they expected.
-
-**Service teams own service infrastructure.** The platform team owns shared infrastructure (VPCs, transit gateways, ECR registries). Each product team owns their own service infrastructure within guardrails defined by the platform team via modules.
-
-### State Storage and Locking
-
-Remote state in S3 with DynamoDB locking for AWS environments, Azure Blob Storage with Terraform Cloud for Azure. We evaluated Terraform Cloud's full state management but found the cost prohibitive at our scale—we're paying for about $0.20/resource-month in AWS DynamoDB costs versus $20/seat/month for Terraform Cloud.
-
-State is organized in a hierarchy that mirrors the repository: one S3 bucket per AWS account, with prefixes matching the environment/service structure.
-
-### The Pipeline
-
-Every infrastructure change goes through this pipeline:
-
-```
-PR opened
-  → terraform fmt check
-  → terraform validate
-  → checkov security scanning
-  → tflint linting
-  → terraform plan (generates plan file, stored as artifact)
-  → plan summary posted to PR as comment
-  
-PR approved + merged to main
-  → terraform apply (uses the saved plan file)
-  → post-apply validation
-  → Slack notification with apply summary
-```
-
-The `plan` step runs on every PR open and commit. Engineers see exactly what will change before they request review. Reviewers see the plan alongside the code diff.
-
-We use GitHub Actions for the pipeline, with separate OIDC-authenticated roles for plan (read-only permissions) and apply (write permissions). No long-lived credentials in CI.
-
-## The Patterns That Made This Sustainable
-
-### 1. The Module API Contract
-
-Every module we build has an explicit API: required variables, optional variables with sensible defaults, and outputs. We treat module interfaces the same way we treat API contracts—breaking changes require a major version bump and a migration plan.
-
-This matters because modules get used by multiple teams. If the networking module interface changes in a breaking way, every team using it needs to update their root module. With 50+ services, that's a significant coordination cost.
-
-We version our modules using Git tags and recommend specific versions in our module documentation. Teams pin to a version and upgrade deliberately.
-
-### 2. Guardrails, Not Gates
-
-The platform team's instinct is often to lock things down—restrict which instance types teams can use, which regions they can deploy to, which services they can create. This feels like governance. In practice, it creates shadow IT: teams find ways to create infrastructure outside Terraform to escape the restrictions.
-
-Better approach: guardrails that make the right thing easy, not gates that make the wrong thing impossible.
-
-Our guardrails:
-- **Required tagging via aws_resourcegroups_tagging_api** in CI—tag compliance is enforced before apply
-- **Budget alerts** configured automatically for every new service, wired to the owning team's Slack channel
-- **Drift detection** runs nightly and pages the owning team if drift is detected
-- **Security scanning** via Checkov catches common misconfigurations (public S3 buckets, open security groups) before resources are created
-
-These guardrails nudge teams toward correct behavior without blocking them from making decisions about their own services.
-
-### 3. Drift Detection as a First-Class Concern
-
-Configuration drift—when the real state of your infrastructure diverges from what Terraform thinks—is the silent killer of IaC programs. Someone makes a "quick" console change for debugging and forgets to translate it back. A cloud provider automation makes a change. An incident response involves a manual override.
-
-We run `terraform plan` on every state file nightly. Any plan that's not empty (i.e., any drift detected) creates a GitHub issue assigned to the owning team. Drift older than 48 hours creates a PagerDuty alert.
-
-The nightly drift scan has found:
-- Console changes made during incidents that were never codified
-- Resources created by vendor integrations outside our Terraform management
-- Drift from provider version upgrades that changed default values
-- State files that were out of sync with reality due to partial apply failures
-
-### 4. The Import Problem and How We Solved It
-
-When we started the "100% coverage" initiative, we had roughly 2,000 resources in AWS that existed outside Terraform. `terraform import` one at a time would have taken months.
-
-Our approach: **Terraformer + manual review + batch import + test.**
-
-[Terraformer](https://github.com/GoogleCloudPlatform/terraformer) is an open-source tool that reverses Terraform—it introspects your cloud environment and generates Terraform code. The code it generates is ugly and requires significant cleanup, but it dramatically accelerated our import process.
-
-The process:
-1. Terraformer scan of a region/service
-2. Generated code cleaned up by an engineer (2-3 hours per service area)
-3. Code review by a second engineer
-4. `terraform import` for each resource
-5. `terraform plan` should show zero changes after import
-6. Tag everything with `origin: imported` for audit trail
-
-We ran this as a sprint initiative over two months with three engineers dedicated part-time. At the end, we had all existing resources in Terraform and could enforce "no console changes" as a hard policy.
-
-## The Hard Lessons
-
-**Not everything should be in Terraform.** Some things belong in application configuration management (Chef/Ansible/Puppet for VM configuration), some belong in Kubernetes manifests, some belong in your application's deployment pipeline. Terraform is for cloud resources—VPCs, instances, managed services, IAM. Trying to manage application deployment through Terraform creates an unmaintainable mess.
-
-**Terraform is not a configuration management tool for VM internals.** I've seen organizations manage SSH keys, cron jobs, and application configs in Terraform. Don't. Use the right tool for the job.
-
-**Provider version pinning is not optional.** Unpinned providers mean your `terraform plan` output changes without you changing any code. Pin your provider versions. Pin your Terraform version. Upgrade deliberately.
-
-**The `terraform destroy` conversation has to happen before the first apply.** What's your plan for tearing down environments? Development environments that can't be destroyed cleanly create sprawl. Make sure every root module can be destroyed completely before you consider it done.
-
-**Data sources create invisible dependencies.** If your service infrastructure uses a data source to look up a shared networking resource, and that shared resource changes in a way that changes the data source output, your apply will fail unexpectedly. Document and test data source dependencies explicitly.
+In a Microsoft-first environment — M365, Azure, Entra ID, Intune — PowerShell is not just the most practical automation tool. It's often the *only* tool that provides the access depth the work requires. And in a managed services context, where you're operating across multiple client environments, the discipline of PowerShell automation is what separates teams that scale from teams that hire more people to keep up with volume.
 
 ---
 
-Three years in, our 100% Terraform coverage is something our team is genuinely proud of—not because it's impressive, but because it's made our work better. Changes are auditable. Environments are reproducible. New services can be created in hours instead of days.
+## The Operational Problem Automation Solves
 
-The investment was real. The return has been real too.
+The promise of automation is usually framed as time savings: "this task takes 45 minutes manually, but 2 minutes with the script." That framing undervalues what automation actually delivers.
 
-*Questions about scaling IaC programs? I've been through most of the failure modes. [Get in touch](/contact/).*
+The real value of automation is **operational consistency**.
+
+When a process runs from a script, it runs the same way every time. The same security groups get assigned. The same licenses get applied. The same compliance policies get attached. The same documentation gets generated. There's no variation because someone was rushing, forgot a step, or applied the process slightly differently than the last person who did it.
+
+In an MSP context, where you're onboarding users and managing configurations across multiple client environments with different standards, that consistency is the difference between an operation that scales and one that depends on institutional knowledge that walks out the door when someone leaves.
+
+At ClowdCover, building consistent PowerShell-based provisioning workflows reduced onboarding time by 25%. The reduction in hours was real, but the more important outcome was that the process became reliable enough to delegate — any team member with the script could execute an onboarding without tribal knowledge.
+
+---
+
+## What PowerShell Actually Covers in a Microsoft Environment
+
+The Microsoft Graph API and the Exchange, SharePoint, Teams, Intune, and Azure PowerShell modules provide comprehensive programmatic access to the Microsoft ecosystem. In practice, this means you can automate nearly any administrative operation that you'd otherwise perform manually.
+
+**The highest-leverage automation targets in M365 and Azure:**
+
+**User lifecycle management.** New user creation, license assignment, security group membership, Intune enrollment trigger, Teams membership — all driven from a single script that takes HR attributes as input and produces a fully provisioned user as output. The same script handles offboarding: license reclaim, group removal, mailbox conversion, account disable, litigation hold if required.
+
+Lifecycle automation is particularly high-value in healthcare and regulated environments because it produces the audit trail that compliance requires. Every provisioning and deprovisioning event is logged in the script execution record, which is something auditors look for.
+
+**License management and reporting.** M365 licensing is expensive and consistently over-provisioned. A weekly script that queries assigned licenses against last sign-in data and flags accounts that haven't been active in 30+ days gives you continuous visibility into licensing waste. The same query, run before a licensing audit, is the starting point for meaningful cost reduction.
+
+When I ran a systematic licensing audit using this approach, the output was $48,000 in annual savings from reclaiming licenses on accounts that had accumulated through turnover, role changes, and service trials that were never cleaned up. The script took a few hours to write. The savings were immediate and permanent.
+
+**Security posture reporting.** Entra ID and Microsoft 365 Defender expose security configuration data through PowerShell and the Graph API. A weekly report that surfaces accounts without MFA, devices out of compliance with Intune policy, or sign-in risk flags gives the IT team the visibility to act before a problem becomes an incident.
+
+In a healthcare environment, this reporting is also the evidence base for compliance conversations. Being able to pull an MFA adoption report on demand — showing percentage of users enrolled, broken down by department — is the kind of data that makes HIPAA compliance conversations concrete rather than theoretical.
+
+**Azure resource tagging and cost attribution.** Cost governance in Azure depends on accurate tagging. A script that audits resources against your tagging standard and reports on untagged or incorrectly tagged resources — run weekly and piped to a shared dashboard or email report — keeps tagging compliance from drifting. Cost attribution is only as good as the tagging it's based on.
+
+---
+
+## Building Scripts That Are Operationally Maintainable
+
+The failure mode for PowerShell automation isn't writing scripts that don't work — it's writing scripts that work initially and then become unmaintainable.
+
+Scripts that no one understands get abandoned when they break. Scripts that only one person understands create single points of failure. Scripts that work in one environment and fail in another create incidents when someone runs them in the wrong context.
+
+**The practices that produce maintainable automation:**
+
+**Write for the person who inherits the script, not for yourself.** The most valuable comment in a script isn't "this does X" — it's "this does X because of Y, and if you change it you'll break Z." Business context and operational reasoning belong in comments. The code says what it does; the comments say why.
+
+**Parameterize everything that might vary across environments.** Client name, tenant ID, license SKU, group naming convention — these belong in parameters or a configuration section at the top of the script, not scattered throughout the logic. A script that requires editing the body to run against a different client is a script that will eventually run against the wrong client.
+
+**Build in error handling and logging.** A script that fails silently is worse than a script that doesn't exist. Every significant operation should produce output that tells you whether it succeeded, and failures should be logged with enough context to diagnose. In an MSP context, this also means your client-facing reporting can be driven from the script's own output.
+
+**Version control your scripts.** Scripts that live in a shared network folder with names like `provision-user-FINAL-v2-USE THIS ONE.ps1` are an operational risk. Even basic version control — a Git repository, even a simple one — gives you change history, the ability to roll back, and a canonical source of truth.
+
+---
+
+## Automation as a Forcing Function for Standardization
+
+One insight from building MSP-scale automation: **you cannot automate what isn't standardized.**
+
+If every client has a different licensing model, a different group naming convention, and a different onboarding checklist, you cannot build a single provisioning script that works across clients. You build one script per client, which means the automation hasn't reduced your operational complexity — it's just encoded it differently.
+
+This is where automation becomes a business conversation, not just a technical one. The discipline of building reusable, cross-client automation requires working with clients to standardize the configurations and processes the automation depends on. That's a client management conversation, a sales conversation, and an operational design conversation — not just a scripting conversation.
+
+The organizations that get the most leverage from automation are the ones that use the automation requirement as a forcing function for standardization. The discipline makes the operation more consistent and more scalable, not just faster.
+
+---
+
+## The Strategic Case for PowerShell Investment
+
+For IT leaders building the case for automation investment — whether that's time to build scripts, tooling, or dedicated resources — the ROI framing that works with executives is not hours saved per task.
+
+It's this:
+
+**Every manual process that runs from a script is a process that no longer depends on specific individuals, runs consistently at any scale, and produces an audit trail.** That's not a time savings. That's organizational capability.
+
+In a healthcare environment, the audit trail argument alone often carries the investment decision. In a managed services environment, the scaling argument does. The combination — consistent, auditable, scalable operations — is the strongest case for treating automation as an operational priority rather than a nice-to-have.
+
+The tooling investment is modest. The PowerShell modules and Graph API access are included in your Microsoft licensing. What requires investment is the engineering discipline to build automation that's maintainable, the organizational discipline to standardize the processes it runs, and the time to build the library of scripts that covers your operational baseline.
+
+That investment pays back quickly, and it compounds.
+
+---
+
+*Running Microsoft 365 or Azure in an MSP or enterprise environment? PowerShell automation is where operational leverage lives. [I'm happy to compare notes.](/contact/)*

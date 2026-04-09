@@ -4,24 +4,25 @@
 
 # Core Identity
 title: Darren Bell
-tagline: Cloud Architect · Director of Infrastructure Operations
+tagline: Senior Cloud Architect · Microsoft 365 & Azure · Healthcare IT Leadership
 description: >-
-  Practical insights on cloud architecture, enterprise infrastructure,
-  technology leadership, and building high-performing engineering teams—
-  written by a practitioner in the field.
+  Practical insights on cloud architecture, Microsoft 365, IT leadership,
+  and building secure, cost-efficient technology operations in regulated environments—
+  written by a practitioner who has done it.
 
 # Author
 author:
   name: Darren Bell
-  title: Cloud Architect & Director of Infrastructure Operations
+  title: Senior Cloud Architect & IT Leader
   bio: >-
-    Cloud Architect and Director of Infrastructure Operations with deep experience
-    designing multi-cloud architectures, leading infrastructure teams, and driving
-    digital transformation at enterprise scale. I write about what actually works.
+    Senior Cloud Architect with 10+ years leading technology operations across
+    healthcare, managed services, and regulated industries. Specializing in Microsoft
+    365, Azure, identity architecture, and IT cost optimization. I write about what
+    it actually takes to build resilient, compliant, and cost-efficient operations.
   avatar: /assets/images/avatar.svg
-  location: United States
+  location: Baton Rouge, Louisiana
   email: ""
-  linkedin: "https://www.linkedin.com/in/darrenbell09"
+  linkedin: "https://www.linkedin.com/in/belldarren/"
   github: "https://github.com/darrenbell09"
   twitter: ""
 
