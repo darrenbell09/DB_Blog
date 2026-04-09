@@ -2,7 +2,7 @@
 layout: post
 title: "Why I'm Writing This Blog"
 subtitle: "A practitioner's perspective on cloud architecture, IT leadership, and operational outcomes"
-date: 2024-01-15
+date: 2026-04-09
 category: Technology Leadership
 tags: [blog, cloud architecture, Microsoft 365, Azure, leadership, healthcare IT]
 excerpt: "After 10+ years in enterprise IT across healthcare and managed services, I've accumulated lessons that took real pain to learn. This is where I share them."

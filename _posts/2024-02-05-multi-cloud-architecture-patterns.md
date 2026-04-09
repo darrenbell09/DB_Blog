@@ -2,7 +2,7 @@
 layout: post
 title: "Azure in a Healthcare Environment: Architecture Decisions That Actually Matter"
 subtitle: "Building cloud infrastructure in regulated environments means every design decision carries compliance weight. Here's how to think about it."
-date: 2024-02-05
+date: 2026-04-09
 category: Cloud Architecture
 tags: [Azure, healthcare IT, HIPAA, Entra ID, Synapse Analytics, cloud architecture, compliance]
 excerpt: "Cloud architecture in healthcare isn't just about what works technically — it's about what holds up under a compliance audit, what your BAAs actually cover, and what you can defend to clinical leadership. Here's the framework I use."

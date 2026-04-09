@@ -2,7 +2,7 @@
 layout: post
 title: "The Gap Between Technical Expert and Operational Leader"
 subtitle: "The skills that made you a strong engineer are not the ones that make you an effective leader. Here's what actually changes."
-date: 2024-04-08
+date: 2026-04-09
 category: Technology Leadership
 tags: [leadership, IT management, career development, team building, executive thinking]
 excerpt: "Technical expertise gets you into IT leadership. The ability to think about business outcomes, own operational risk, and develop other people is what determines whether you succeed once you're there."

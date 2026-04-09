@@ -2,7 +2,7 @@
 layout: post
 title: "HIPAA in the Cloud: What Healthcare IT Actually Requires at the Operational Level"
 subtitle: "Compliance isn't an implementation project. It's an ongoing operational posture that lives or dies in the day-to-day decisions your team makes."
-date: 2024-02-26
+date: 2026-04-09
 category: Healthcare IT
 tags: [HIPAA, healthcare IT, Microsoft 365, compliance, Azure, Entra ID, Conditional Access]
 excerpt: "Most healthcare IT compliance failures aren't technical failures. They're operational ones — gaps in process, gaps in documentation, and gaps in the daily discipline that keeps a compliance posture intact. Here's what it actually takes."

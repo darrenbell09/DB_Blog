@@ -2,7 +2,7 @@
 layout: post
 title: "PowerShell as Operational Discipline: Automation Lessons from MSP-Scale IT"
 subtitle: "Automation isn't a time-saving tactic — it's how you build operational consistency at scale. Here's what that looks like in a Microsoft-first environment."
-date: 2024-05-14
+date: 2026-04-09
 category: Cloud Architecture
 tags: [PowerShell, automation, Microsoft 365, Azure, MSP, operational discipline, Entra ID]
 excerpt: "The value of PowerShell automation in a Microsoft-first environment isn't the hours saved on individual tasks. It's the operational consistency it produces across every client and every environment you manage. Here's how to build it right."
