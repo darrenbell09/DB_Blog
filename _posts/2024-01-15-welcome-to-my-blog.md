@@ -1,59 +1,61 @@
 ---
 layout: post
 title: "Why I'm Writing This Blog"
-subtitle: "A practitioner's perspective on cloud architecture and infrastructure leadership"
+subtitle: "A practitioner's perspective on cloud architecture, IT leadership, and operational outcomes"
 date: 2024-01-15
 category: Technology Leadership
-tags: [blog, cloud architecture, infrastructure, leadership]
-excerpt: "After 15+ years in enterprise infrastructure and cloud architecture, I've accumulated lessons that took real pain to learn. This is where I share them."
+tags: [blog, cloud architecture, Microsoft 365, Azure, leadership, healthcare IT]
+excerpt: "After 10+ years in enterprise IT across healthcare and managed services, I've accumulated lessons that took real pain to learn. This is where I share them."
 ---
 
-After more than fifteen years designing and operating enterprise infrastructure, I've accumulated a lot of opinions. Not the polished, conference-talk kind—the kind that come from being paged at 2am, from watching a carefully architected system crumble under unexpected load, from trying to explain to a CFO why last quarter's cloud bill was 40% higher than projected.
+After more than ten years in enterprise IT — designing systems, managing teams, navigating compliance requirements, and fighting the same cost battles in different organizations — I've accumulated a lot of hard-won opinions.
+
+Not the polished, certification-guide kind. The kind that come from being accountable for a HIPAA audit, from watching a licensing decision turn into a six-figure overspend, from trying to explain to a CFO why the Azure bill doesn't match the forecast, from being the person whose phone rings when something stops working at 2am.
 
 This blog is where I share those opinions.
 
 ## What This Blog Is (and Isn't)
 
-Let me be direct about what you'll find here.
+**This is a practitioner's blog.** I'm not a vendor advocate, not a conference speaker optimizing for applause, and not a consultant selling frameworks that work great in PowerPoint. I'm someone who has spent the better part of a decade doing this work in healthcare and managed services environments, and I write about what I've found to be true in practice.
 
-**This is a practitioner's blog.** I'm not a cloud vendor advocate, not a conference circuit speaker optimizing for applause, and not a consultant selling you on a framework that works great in PowerPoint. I'm someone who has spent the better part of two decades doing this work, and I write about what I've found to be true in practice.
+**This is about the intersection of technology and leadership.** Cloud architecture isn't just a technical discipline — it's an organizational one. The decisions that shape your infrastructure are shaped by budget cycles, compliance requirements, vendor relationships, team capabilities, and executive priorities. I can't write honestly about cloud architecture without writing about those things too.
 
-**This is about the intersection of technology and leadership.** Cloud architecture isn't just a technical discipline—it's a sociotechnical one. The decisions that shape your infrastructure are shaped by your organization, your team, your politics, and your incentives. I can't write honestly about cloud architecture without writing about those things too.
-
-**This is not vendor-neutral marketing.** I'll recommend specific tools when they're the right choice. I'll criticize others when they aren't. I'll tell you when I got something wrong.
+**This is not vendor-neutral marketing.** My background is Microsoft-first — Azure, Microsoft 365, Entra ID, Intune, Defender. I'll write about what I actually work with, what works, what doesn't, and when the Microsoft way is the right way versus when it isn't.
 
 ## Why Now
 
-I've resisted starting a blog for years. Partly because I'm skeptical of the medium—the infrastructure internet is full of posts that optimize for SEO traffic over genuine insight. Partly because writing takes time I could spend building things. Partly, honestly, because there's always something more urgent.
+I've resisted starting a blog for a while. Partly because the internet already has more infrastructure content than anyone can read. Partly because writing takes time I could spend building things.
 
-But I keep finding myself in conversations—with engineers early in their careers, with leaders trying to mature their cloud practice, with peers navigating the same architectural tradeoffs I've faced—where I wish I had a canonical place to point people. Where I could say: "Here's how I've thought about this, here's what worked, here's what I wish I'd known."
+But I keep finding myself in conversations — with engineers early in their careers, with IT managers navigating their first healthcare compliance audit, with architects trying to make a cost optimization case to leadership — where I wish I had a place to point people. Where I could say: here's how I've thought about this, here's what worked, here's what I wish I'd known before we spent three months going in the wrong direction.
 
 This blog is that place.
 
+I'm also writing toward Director-level and above roles, which means I'm deliberately developing executive thinking — connecting technical decisions to business outcomes, building the frameworks for cost governance and risk management, thinking about what IT leadership looks like at scale. Writing in public is part of that discipline.
+
 ## What to Expect
 
-I'll write about six areas where I have genuine depth:
+I'll write in six areas where I have genuine, hands-on depth:
 
-**Cloud Architecture:** Multi-cloud patterns, landing zone design, network topology, resilience architecture, workload placement decisions. The real decisions, not the vendor diagrams.
+**Azure Architecture:** Synapse Analytics, Entra ID, cold storage design, cost governance, and the architecture decisions that matter in regulated environments. The real trade-offs, not the vendor diagrams.
 
-**Infrastructure Operations:** SRE in practice, incident management that actually improves things, observability that goes beyond metrics, on-call cultures that don't burn people out.
+**Microsoft 365:** Exchange Online, Teams, SharePoint, Intune, Defender — governance, compliance, and the operational discipline required to run M365 in a way that's actually secure and auditable.
 
-**Technology Leadership:** Building engineering teams, org design decisions, managing up, hiring, performance management, and the surprisingly important skill of writing a compelling engineering strategy document.
+**Healthcare IT & Compliance:** HIPAA isn't a checkbox — it's an operational posture. I've spent six years in a healthcare environment and I'll write about what compliance actually looks like in practice, what auditors actually look for, and how to build systems that hold up.
 
-**DevOps & Platform Engineering:** The difference between "we use Kubernetes" and a mature platform practice. CI/CD at scale. The internal developer platform as a product.
+**IT Leadership:** Budget ownership, team development, stakeholder communication, hiring, and the shift from technical expert to operational leader. The skills that matter at the manager and director level are different from the ones that make you a great engineer, and that gap is rarely discussed honestly.
 
-**FinOps:** Cloud cost is one of the most misunderstood problems in enterprise engineering. I'll share frameworks and tactics that have actually moved the needle.
+**FinOps & Cost Optimization:** Cloud cost is one of the most misunderstood problems in enterprise IT. I've documented over $127K in savings across licensing audits, environment rationalization, and storage optimization. I'll share frameworks and tactics that have actually moved the needle.
 
-**Security & Compliance:** Zero trust isn't just a buzzword. Cloud-native security architecture, IAM design, compliance as code.
+**Security & Identity:** Entra ID, Conditional Access, MFA strategy, Fortinet, and zero-trust foundations in environments where compliance requirements make security non-negotiable.
 
-## A Note on Opinions
+## A Note on Perspective
 
-I have them. Strong ones. I'll argue for positions that some will disagree with, and I'll try to argue fairly. When I share an opinion, I'll try to explain the reasoning and the assumptions behind it, so you can evaluate whether it applies to your situation.
+I'm not the most senior person in any room, and I don't pretend to be. What I am is someone who has owned outcomes — budgets, compliance postures, team performance, cost numbers — and has had to develop both technical depth and operational breadth to do that well.
 
-I'm also wrong sometimes, and I'll say so when I discover it.
+The perspective here is practitioner to practitioner. If you're an IT manager, a senior cloud architect, or a technical leader working through the same problems in healthcare or managed services, I think you'll find something useful.
 
 ---
 
-If this sounds useful to you, subscribe via RSS or drop your email in the newsletter form. I publish when I have something worth saying, not on a schedule.
+If this resonates, subscribe via RSS or check back regularly. I write when I have something worth saying.
 
 Let's get into it.

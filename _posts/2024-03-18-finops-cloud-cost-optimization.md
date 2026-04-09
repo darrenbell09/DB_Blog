@@ -16,6 +16,8 @@ The pattern is consistent: tooling gets added, dashboards get built, but nothing
 
 Fixing cloud spend is not a tooling problem. It's an operational discipline problem.
 
+I've applied the framework below across healthcare and managed services environments and documented over **$127K in annual savings** — from licensing audits, environment rationalization, and storage tier optimization — without changing any core architecture. The work is organizational, not technical.
+
 ---
 
 ## The Reality of Cloud Cost Optimization
@@ -73,6 +75,8 @@ These are not complex problems. They are operational gaps.
 
 Cleaning this up does not require architectural changes. It requires discipline, communication, and enforcement. This phase consistently produces fast, defensible cost reduction — typically 15–25% of total spend — with minimal risk.
 
+**Real-world example:** A licensing audit in a healthcare environment identified $48,000 in annual spend on unassigned or inactive licenses — accounts that had accumulated through turnover, role changes, and service trials that were never cleaned up. In the same environment, an Azure Virtual Desktop deployment audit found a $79,000 annual cost with utilization patterns that didn't justify the deployment; the legitimate use cases were addressed through better Conditional Access policies at a fraction of the cost. Neither required new tooling. They required visibility and the willingness to act on what the data showed.
+
 ---
 
 ## Phase 3: Align Spend With Reality
@@ -101,7 +105,7 @@ The deeper savings require engineering changes. This is where effort increases a
 
 **Data transfer costs** are frequently the hidden driver of bills that don't respond to compute optimization. Poor resource placement, cross-AZ traffic, and uncompressed origin responses are typical culprits. Audit data movement before assuming compute is the problem.
 
-**Storage tiering** is consistently overlooked. Not all data is hot. Object storage lifecycle policies and archival tiers exist for a reason — use them. Most environments keep years of data on the highest-cost tier by default.
+**Storage tiering** is consistently overlooked. Not all data is hot. Object storage lifecycle policies and archival tiers exist for a reason — use them. Most environments keep years of data on the highest-cost tier by default. In a healthcare data environment, implementing lifecycle policies that moved clinical data older than 90 days to cold storage tiers produced $1,500 per month in immediate, ongoing savings — from a one-time configuration effort against data that had been accumulating for years.
 
 **Managed service economics** cut both ways. Sometimes managed services save money once operational overhead is factored in. Sometimes they're egregiously overpriced at scale compared to self-hosted alternatives. Evaluate each category on its own merits rather than applying a blanket policy.
 
