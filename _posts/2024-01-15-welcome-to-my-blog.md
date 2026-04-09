@@ -30,7 +30,7 @@ But I keep finding myself in conversations — with engineers early in their car
 
 This blog is that place.
 
-I'm also writing toward Director-level and above roles, which means I'm deliberately developing executive thinking — connecting technical decisions to business outcomes, building the frameworks for cost governance and risk management, thinking about what IT leadership looks like at scale. Writing in public is part of that discipline.
+I've spent years operating at the intersection of technical depth and business accountability — owning budgets, driving cost outcomes, making compliance calls, and building teams that outlast any individual. That's the lens this blog is written from. Writing in public is how I articulate and pressure-test ideas that I'm already living in the work.
 
 ## What to Expect
 
