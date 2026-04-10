@@ -92,9 +92,36 @@ Darren's specific examples must appear in the post — the exact numbers, tool n
 
 ---
 
-## Step 4: Offer to Save
+## Step 4: Fact-Check the Draft
 
-After presenting the draft, ask:
+Before offering to save, fact-check every verifiable technical claim in the post. Do not skip this step.
+
+### What to check
+Look for and verify:
+- **Product and feature names** — exact Microsoft/vendor terminology (e.g. "Microsoft Entra hybrid joined" not "Hybrid Azure AD joined"; "People in your organization" not "Anyone in the organization")
+- **Feature behavior** — does the technology actually do what the post claims? Flag any claims where the mechanism is imprecise or oversimplified.
+- **Regulatory claims** — compliance requirements (HIPAA, GDPR, SOC 2, etc.). Verify what the regulation *actually* requires vs. common misstatements.
+- **Statistics and figures** — any percentages, cost savings ranges, or benchmarks that weren't sourced directly from Darren's own experience. Verify against authoritative sources.
+- **Tool names and acronyms** — confirm the full name is correct (e.g. CIPP = "CyberDrain Improved Partner Portal", not a guess).
+
+### What not to flag
+- Darren's own documented experiences (his specific cost savings figures, his specific situations) — these are his data, not verifiable claims
+- Opinion and framing statements — the thesis, the leadership lessons, the "what works" judgments
+- General best practices that are industry-standard
+
+### How to report
+After checking, present findings in one of three states:
+- **Clean** — "No technical inaccuracies found. Ready to save."
+- **Minor fixes** — List each issue briefly, make the corrections directly in the draft, show Darren what changed, then proceed.
+- **Needs Darren's input** — If something can't be verified or the correct answer changes the substance of a claim, flag it with a specific question before making any change.
+
+Do not present a long report if everything is clean. Only surface what actually needs attention.
+
+---
+
+## Step 5: Offer to Save
+
+After the fact-check is complete, ask:
 "Want me to save this as a post file and commit it to the repo? I'll need the publish date if you haven't given one."
 
 If yes, save to `_posts/YYYY-MM-DD-[slug].md` where the slug is a hyphenated lowercase version of the title, commit with message `Add new post: [title]`, and push to main.
