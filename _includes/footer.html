@@ -5,7 +5,9 @@
       <!-- Brand column -->
       <div class="site-footer__brand">
         <a href="{{ site.baseurl }}/" class="nav-brand" style="display:inline-flex;">
-          <div class="nav-brand__logo">DB</div>
+          <div class="nav-brand__logo">
+            <img src="{{ site.author.avatar | prepend: site.baseurl }}" alt="{{ site.author.name }}" onerror="this.style.display='none';this.parentElement.textContent='DB'">
+          </div>
           <div class="nav-brand__text">
             <span class="nav-brand__name">{{ site.author.name }}</span>
             <span class="nav-brand__role">Cloud Architect</span>
@@ -53,7 +55,6 @@
           <li><a href="{{ site.baseurl }}/categories/#cloud-architecture">Cloud Architecture</a></li>
           <li><a href="{{ site.baseurl }}/categories/#infrastructure-ops">Infrastructure Ops</a></li>
           <li><a href="{{ site.baseurl }}/categories/#technology-leadership">Tech Leadership</a></li>
-          <li><a href="{{ site.baseurl }}/categories/#devops">DevOps &amp; Platform</a></li>
           <li><a href="{{ site.baseurl }}/categories/#finops">FinOps</a></li>
         </ul>
       </div>

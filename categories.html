@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Topics"
-description: "Browse all blog topics — cloud architecture, infrastructure operations, technology leadership, DevOps, FinOps, and security."
+description: "Browse all blog topics — cloud architecture, infrastructure operations, technology leadership, FinOps, and security."
 permalink: /categories/
 ---
 
@@ -19,12 +19,12 @@ permalink: /categories/
 
     {% if categories.size == 0 %}
     <!-- Fallback: show predefined categories even if no posts yet -->
-    {% assign categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,DevOps,FinOps,Security" | split: "," %}
+    {% assign categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
     {% endif %}
 
     <div class="category-list">
 
-      {% assign all_categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,DevOps,FinOps,Security" | split: "," %}
+      {% assign all_categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
 
       {% for cat in all_categories %}
         {% assign cat_slug = cat | slugify %}
@@ -37,7 +37,6 @@ permalink: /categories/
                 {% when 'Cloud Architecture' %}☁️&nbsp;
                 {% when 'Infrastructure Ops' %}⚙️&nbsp;
                 {% when 'Technology Leadership' %}🏛️&nbsp;
-                {% when 'DevOps' %}🔄&nbsp;
                 {% when 'FinOps' %}💰&nbsp;
                 {% when 'Security' %}🔒&nbsp;
               {% endcase %}
@@ -72,11 +71,11 @@ permalink: /categories/
 </section>
 
 <!-- All posts by category -->
-{% assign all_cats = "Cloud Architecture,Infrastructure Ops,Technology Leadership,DevOps,FinOps,Security" | split: "," %}
+{% assign all_cats = "Cloud Architecture,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
 {% for cat in all_cats %}
   {% assign cat_posts = site.posts | where: "category", cat %}
   {% if cat_posts.size > 0 %}
-<section class="section--sm" style="border-top:1px solid #1a2e4a;">
+<section class="section--sm" style="border-top:1px solid #252638;">
   <div class="container">
     <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:2rem;" id="{{ cat | slugify }}-posts">
       All {{ cat }} Posts
