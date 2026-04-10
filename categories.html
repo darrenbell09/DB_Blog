@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "Topics"
-description: "Browse all blog topics — cloud architecture, infrastructure operations, technology leadership, FinOps, and security."
+description: "Browse all blog topics — cloud architecture, Microsoft 365, infrastructure operations, technology leadership, FinOps, and security."
 permalink: /categories/
 ---
 
 <div class="page-hero">
   <div class="container">
     <h1>Topics</h1>
-    <p>Five focus areas spanning the full spectrum of enterprise infrastructure leadership.</p>
+    <p>Six focus areas spanning the full spectrum of enterprise infrastructure leadership.</p>
   </div>
 </div>
 
@@ -19,12 +19,12 @@ permalink: /categories/
 
     {% if categories.size == 0 %}
     <!-- Fallback: show predefined categories even if no posts yet -->
-    {% assign categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
+    {% assign categories = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
     {% endif %}
 
     <div class="category-list">
 
-      {% assign all_categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
+      {% assign all_categories = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
 
       {% for cat in all_categories %}
         {% assign cat_slug = cat | slugify %}
@@ -35,6 +35,7 @@ permalink: /categories/
             <h2 class="category-block__title">
               {% case cat %}
                 {% when 'Cloud Architecture' %}☁️&nbsp;
+                {% when 'Microsoft 365' %}📧&nbsp;
                 {% when 'Infrastructure Ops' %}⚙️&nbsp;
                 {% when 'Technology Leadership' %}🏛️&nbsp;
                 {% when 'FinOps' %}💰&nbsp;
@@ -71,7 +72,7 @@ permalink: /categories/
 </section>
 
 <!-- All posts by category -->
-{% assign all_cats = "Cloud Architecture,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
+{% assign all_cats = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
 {% for cat in all_cats %}
   {% assign cat_posts = site.posts | where: "category", cat %}
   {% if cat_posts.size > 0 %}
