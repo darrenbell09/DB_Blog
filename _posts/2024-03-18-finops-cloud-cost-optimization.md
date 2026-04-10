@@ -2,7 +2,7 @@
 layout: post
 title: "FinOps in Practice: What Actually Works When Cloud Costs Get Out of Control"
 subtitle: "Cloud cost problems are operational discipline problems. Here's the framework that fixes them."
-date: 2026-04-09
+date: 2026-03-26
 category: FinOps
 tags: [FinOps, cloud costs, AWS, cost optimization, reserved instances, tagging]
 excerpt: "Most cloud cost problems don't start with architecture. They start with ownership. Here's the four-phase operational framework that actually delivers lasting results."

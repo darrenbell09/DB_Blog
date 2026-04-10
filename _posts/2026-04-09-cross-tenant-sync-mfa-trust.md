@@ -2,7 +2,7 @@
 layout: post
 title: "Eliminating the Guest User Problem: Cross-Tenant Sync and MFA Trust in Microsoft 365"
 subtitle: "When two organizations need to work as one, the Microsoft 365 tenant boundary shouldn't be what gets in the way."
-date: 2026-04-09
+date: 2026-03-19
 category: Infrastructure Ops
 tags: [Microsoft 365, Entra ID, cross-tenant sync, MFA trust, collaboration, identity, SharePoint]
 excerpt: "Organizations that need to collaborate closely across Microsoft 365 tenants have historically faced a frustrating choice: clunky guest access or full tenant consolidation. Cross-tenant synchronization and MFA trust policies offer a third path."

@@ -2,7 +2,7 @@
 layout: post
 title: "Scaling MSP Operations Without Scaling Headcount: Standardizing Microsoft 365 with CIPP"
 subtitle: "When every client environment is a snowflake, you don't have a business — you have a collection of one-off consulting engagements. Here's how we fixed that."
-date: 2026-04-09
+date: 2026-03-05
 category: Infrastructure Ops
 tags: [MSP, CIPP, Microsoft 365, standardization, automation, operational discipline, multi-tenant]
 excerpt: "Every MSP reaches the same inflection point: the number of client environments outpaces the team's ability to manage them individually. The answer isn't more people — it's operational standardization. Here's how we used CIPP to get there."

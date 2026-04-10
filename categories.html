@@ -8,7 +8,7 @@ permalink: /categories/
 <div class="page-hero">
   <div class="container">
     <h1>Topics</h1>
-    <p>Six focus areas spanning the full spectrum of enterprise infrastructure leadership.</p>
+    <p>The areas I write about — practical, from the work.</p>
   </div>
 </div>
 
@@ -19,12 +19,12 @@ permalink: /categories/
 
     {% if categories.size == 0 %}
     <!-- Fallback: show predefined categories even if no posts yet -->
-    {% assign categories = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
+    {% assign categories = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security,AI & Automation" | split: "," %}
     {% endif %}
 
     <div class="category-list">
 
-      {% assign all_categories = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
+      {% assign all_categories = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security,AI & Automation" | split: "," %}
 
       {% for cat in all_categories %}
         {% assign cat_slug = cat | slugify %}
@@ -40,6 +40,7 @@ permalink: /categories/
                 {% when 'Technology Leadership' %}🏛️&nbsp;
                 {% when 'FinOps' %}💰&nbsp;
                 {% when 'Security' %}🔒&nbsp;
+                {% when 'AI & Automation' %}🤖&nbsp;
               {% endcase %}
               {{ cat }}
             </h2>
@@ -72,7 +73,7 @@ permalink: /categories/
 </section>
 
 <!-- All posts by category -->
-{% assign all_cats = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security" | split: "," %}
+{% assign all_cats = "Cloud Architecture,Microsoft 365,Infrastructure Ops,Technology Leadership,FinOps,Security,AI & Automation" | split: "," %}
 {% for cat in all_cats %}
   {% assign cat_posts = site.posts | where: "category", cat %}
   {% if cat_posts.size > 0 %}
