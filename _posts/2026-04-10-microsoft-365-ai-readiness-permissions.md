@@ -22,11 +22,11 @@ Microsoft Copilot respects Microsoft's permissions model exactly. It won't surfa
 
 The most common blind spot I see across Microsoft 365 environments isn't a misconfiguration someone made deliberately. It's the configuration nobody changed.
 
-**"Anyone" and "Anyone in the organization" links are often set as the org-level default.** When a user shares a document in SharePoint or OneDrive, the default link type in many tenants is one of these. The user clicks share, copies the link, pastes it into an email, and sends it to one person. What they actually did was make that document accessible to every person in the organization — because that's what "Anyone in the organization" means.
+**"People in your organization" links are often set as the org-level default — and many tenants have never changed it.** When a user shares a document in SharePoint or OneDrive, the default link type in tenants that haven't been hardened is one that grants access to any authenticated member of the organization. The user clicks share, copies the link, pastes it into an email, and sends it to one person. What they actually created is a link that any colleague can redeem.
 
-**The default permission on those links is frequently Edit, not Read.** The employee who shared a budget document with their manager didn't intend to give the whole company write access to a budget spreadsheet. But the link they sent does exactly that.
+**The default permission on those links is Edit, not Read.** The employee who shared a budget document with their manager didn't intend to give any colleague who receives that link write access to a budget spreadsheet. But that's what the link does.
 
-Now that link is in an email. That email might get forwarded. The document is sitting in SharePoint with organization-wide access, attached to a filename that Copilot will find when someone searches for anything related to budgets. An employee who was never supposed to see that document asks Copilot a question. Copilot finds it. Copilot answers with it.
+Here's how the exposure plays out. That link is in an email. The email gets forwarded — to a broader team, to someone cc'd by mistake, to a distribution list. Any org member who clicks it can redeem it and gain access. Once they do, Copilot can surface that document for them. An employee who was never supposed to see that file asks Copilot a question about budgets. Copilot finds it. Copilot answers with it.
 
 No one breached anything. The permissions worked exactly as configured. That's the problem.
 
@@ -48,7 +48,7 @@ The engineers in your organization who manage Microsoft 365 already know this. T
 
 Getting ready for Copilot isn't a one-time project. It's a posture shift that requires ongoing discipline. Here's what the organizations that do it right actually change:
 
-**Harden the global sharing configuration.** Set the default link type to Specific people. Change the default permission to Read. These two settings alone stop new oversharing before it accumulates. They don't fix what's already there — but they stop it from getting worse.
+**Harden the global sharing configuration.** Set the default link type to Specific people. Change the default permission to Read. Microsoft changed the out-of-the-box default to Specific people in July 2024 — but any tenant created before that may still be running the old default, and even new tenants need this verified. These two settings stop new oversharing before it accumulates. They don't fix what's already there — but they stop it from getting worse.
 
 **Set link expiration policies.** Sharing links should have a maximum lifetime. External links especially. Most tenants have no expiration configured, which means links created three years ago are still live and still granting access.
 
@@ -68,7 +68,7 @@ Permission sprawl in Microsoft 365 has always been a governance problem. Most or
 
 Copilot changes the consequence, not the root cause.
 
-A forgotten "Anyone in the organization" link used to mean one document was more accessible than intended. With Copilot, that same link means the document is now findable and summarizable by anyone in the organization who asks the right question — whether they were supposed to have access to it or not.
+A forgotten "People in your organization" link used to mean one document was more accessible than intended — a risk that materialized only if someone stumbled across it. With Copilot, the risk materializes the moment that link gets forwarded to someone who wasn't supposed to have it. They redeem it. They have access. Copilot can now answer their questions using content they were never meant to see.
 
 The data exposure risk here isn't about Microsoft reading your files or an LLM provider training on your content. It's internal. It's an employee in one department using Copilot to surface information from another department that was never meant to be shared — because someone sent an email with the wrong default link three years ago.
 
