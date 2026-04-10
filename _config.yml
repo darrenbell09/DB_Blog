@@ -76,7 +76,7 @@ og_image: /assets/images/og-default.svg
 # =============================================================================
 
 # Google Analytics 4 — add your Measurement ID (e.g. G-XXXXXXXXXX)
-google_analytics: ""
+google_analytics: "G-K2GR3YMHP5"
 
 # utterances comments — uses GitHub Issues on this repo
 comments:
