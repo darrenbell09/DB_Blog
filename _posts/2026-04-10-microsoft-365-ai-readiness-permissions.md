@@ -70,7 +70,7 @@ Copilot changes the consequence, not the root cause.
 
 A forgotten "People in your organization" link used to mean one document was more accessible than intended — a risk that materialized only if someone stumbled across it. With Copilot, the risk materializes the moment that link gets forwarded to someone who wasn't supposed to have it. They redeem it. They have access. Copilot can now answer their questions using content they were never meant to see.
 
-The data exposure risk here isn't about Microsoft reading your files or an LLM provider training on your content. It's internal. It's an employee in one department using Copilot to surface information from another department that was never meant to be shared — because someone sent an email with the wrong default link three years ago.
+The exposure risk most organizations aren't thinking about is internal. It's an employee in one department using Copilot to surface information from another department that was never meant to be shared — because someone sent an email with the wrong default link three years ago.
 
 That's the AI readiness problem. It isn't glamorous. It's an audit and a settings review and a governance conversation that most organizations have been deferring. The right time to have it is before you roll out the tool that makes the consequences visible.
 
