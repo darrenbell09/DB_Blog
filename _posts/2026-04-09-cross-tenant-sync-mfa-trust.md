@@ -8,11 +8,11 @@ tags: [Microsoft 365, Entra ID, cross-tenant sync, MFA trust, SharePoint, identi
 excerpt: "A holding company with multiple subsidiaries needed their people to access SharePoint files across tenants without multiple logins, duplicate licenses, or MFA fatigue. Here's the architecture that got them there."
 ---
 
-A holding company running multiple subsidiaries on separate Microsoft 365 tenants has a collaboration problem that looks simple on the surface and isn't.
+A holding company running multiple subsidiaries on separate Microsoft 365 tenants has a collaboration problem that looks simple on the surface and isn't. The same problem shows up after acquisitions that haven't consolidated yet, in private equity portfolio structures, and anywhere organizations need to stay operationally distinct but work closely together.
 
 The people doing the work need files from multiple tenants. They don't know or care what a tenant boundary is — they just want access. What they get instead is repeated MFA prompts every time they cross a tenant boundary, a confusing login experience that varies depending on which subsidiary's resources they're trying to reach, and IT fielding a steady stream of access requests and guest account issues.
 
-The obvious fixes are all expensive in different ways. License users in every tenant they need access to — now you're paying for the same person three times. Consolidate the tenants — a project that takes months, disrupts operations, and may not be feasible if the subsidiaries need to remain operationally distinct. Use guest access everywhere — you've just traded licensing cost for management burden and you still haven't fixed the MFA friction.
+The obvious fixes are all expensive in different ways. License users in every tenant they need access to — now you're paying for the same person three times. Consolidate the tenants — a project that takes months, disrupts operations, and may not be feasible if the entities need to remain operationally distinct. Use guest access everywhere — you've just traded licensing cost for management burden and you still haven't fixed the MFA friction.
 
 There's a fourth option. It's just not the first thing most people reach for.
 
