@@ -22,14 +22,14 @@
   white-space: nowrap;
 
   &--primary {
-    background: $gradient-brand;
+    background: $accent-blue;
     color: #fff;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    box-shadow: none;
 
     &:hover {
       color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
+      background: darken(#3b82f6, 8%);
+      box-shadow: none;
     }
   }
 
@@ -143,8 +143,8 @@
   transition: transform $t-base, box-shadow $t-base, border-color $t-base;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: $shadow-xl, $shadow-glow;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
     border-color: $border-light;
   }
 
@@ -372,10 +372,7 @@
   &__number {
     font-size: $fs-4xl;
     font-weight: $fw-extrabold;
-    background: $gradient-brand;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: $accent-blue;
     line-height: 1;
     margin-bottom: $sp-2;
   }

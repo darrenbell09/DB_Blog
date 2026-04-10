@@ -107,10 +107,7 @@
     max-width: 800px;
 
     .gradient-text {
-      background: $gradient-brand;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: $accent-cyan;
     }
   }
 
