@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "One Login, Every Tenant: Solving File Access Across a Holding Company Structure"
+title: "Multi-Tenant Doesn't Have to Mean Multi-Login"
 subtitle: "The goal wasn't clever identity architecture. It was one MFA prompt and access to everything."
 date: 2026-03-19
 category: Microsoft 365
