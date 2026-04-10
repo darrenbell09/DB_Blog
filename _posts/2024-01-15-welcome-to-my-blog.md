@@ -36,7 +36,7 @@ I've spent years operating at the intersection of technical depth and business a
 
 I'll write in six areas where I have genuine, hands-on depth:
 
-**Azure Architecture:** Synapse Analytics, Entra ID, cold storage design, cost governance, and the architecture decisions that matter in regulated environments. The real trade-offs, not the vendor diagrams.
+**Azure Architecture:** Entra ID, cold storage design, analytics infrastructure, cost governance, and the architecture decisions that matter in regulated environments. The real trade-offs, not the vendor diagrams.
 
 **Microsoft 365:** Exchange Online, Teams, SharePoint, Intune, Defender — governance, compliance, and the operational discipline required to run M365 in a way that's actually secure and auditable.
 

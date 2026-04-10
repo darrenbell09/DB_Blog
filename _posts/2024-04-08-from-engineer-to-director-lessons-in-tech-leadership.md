@@ -72,7 +72,7 @@ One of the most undervalued skills in IT leadership is the ability to move fluen
 
 Most technical people can explain what they built. Fewer can explain why it matters to someone who doesn't care about the technology.
 
-When I presented the case for Azure Synapse Analytics at Premier Health, the conversation with clinical leadership wasn't about columnar storage or distributed query execution. It was about: clinical staff currently wait [X amount of time] to generate reports that inform patient care decisions. This architecture reduces that to [Y amount of time]. Here's what that's worth to the organization.
+When I presented the case for a cloud analytics platform at Premier Health, the conversation with clinical leadership wasn't about the underlying architecture. It was about: clinical staff currently wait [X amount of time] to generate reports that inform patient care decisions. This solution reduces that to [Y amount of time]. Here's what that's worth to the organization.
 
 The technical architecture enabled the outcome. The business case got the investment approved.
 
