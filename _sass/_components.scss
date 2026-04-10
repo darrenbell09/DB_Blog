@@ -39,8 +39,8 @@
 
     &:hover {
       background: $bg-card;
-      border-color: $accent-blue;
-      color: $accent-blue;
+      border-color: $accent-amber;
+      color: $accent-amber;
     }
   }
 
@@ -406,7 +406,7 @@
     &::placeholder { color: $text-muted; }
     &:focus {
       outline: none;
-      border-color: $accent-blue;
+      border-color: $accent-amber;
       box-shadow: $shadow-glow;
     }
   }
@@ -438,7 +438,7 @@
       font-size: $fs-lg;
       font-weight: $fw-bold;
       margin-bottom: $sp-2;
-      a { color: $text-primary; &:hover { color: $accent-cyan; } }
+      a { color: $text-primary; &:hover { color: $accent-amber; } }
     }
 
     p {
@@ -516,7 +516,7 @@
       justify-content: space-between;
       align-items: center;
       gap: $sp-4;
-      &:hover { color: $accent-cyan; }
+      &:hover { color: $accent-amber; }
     }
 
     .post-date {
@@ -576,7 +576,7 @@
 
   &__title {
     font-size: $fs-sm;
-    color: $accent-cyan;
+    color: $accent-amber;
     margin-bottom: $sp-4;
   }
 
@@ -595,7 +595,7 @@
       font-size: $fs-sm;
       font-weight: $fw-medium;
       color: $text-muted;
-      &:hover { color: $accent-cyan; }
+      &:hover { color: $accent-amber; }
     }
   }
 }
