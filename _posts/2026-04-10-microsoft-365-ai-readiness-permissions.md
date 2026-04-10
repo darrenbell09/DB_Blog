@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "You're Not AI Ready — Your Microsoft 365 Permissions Are"
+title: "Copilot Is Ready. Your Tenant Isn't."
 subtitle: "Most organizations focus on MFA and role assignments before deploying Copilot. The real risk is the sharing sprawl nobody audited."
 date: 2026-04-10
 category: AI & Automation
