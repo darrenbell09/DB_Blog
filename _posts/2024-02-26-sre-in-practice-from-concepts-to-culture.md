@@ -45,7 +45,7 @@ The M365 features that matter most for HIPAA operational compliance:
 
 The critical configuration decision: **block vs. audit**. A block policy stops the sharing attempt. An audit policy logs it and notifies. In my experience, starting with audit-then-block gives you visibility into existing sharing patterns before enforcement, which prevents the operational disruption that comes from blocking workflows people didn't know were non-compliant.
 
-**Retention policies and litigation holds.** HIPAA requires specific retention periods for medical records. M365 retention policies enforce those periods automatically — preventing both premature deletion and indefinite accumulation. Litigation hold capability is essential for legal and compliance purposes and should be tested before it's needed.
+**Retention policies and litigation holds.** HIPAA requires a 6-year retention period for compliance documentation — policies, procedures, and training records. Medical record retention periods are governed by state law and vary, but are typically longer. M365 retention policies can enforce both, automatically preventing premature deletion and managing accumulation. Litigation hold capability is essential for legal and compliance purposes and should be tested before it's needed.
 
 **Microsoft Defender for M365.** Phishing and business email compromise are the leading vectors for healthcare data breaches. Defender's anti-phishing, safe links, and safe attachments controls are not optional in a healthcare environment — they're table stakes. The configuration that matters most: impersonation protection for executive and clinical leadership, whose email accounts are the highest-value targets.
 
@@ -63,9 +63,9 @@ A correctly configured Conditional Access policy answers the auditor's core acce
 
 **Require MFA for all users accessing clinical systems.** This is not optional. The authentication event creates the audit record that demonstrates the person accessing the system was verified at the time of access. Multi-factor authentication is the most effective single control against credential-based compromise.
 
-**Require compliant or Hybrid Azure AD joined devices.** A compliant device policy ensures that devices accessing clinical systems meet a minimum security standard: encrypted, up to date, managed by Intune. This prevents the scenario where a personal device — potentially compromised, potentially shared — accesses patient data without any organizational visibility.
+**Require compliant or Microsoft Entra hybrid joined devices.** A compliant device policy ensures that devices accessing clinical systems meet a minimum security standard: encrypted, up to date, managed by Intune. This prevents the scenario where a personal device — potentially compromised, potentially shared — accesses patient data without any organizational visibility.
 
-**Block legacy authentication protocols.** Legacy authentication doesn't support MFA. Any device or application using Basic Auth, IMAP, or POP3 to authenticate is a gap in your MFA coverage, regardless of how well your Conditional Access policies are configured. Blocking legacy authentication closes that gap.
+**Block legacy authentication protocols.** Basic Auth doesn't support MFA. Any device or application authenticating via Basic Auth — including IMAP and POP3 clients that haven't been migrated to OAuth2 — is a gap in your MFA coverage regardless of how well your Conditional Access policies are configured. Blocking Basic Auth and requiring Modern Authentication closes that gap. Microsoft has been deprecating Basic Auth for Exchange Online protocols since 2022.
 
 **Implement risk-based Conditional Access for high-risk sign-ins.** Entra ID evaluates sign-in risk in real time based on factors like impossible travel, anonymous IP usage, and known malicious IP ranges. A risk-based policy that requires step-up verification for high-risk sign-ins catches credential compromise scenarios that static policies miss.
 

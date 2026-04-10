@@ -30,7 +30,7 @@ That assumption fails at the worst possible times.
 
 ## The Approach: Centralized Management and Drift Detection with CIPP
 
-The Cyberdrain CIPP (Cloud Infrastructure Partner Portal) platform addresses the core operational problem directly: it provides a single management interface across all Microsoft 365 tenants, with the ability to deploy standardized configuration templates and monitor for drift from those standards.
+The CyberDrain CIPP (CyberDrain Improved Partner Portal) platform addresses the core operational problem directly: it provides a single management interface across all Microsoft 365 tenants, with the ability to deploy standardized configuration templates and monitor for drift from those standards.
 
 The operational shift this enables:
 

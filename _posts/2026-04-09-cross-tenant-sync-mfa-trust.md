@@ -34,11 +34,11 @@ The response that weakens MFA requirements to reduce friction is the wrong answe
 
 Entra ID's cross-tenant synchronization capability, combined with cross-tenant access policies that establish inbound MFA trust, addresses both problems directly.
 
-**Cross-tenant synchronization** creates a synchronized representation of users from the source tenant in the target tenant's directory. Those users appear as internal members — visible in search, showing real availability in calendar, accessible for Teams mentions — rather than external guests. The synchronization is ongoing, so when someone changes roles or leaves the source organization, their representation in the target tenant updates automatically rather than requiring manual management.
+**Cross-tenant synchronization** creates a synchronized representation of users from the source tenant in the target tenant's directory. Those users appear as external members — B2B collaboration users with member-level access rather than guest-level access — meaning they're accessible for Teams mentions and show up in directory search in a way that guests don't. The synchronization is ongoing, so when someone changes roles or leaves the source organization, their representation in the target tenant updates automatically rather than requiring manual management.
 
 **Inbound MFA trust** tells the target tenant to honor MFA claims from the source tenant. When a source tenant user completes MFA in their home environment, that authentication event is recognized when they access target tenant resources — no second challenge. Security is maintained: MFA still happens, just once, in the user's home context. The friction is eliminated.
 
-The configuration lives in Entra ID's external identities and cross-tenant access settings — the administrative scope is identity governance, not infrastructure. From a compliance standpoint, the access policies and trust configurations are auditable and can be scoped precisely to control which users and which resources participate in the synchronization.
+Calendar free/busy visibility across tenants requires one additional step — configuring Exchange Online Organization Relationships between the tenants — but once in place, availability shows correctly across the boundary. The configuration lives in Entra ID's external identities and cross-tenant access settings alongside Exchange Online. From a compliance standpoint, the access policies and trust configurations are auditable and can be scoped precisely to control which users and which resources participate in the synchronization.
 
 ---
 

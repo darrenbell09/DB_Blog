@@ -4,7 +4,7 @@ title: "FinOps in Practice: What Actually Works When Cloud Costs Get Out of Cont
 subtitle: "Cloud cost problems are operational discipline problems. Here's the framework that fixes them."
 date: 2026-03-26
 category: FinOps
-tags: [FinOps, cloud costs, AWS, cost optimization, reserved instances, tagging]
+tags: [FinOps, cloud costs, Azure, cost optimization, reserved instances, tagging, licensing]
 excerpt: "Most cloud cost problems don't start with architecture. They start with ownership. Here's the four-phase operational framework that actually delivers lasting results."
 ---
 
@@ -93,7 +93,7 @@ Optimizing this layer involves:
 
 **A critical sequencing note:** commit to pricing *after* rightsizing, not before. A common and expensive mistake is locking in commitment-based discounts before workloads are properly sized. That locks in inefficiency at a discount — you still overpay, just less visibly.
 
-Done correctly, this phase reduces cost 20–30% without changing any architecture — only how it is paid for.
+Done correctly, this phase can reduce cost 30–70% on committed workloads without changing any architecture — only how it is paid for. Azure Reserved Instances alone offer up to 72% savings versus on-demand pricing on eligible VM families.
 
 ---
 
