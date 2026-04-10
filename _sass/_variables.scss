@@ -1,38 +1,38 @@
 // =============================================================================
-// DESIGN TOKENS — Professional Tech Leader Dark Theme
+// DESIGN TOKENS — Dark Charcoal & Amber
 // =============================================================================
 
 // ---- Background ----
-$bg-primary:      #060d1f;
-$bg-secondary:    #0a1628;
-$bg-card:         #0f1e35;
-$bg-card-hover:   #142540;
-$bg-code:         #0d1a30;
-$bg-nav:          rgba(6, 13, 31, 0.95);
+$bg-primary:      #111111;
+$bg-secondary:    #181818;
+$bg-card:         #1c1c1c;
+$bg-card-hover:   #222222;
+$bg-code:         #161616;
+$bg-nav:          rgba(17, 17, 17, 0.97);
 
 // ---- Border ----
-$border:          #1a2e4a;
-$border-light:    #243654;
-$border-focus:    #3b82f6;
+$border:          #2a2420;
+$border-light:    #3a3430;
+$border-focus:    #d97706;
 
 // ---- Text ----
-$text-primary:    #e2e8f0;
-$text-secondary:  #94a3b8;
-$text-muted:      #64748b;
-$text-inverse:    #060d1f;
+$text-primary:    #e8ddd0;
+$text-secondary:  #9a8f82;
+$text-muted:      #6b6058;
+$text-inverse:    #111111;
 
 // ---- Accent Palette ----
-$accent-blue:     #3b82f6;   // trust, technology, primary CTA
-$accent-cyan:     #06b6d4;   // innovation, cloud, links
-$accent-green:    #10b981;   // growth, success, ops
-$accent-purple:   #8b5cf6;   // leadership, vision
-$accent-amber:    #f59e0b;   // highlight, warning, energy
+$accent-blue:     #3b82f6;   // tags only
+$accent-cyan:     #06b6d4;   // tags only
+$accent-green:    #10b981;   // tags only
+$accent-purple:   #8b5cf6;   // tags only
+$accent-amber:    #d97706;   // PRIMARY accent
 
 // ---- Gradients ----
-$gradient-brand:    linear-gradient(135deg, #{$accent-blue} 0%, #{$accent-cyan} 100%);
+$gradient-brand:    #{$accent-amber};
 $gradient-cyan:     linear-gradient(135deg, #{$accent-cyan} 0%, #{$accent-blue} 100%);
 $gradient-green:    linear-gradient(135deg, #{$accent-green} 0%, #{$accent-cyan} 100%);
-$gradient-hero-bg:  linear-gradient(160deg, #060d1f 0%, #0a1628 40%, #091520 100%);
+$gradient-hero-bg:  linear-gradient(160deg, #111111 0%, #181818 40%, #111111 100%);
 
 // ---- Typography ----
 $font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -86,11 +86,11 @@ $radius-2xl:  24px;
 $radius-full: 9999px;
 
 // ---- Shadows ----
-$shadow-sm:   0 1px 3px rgba(0,0,0,0.5);
-$shadow-md:   0 4px 12px rgba(0,0,0,0.5);
-$shadow-lg:   0 10px 30px rgba(0,0,0,0.6);
-$shadow-xl:   0 20px 50px rgba(0,0,0,0.7);
-$shadow-glow: 0 0 25px rgba(59, 130, 246, 0.15);
+$shadow-sm:   0 1px 3px rgba(0,0,0,0.7);
+$shadow-md:   0 4px 12px rgba(0,0,0,0.6);
+$shadow-lg:   0 10px 30px rgba(0,0,0,0.7);
+$shadow-xl:   0 20px 50px rgba(0,0,0,0.8);
+$shadow-glow: 0 0 20px rgba(217, 119, 6, 0.08);
 
 // ---- Transitions ----
 $t-fast: 150ms ease;

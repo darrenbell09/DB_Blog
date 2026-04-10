@@ -22,14 +22,13 @@
   white-space: nowrap;
 
   &--primary {
-    background: $accent-blue;
-    color: #fff;
+    background: $accent-amber;
+    color: $text-inverse;
     box-shadow: none;
 
     &:hover {
-      color: #fff;
-      background: darken(#3b82f6, 8%);
-      box-shadow: none;
+      background: #b45309;
+      color: $text-inverse;
     }
   }
 
@@ -179,7 +178,7 @@
     a {
       color: inherit;
       text-decoration: none;
-      &:hover { color: $accent-cyan; }
+      &:hover { color: $accent-amber; }
     }
   }
 
@@ -217,9 +216,9 @@
   &__link {
     font-size: $fs-sm;
     font-weight: $fw-semibold;
-    color: $accent-cyan;
+    color: $accent-amber;
     white-space: nowrap;
-    &:hover { color: $accent-blue; }
+    &:hover { color: #f59e0b; }
   }
 }
 
@@ -372,7 +371,7 @@
   &__number {
     font-size: $fs-4xl;
     font-weight: $fw-extrabold;
-    color: $accent-blue;
+    color: $accent-amber;
     line-height: 1;
     margin-bottom: $sp-2;
   }

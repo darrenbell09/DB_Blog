@@ -73,11 +73,11 @@ h6 { font-size: $fs-md; }
 
 // ---- Links ----
 a {
-  color: $accent-cyan;
+  color: $accent-amber;
   text-decoration: none;
   transition: color $t-fast;
 
-  &:hover { color: $accent-blue; }
+  &:hover { color: #f59e0b; }
 }
 
 // ---- Paragraphs ----
@@ -126,7 +126,7 @@ pre {
 blockquote {
   margin: $sp-8 0;
   padding: $sp-5 $sp-6;
-  border-left: 4px solid $accent-blue;
+  border-left: 4px solid $accent-amber;
   background: $bg-card;
   border-radius: 0 $radius-md $radius-md 0;
   color: $text-secondary;
