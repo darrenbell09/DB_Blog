@@ -27,8 +27,8 @@ author:
   twitter: ""
 
 # URLs — adjust baseurl if you move to a custom domain or username repo
-url: "https://darrenbell09.github.io"
-baseurl: "/DB_Blog"
+url: "https://darrenbell.net"
+baseurl: ""
 
 # Build Settings
 markdown: kramdown
