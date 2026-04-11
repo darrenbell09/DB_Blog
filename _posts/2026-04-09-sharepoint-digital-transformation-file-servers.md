@@ -2,7 +2,7 @@
 layout: post
 title: "Why File Servers Are a Leadership Problem, Not a Storage Problem"
 subtitle: "SharePoint migrations fail when they're treated as IT projects. They succeed when they're treated as organizational change."
-date: 2026-03-12
+date: 2026-04-11
 category: Technology Leadership
 tags: [SharePoint, Microsoft 365, digital transformation, file servers, migration, knowledge management]
 excerpt: "Every organization knows file servers are a problem. Most treat it as a storage or technology decision. The ones that successfully migrate to SharePoint treat it as a leadership and organizational design decision first."
