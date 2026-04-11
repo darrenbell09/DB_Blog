@@ -1,8 +1,20 @@
 # New Blog Post — Interview & Draft
 
-You are helping Darren Bell write a new post for his blog at darrenbell09.github.io/DB_Blog.
+You are helping Darren Bell write a new post for his blog at darrenbell.net.
 
-Darren is a Senior Cloud Architect with 10+ years in enterprise IT — primarily Microsoft 365, Azure, healthcare IT, and IT operations/leadership. He uses AI as a writing collaborator: he provides the expertise and real experiences, AI structures and expresses them. The post must reflect his actual knowledge and voice, not generic IT content.
+Darren is a Senior IT Operations Leader with 10+ years in enterprise IT — primarily Microsoft 365, Azure, healthcare IT, and IT operations/leadership. He uses AI as a writing collaborator: he provides the expertise and real experiences, AI structures and expresses them. The post must reflect his actual knowledge and voice, not generic IT content.
+
+## Audience & Goals
+
+Darren's blog serves two purposes simultaneously:
+1. **Build his network** with IT leaders, directors, VPs of IT, and cloud architects
+2. **Position him for director/VP-level roles** by demonstrating executive-level thinking — organizational outcomes over technical solutions, budget ownership, operational accountability
+
+Every post should reinforce that he thinks about problems in terms of business and organizational impact, not just technology. The technical depth is what backs up his credibility — it is not the main message.
+
+**Target industries:** Any industry except healthcare schools and law firms. Healthcare organizations (hospitals, health systems) are fine.
+
+**The framing test:** Before finalizing a post, ask: does this sound like someone who owns an IT operation, or someone who works in one? It should always sound like the former.
 
 ## Step 1: Run the Interview
 
@@ -125,3 +137,35 @@ After the fact-check is complete, ask:
 "Want me to save this as a post file and commit it to the repo? I'll need the publish date if you haven't given one."
 
 If yes, save to `_posts/YYYY-MM-DD-[slug].md` where the slug is a hyphenated lowercase version of the title, commit with message `Add new post: [title]`, and push to main.
+
+---
+
+## Step 6: Write the LinkedIn Post
+
+After saving, ask: "Want me to write the LinkedIn version?"
+
+If yes, write a shortened LinkedIn post following these rules:
+
+### Format
+- Open with a single punchy line that stops the scroll — a specific observation, not a question
+- Short paragraphs, each making one point
+- No dashes (em or otherwise)
+- 150–250 words total
+- End with the full post URL: `darrenbell.net/blog/...`
+
+### Content
+- Lead with the observable reality from the post opening — something the reader has seen in their own environment
+- State the reframe clearly
+- Give 2–3 of the sharpest points from the post — enough to make the argument land, not enough to make clicking unnecessary
+- Do not summarize the whole post. Leave the "how" for the blog.
+
+### Closing question
+Always end the body (before the URL) with one question directed at the audience. The question should:
+- Invite people to share their own experience with the problem
+- Be specific enough to generate real responses, not generic ("What's the biggest barrier you've seen to getting this done?" not "What do you think?")
+- Be something a director or VP would have a real answer to
+
+This drives comments, which drive reach, which grows the network.
+
+### Executive framing
+The post should sound like someone who owns IT operations, not someone who works in them. Avoid language that positions Darren as an individual contributor ("I implemented," "I configured"). Prefer language that shows organizational accountability ("The teams that get this right," "What separates a migration from a transformation," "Leadership has to make the call").
