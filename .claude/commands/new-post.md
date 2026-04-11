@@ -61,6 +61,7 @@ Once confirmed, write a complete draft post in Darren's established voice and st
 - Practitioner perspective throughout — "from someone doing the work," not a consultant selling frameworks.
 - Name the real problem vs the perceived problem. Reframe early.
 - No filler phrases: no "It's worth noting," "It's important to understand," "In today's landscape," "As we've seen."
+- No dashes of any kind (em dashes, en dashes, or hyphens used as punctuation). Use commas, periods, or restructure the sentence instead.
 - Use "you" and "your" to address the reader directly.
 - Em-dashes for parenthetical asides. Never parentheses for prose.
 
@@ -149,7 +150,7 @@ If yes, write a shortened LinkedIn post following these rules:
 ### Format
 - Open with a single punchy line that stops the scroll — a specific observation, not a question
 - Short paragraphs, each making one point
-- No dashes (em or otherwise)
+- No dashes of any kind (em, en, or hyphen used as punctuation)
 - 150–250 words total
 - End with the full post URL: `darrenbell.net/blog/...`
 
