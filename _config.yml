@@ -70,6 +70,7 @@ feed:
 twitter:
   username: darrenbell09
 og_image: /assets/images/og-default.png
+image: /assets/images/og-default.png
 
 # =============================================================================
 # INTEGRATIONS (fill in your own values)

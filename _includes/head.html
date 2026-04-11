@@ -3,6 +3,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 {% seo %}
+{% assign og_img = page.image | default: site.image %}
+{% if og_img %}
+<meta property="og:image" content="{{ og_img | prepend: site.url }}">
+<meta name="twitter:image" content="{{ og_img | prepend: site.url }}">
+{% endif %}
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
