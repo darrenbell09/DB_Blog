@@ -2,7 +2,7 @@
 layout: post
 title: "Copilot Is Ready. Your Tenant Isn't."
 subtitle: "Most organizations focus on MFA and role assignments before deploying Copilot. The real risk is the sharing sprawl nobody audited."
-date: 2026-04-10
+date: 2026-04-23
 category: AI & Automation
 tags: [Microsoft 365, Copilot, SharePoint, AI readiness, security, permissions, governance, OneDrive]
 excerpt: "Everyone thinks their Microsoft 365 environment is locked down enough to deploy AI tools. MFA is on. Permissions are set. What they haven't looked at is the sharing sprawl underneath — the Anyone links that never expired, the contractor guest accounts still sitting in SharePoint groups. Copilot follows Microsoft's permissions exactly. The problem is the permissions you forgot you set."
