@@ -2,7 +2,7 @@
 layout: post
 title: "Buying Copilot Licenses Isn't an AI Strategy"
 subtitle: "Chinese AI models are genuinely impressive and free to use. That makes governance more urgent, not less."
-date: 2026-04-11
+date: 2026-07-02
 category: AI & Automation
 tags: [AI transformation, Microsoft Copilot, SMB, Microsoft 365, AI adoption, governance, data security, DeepSeek, Chinese AI, GLM]
 excerpt: "Chinese AI labs have closed the performance gap faster than most organizations expected. Free, capable models are now available to anyone with an internet connection. For small and mid-sized businesses without an AI governance framework, that changes the risk calculation significantly."
