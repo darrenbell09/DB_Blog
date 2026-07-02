@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The Best AI Models Are Now Free. Where You Run Them Is the Only Decision That Matters."
-subtitle: "Open source has caught up to frontier. The question is no longer which model to buy. It is where to run it."
+title: "Open Source AI Has Closed the Gap. Where You Run It Is the Decision."
+subtitle: "The performance difference between open source and frontier models has narrowed significantly. The strategic question now is where inference happens and who controls the data."
 date: 2026-07-02
 category: AI & Automation
 tags: [AI strategy, open source AI, AI infrastructure, Microsoft Azure, AWS, co-location, GLM, DeepSeek, AI adoption, data sovereignty]
@@ -10,7 +10,7 @@ excerpt: "Open source AI models now match or exceed closed frontier models on ma
 
 Last month, Zhipu AI released GLM-5.2 and it outscored GPT-5.5 on SWE-bench Pro, one of the most rigorous AI coding benchmarks in use. It is open weight, MIT licensed, and free. Before that, Alibaba's Qwen 3 pushed the benchmarks further. Before that, DeepSeek R1 matched GPT-4 class performance in January 2025.
 
-The performance gap between open source models and closed frontier models has effectively closed.
+The performance gap between open source models and closed frontier models has narrowed significantly, and on some of the most demanding benchmarks, open source models are now winning.
 
 For businesses deciding how to adopt AI, that changes the strategic question entirely. It is no longer "which frontier model subscription do we buy?" It is "which open source model do we run, and where do we run it?"
 
