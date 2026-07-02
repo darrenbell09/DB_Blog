@@ -69,8 +69,8 @@ feed:
 # SEO defaults
 twitter:
   username: darrenbell09
-og_image: /assets/images/og-default.png
-image: /assets/images/og-default.png
+og_image: /assets/images/og-default-v2.png
+image: /assets/images/og-default-v2.png
 
 # =============================================================================
 # INTEGRATIONS (fill in your own values)
@@ -106,7 +106,7 @@ defaults:
       layout: post
       comments: true
       share: true
-      image: /assets/images/og-default.png
+      image: /assets/images/og-default-v2.png
 
 # =============================================================================
 # BUILD EXCLUSIONS
