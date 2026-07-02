@@ -4,7 +4,7 @@ title: "Buying Copilot Licenses Isn't an AI Strategy"
 subtitle: "Chinese AI models are genuinely impressive and free to use. That makes governance more urgent, not less."
 date: 2026-04-11
 category: AI & Automation
-tags: [AI transformation, Microsoft Copilot, SMB, Microsoft 365, AI adoption, governance, data security, DeepSeek, Chinese AI]
+tags: [AI transformation, Microsoft Copilot, SMB, Microsoft 365, AI adoption, governance, data security, DeepSeek, Chinese AI, GLM]
 excerpt: "Chinese AI labs have closed the performance gap faster than most organizations expected. Free, capable models are now available to anyone with an internet connection. For small and mid-sized businesses without an AI governance framework, that changes the risk calculation significantly."
 ---
 
@@ -12,9 +12,9 @@ In January 2025, DeepSeek R1 matched GPT-4 class performance at a fraction of th
 
 Your employees spent that same week noticing it was free.
 
-Alibaba's Qwen 3, released months later, pushed the benchmark numbers further. More capable Chinese open source models are coming. The quality gap that once made Western AI tools the obvious default has narrowed significantly, and several Chinese alternatives are now genuinely competitive.
+Alibaba's Qwen 3 followed a few months later. Then in June 2026, Zhipu AI released GLM-5.2, a 744 billion parameter open-weight model that outscored GPT-5.5 on SWE-bench Pro, one of the most rigorous coding benchmarks in use, and released it under an MIT license. Each successive release has closed the gap with Western frontier models a little further, and each one is freely accessible via API.
 
-For a cost-conscious employee trying to work faster, that changes the calculation entirely. These are not low-quality workarounds. They are capable tools. And for most small and mid-sized businesses, there is nothing stopping employees from using them on company data right now.
+For a cost-conscious employee trying to work faster, that changes the calculation entirely. These are not low-quality workarounds. They are genuinely capable tools, and in some benchmarks they now lead the field. For most small and mid-sized businesses, there is nothing stopping employees from using them on company data right now.
 
 ---
 
@@ -22,9 +22,9 @@ For a cost-conscious employee trying to work faster, that changes the calculatio
 
 The performance of these models is not the problem. Where the data goes when you use them is.
 
-DeepSeek, Qwen, and similar tools hosted by Chinese companies process and store data on servers in China. China's National Intelligence Law, passed in 2017, requires organizations operating in China to cooperate with state intelligence work. That means the Chinese government can compel access to stored data. There is no enterprise data processing agreement, no GDPR-equivalent protection, and no contractual obligation governing how your data is retained or used.
+DeepSeek, Qwen, GLM-5.2, and similar tools hosted by Chinese companies process and store data on servers in China. China's National Intelligence Law, passed in 2017, requires organizations operating in China to cooperate with state intelligence work. That means the Chinese government can compel access to stored data. There is no enterprise data processing agreement, no GDPR-equivalent protection, and no contractual obligation governing how your data is retained or used. GLM-5.2 ships with an MIT license that allows anyone to download and run the model weights, but most users are not running 744 billion parameters on their own hardware. They are using the API, and the API sends data to China.
 
-Security researchers found DeepSeek transmitting user data to third-party servers without clear disclosure. The United States Navy, NASA, the Italian government, Australia, Taiwan, South Korea, and several U.S. states have banned DeepSeek from official use specifically because of these risks. The bans are not hypothetical caution. They reflect documented concerns about where that data goes.
+Security researchers found DeepSeek transmitting user data to third-party servers without clear disclosure. The United States Navy, NASA, the Italian government, Australia, Taiwan, South Korea, and several U.S. states have banned DeepSeek from official use specifically because of these risks. The bans are not hypothetical caution. They reflect documented concerns about where that data goes. The same legal framework that applies to DeepSeek applies to every Chinese-hosted model, regardless of how capable or how open the weights are.
 
 One distinction matters here: running an open-weight model on your own infrastructure is a different risk profile than using someone else's API. Organizations with the technical capability to self-host have more control over their data. Most SMBs are not self-hosting. They are using the web interface or the API, which means the data is leaving the building and going to servers in China with none of the enterprise protections that would govern an approved tool.
 
