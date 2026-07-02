@@ -26,21 +26,13 @@ The answer is not to avoid these models. The answer is to not use their API.
 
 ---
 
-## Three Paths to Running Open Source Models on Infrastructure You Control
+## Running Open Source Models on Infrastructure You Control
 
-When the model weights are open, you decide where the inference happens.
+When the model weights are open, you decide where the inference happens. The options range from managed cloud services to dedicated hardware, and the right fit depends on what your organization already operates and how much control you need over the stack.
 
-**Azure AI Foundry**
+For organizations in the Microsoft ecosystem, Azure AI Foundry provides access to thousands of open source models from Hugging Face deployed directly within your Azure tenant. Inference runs inside your cloud boundary under your existing data governance policies, with no data leaving your Azure environment. AWS Bedrock offers a comparable approach for organizations already invested in AWS infrastructure. Both are managed paths that remove the complexity of building and maintaining the inference stack yourself.
 
-Microsoft Azure AI Foundry gives organizations access to thousands of open source models from Hugging Face deployed directly within their Azure tenant. Inference runs inside your cloud boundary under your data governance policies. Models including Llama, Qwen, Mistral, and Phi can be deployed without data leaving your Azure environment. For organizations already operating in the Microsoft ecosystem, this is the lowest-friction path to self-hosted inference with enterprise-grade access controls already in place.
-
-**AWS**
-
-Amazon Bedrock offers a comparable model catalog with inference that runs inside your AWS environment. For organizations already invested in AWS infrastructure, Bedrock is a managed path to open source model deployment without building and maintaining the inference stack from scratch.
-
-**Co-Location**
-
-For organizations that want full control over the hardware stack, running inference on servers in a co-location facility means the data stays on equipment you own, in a facility under a direct contract, with visibility into exactly where the hardware sits and who has physical access to it. No hyperscaler intermediary. No shared tenancy. No cloud provider data handling terms to parse.
+Beyond the major hyperscalers, dedicated GPU cloud providers, on-premises hardware, and hybrid approaches all represent viable paths depending on data residency requirements, latency needs, and existing infrastructure investments. The common thread across all of them is that inference happens in an environment your organization controls, under terms you negotiated, in a jurisdiction you chose.
 
 ---
 
@@ -48,15 +40,15 @@ For organizations that want full control over the hardware stack, running infere
 
 Traditional co-location providers have been losing ground to Azure and AWS for the better part of a decade. The hyperscaler value proposition of managed infrastructure, global scale, and consumption-based pricing has steadily eroded the case for maintaining your own hardware in a third-party facility.
 
-AI inference is going to reverse that pressure.
+AI inference is going to reverse that pressure, but not in the way most people assume.
 
-Co-location facilities already have what inference workloads require: dense power capacity, precision cooling, physical security, and high-bandwidth connectivity. What they have lacked is the GPU density and the software layer to turn rack space into an inference platform. That transition is coming, and the timing depends on two things that go directly hand in hand: the cost of GPU hardware coming down and the supply of that hardware increasing.
+The transition is not about co-lo facilities hosting customer-owned GPU rigs. It is about co-lo providers owning the hardware themselves and renting inference capacity directly. That is a more significant business model shift, and it is a natural one. These facilities already have what inference workloads require: dense power capacity, precision cooling, physical security, and high-bandwidth connectivity. The missing piece has been the economics of the GPU hardware itself.
 
-Both are in motion. As next-generation inference chips reach the market and fabrication capacity expands, the economics of running your own inference hardware in a co-lo facility will reach an inflection point. At that point, organizations will have a path to frontier-grade AI inference at competitive cost, on hardware they own, in a facility with a contractual obligation to keep data within a defined jurisdiction.
+That is changing. As next-generation inference chips reach the market and fabrication capacity expands, GPU hardware costs are coming down and supply is increasing. The two go directly hand in hand. When the economics reach an inflection point, co-lo providers can invest in GPU hardware at competitive prices and offer rented inference capacity at rates that undercut hyperscaler pricing, without the global redundancy overhead and margin requirements that make cloud inference expensive.
 
-For co-location providers, this is the transition that stops the erosion and reopens a market they have been ceding to hyperscalers for years. They have the physical infrastructure already in place. They need the hardware economics to catch up. When that happens, co-lo inference becomes a compelling alternative to both hyperscaler APIs and overseas-hosted open source.
+For co-location providers, this is the transition that stops the erosion. They already have the physical plant, the enterprise customer relationships, and the operational expertise. Adding rentable inference hardware turns them from passive real estate into active infrastructure providers competing directly in the AI compute market.
 
-For businesses, it is an infrastructure model that separates AI capability from cloud vendor dependency entirely.
+For businesses, it opens a path to frontier-grade inference capacity without purchasing and maintaining the hardware, without routing data through a hyperscaler, and with contractual jurisdiction guarantees a cloud API cannot provide.
 
 ---
 
