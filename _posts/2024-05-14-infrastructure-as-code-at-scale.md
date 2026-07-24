@@ -28,7 +28,7 @@ When a process runs from a script, it runs the same way every time. The same sec
 
 In an MSP context, where you're onboarding users and managing configurations across multiple client environments with different standards, that consistency is the difference between an operation that scales and one that depends on institutional knowledge that walks out the door when someone leaves.
 
-At ClowdCover, building consistent PowerShell-based provisioning workflows reduced onboarding time by 25%. The reduction in hours was real, but the more important outcome was that the process became reliable enough to delegate — any team member with the script could execute an onboarding without tribal knowledge.
+In practice, building consistent PowerShell-based provisioning workflows can cut onboarding time significantly. The reduction in hours matters, but the more important outcome is that the process becomes reliable enough to delegate. Any team member with the script can execute a complete onboarding without tribal knowledge.
 
 ---
 
