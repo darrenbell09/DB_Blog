@@ -54,13 +54,11 @@ Start with a task you already know how to do in the portal. Something repeatable
 
 Open Graph X-Ray and review the calls the portal made. Note the endpoint and the request structure. That is your starting material.
 
-Take the endpoint to the Microsoft Graph documentation and understand what parameters it accepts and what it returns. The documentation is the authoritative source.
-
-Bring that context to an AI assistant with the Graph Skill enabled, or paste the endpoint and your goal into a prompt for a capable model. Ask it to generate the PowerShell logic you need. Review what it produces.
+Bring that endpoint to an AI assistant with the Graph Skill enabled. Ask it to generate the PowerShell logic you need. Review what it produces.
 
 Run it in a test environment. Validate the output. Then operationalize it.
 
-This process does not require writing code from scratch. It requires understanding what you are trying to accomplish, knowing where to verify the information, and using AI to handle the translation work.
+This process does not require writing code from scratch. It requires understanding what you are trying to accomplish and using AI to handle the translation work.
 
 ---
 
