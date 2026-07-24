@@ -16,6 +16,10 @@
     {% assign tag_color = 'amber' %}
   {% when 'security' %}
     {% assign tag_color = 'blue' %}
+  {% when 'microsoft-365' %}
+    {% assign tag_color = 'cyan' %}
+  {% when 'ai-automation' %}
+    {% assign tag_color = 'purple' %}
   {% else %}
     {% assign tag_color = 'blue' %}
 {% endcase %}
