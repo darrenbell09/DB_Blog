@@ -2,7 +2,7 @@
 layout: post
 title: "Show the AI Once. It Runs It Every Time."
 subtitle: "A new category of AI tool is solving the problem that has stalled most adoption programs: nobody knows which workflows to hand over. These tools find out by watching."
-date: 2026-08-05
+date: 2026-08-04
 category: AI & Automation
 tags: [AI strategy, AI adoption, workflow automation, OpenAI, Codex, Microsoft Copilot, Skill Recorder, Anthropic, Claude, productivity, ROI, knowledge workers, AI champions]
 excerpt: "Most organizations have AI subscriptions and still cannot answer the question: what should we actually automate? The bottleneck was never capability. It was discovery. A new category of tool is closing that gap by watching how work actually gets done."
