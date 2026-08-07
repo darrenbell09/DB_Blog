@@ -17,6 +17,8 @@
 
   &__category {
     margin-bottom: $sp-5;
+
+    .tag { color: $accent-amber; font-weight: $fw-bold; }
   }
 
   &__title {

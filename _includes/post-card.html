@@ -27,7 +27,7 @@
 {% assign words = post.content | strip_html | number_of_words %}
 {% assign read_time = words | divided_by: 200 | plus: 1 %}
 
-<article class="post-card{% if featured %} post-card--featured{% endif %} animate-in">
+<article class="post-card{% if featured %} post-card--featured{% endif %}">
   <div class="post-card__accent"></div>
   <div class="post-card__body">
     <div class="post-card__meta">

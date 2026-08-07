@@ -32,7 +32,7 @@
 // =============================================================================
 
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   background: $gradient-hero-bg;
@@ -96,9 +96,9 @@
     padding: $sp-2 $sp-4;
     border-radius: $radius-full;
     font-size: $fs-xs;
-    font-weight: $fw-medium;
+    font-weight: $fw-semibold;
     border: 1px solid $border;
-    color: $text-muted;
+    color: $text-secondary;
     background: $bg-card;
 
     svg, .icon { color: $text-muted; }
