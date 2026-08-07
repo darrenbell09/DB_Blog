@@ -47,7 +47,7 @@ permalink: /search/
       <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
         {% assign all_categories = "Cloud Architecture,Infrastructure Ops,Technology Leadership,DevOps,FinOps,Security" | split: "," %}
         {% for cat in all_categories %}
-        <a href="{{ site.baseurl }}/categories/#{{ cat | slugify }}" class="tag tag--blue" style="padding:0.5rem 1rem;font-size:0.875rem;">{{ cat }}</a>
+        <a href="{{ site.baseurl }}/categories/#{{ cat | slugify }}" class="tag tag--blue">{{ cat }}</a>
         {% endfor %}
       </div>
     </div>
