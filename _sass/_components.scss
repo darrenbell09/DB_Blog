@@ -145,8 +145,7 @@
   }
 
   &__accent {
-    height: 4px;
-    background: $gradient-brand;
+    display: none;
   }
 
   &__body {
