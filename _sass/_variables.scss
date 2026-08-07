@@ -1,55 +1,55 @@
 // =============================================================================
-// DESIGN TOKENS — Warm Dark & Steel Blue
+// DESIGN TOKENS — Clean Light
 // =============================================================================
 
 // ---- Background ----
-$bg-primary:      #0e0f14;
-$bg-secondary:    #14151d;
-$bg-card:         #1a1b25;
-$bg-card-hover:   #202130;
-$bg-code:         #12131a;
-$bg-nav:          rgba(14, 15, 20, 0.97);
+$bg-primary:      #ffffff;
+$bg-secondary:    #f8fafc;
+$bg-card:         #ffffff;
+$bg-card-hover:   #f8fafc;
+$bg-code:         #f1f5f9;
+$bg-nav:          rgba(255, 255, 255, 0.92);
 
 // ---- Border ----
-$border:          #252638;
-$border-light:    #363752;
-$border-focus:    #5b9bd5;
+$border:          #e2e8f0;
+$border-light:    #f1f5f9;
+$border-focus:    #2563eb;
 
 // ---- Text ----
-$text-primary:    #d8dff0;
-$text-secondary:  #8892aa;
-$text-muted:      #58617a;
-$text-inverse:    #0e0f14;
+$text-primary:    #0f172a;
+$text-secondary:  #475569;
+$text-muted:      #94a3b8;
+$text-inverse:    #ffffff;
 
 // ---- Accent Palette ----
-$accent-blue:     #3b82f6;   // tags only
-$accent-cyan:     #06b6d4;   // tags only
-$accent-green:    #10b981;   // tags only
-$accent-purple:   #8b5cf6;   // tags only
-$accent-amber:    #4d86b8;   // PRIMARY accent — steel blue (muted, deeper)
+$accent-blue:     #2563eb;
+$accent-cyan:     #0891b2;
+$accent-green:    #059669;
+$accent-purple:   #7c3aed;
+$accent-amber:    #2563eb;   // PRIMARY accent — professional blue
 
 // ---- Gradients ----
 $gradient-brand:    #{$accent-amber};
 $gradient-cyan:     linear-gradient(135deg, #{$accent-cyan} 0%, #{$accent-blue} 100%);
 $gradient-green:    linear-gradient(135deg, #{$accent-green} 0%, #{$accent-cyan} 100%);
-$gradient-hero-bg:  linear-gradient(160deg, #0e0f14 0%, #14151d 40%, #0e0f14 100%);
+$gradient-hero-bg:  linear-gradient(180deg, #f0f4ff 0%, #ffffff 60%);
 
 // ---- Typography ----
 $font-sans:  'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 $font-serif: 'Lora', Georgia, 'Times New Roman', serif;
 $font-mono:  'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
 
-// Font Sizes (fluid-ish scale)
-$fs-xs:   0.75rem;    // 12px
-$fs-sm:   0.875rem;   // 14px
-$fs-base: 1rem;       // 16px
-$fs-md:   1.125rem;   // 18px
-$fs-lg:   1.25rem;    // 20px
-$fs-xl:   1.5rem;     // 24px
-$fs-2xl:  1.875rem;   // 30px
-$fs-3xl:  2.25rem;    // 36px
-$fs-4xl:  3rem;       // 48px
-$fs-5xl:  3.75rem;    // 60px
+// Font Sizes
+$fs-xs:   0.75rem;
+$fs-sm:   0.875rem;
+$fs-base: 1rem;
+$fs-md:   1.125rem;
+$fs-lg:   1.25rem;
+$fs-xl:   1.5rem;
+$fs-2xl:  1.875rem;
+$fs-3xl:  2.25rem;
+$fs-4xl:  3rem;
+$fs-5xl:  3.75rem;
 
 // Font Weights
 $fw-normal:    400;
@@ -76,7 +76,7 @@ $sp-32: 8rem;
 // ---- Layout ----
 $max-width:       1200px;
 $max-width-prose: 740px;
-$nav-height:      4.5rem;   // 72px at 16px base
+$nav-height:      4.5rem;
 
 // ---- Border Radius ----
 $radius-sm:   4px;
@@ -87,11 +87,11 @@ $radius-2xl:  24px;
 $radius-full: 9999px;
 
 // ---- Shadows ----
-$shadow-sm:   0 1px 3px rgba(0,0,0,0.7);
-$shadow-md:   0 4px 12px rgba(0,0,0,0.6);
-$shadow-lg:   0 10px 30px rgba(0,0,0,0.7);
-$shadow-xl:   0 20px 50px rgba(0,0,0,0.8);
-$shadow-glow: 0 0 20px rgba(91, 155, 213, 0.08);
+$shadow-sm:   0 1px 2px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.04);
+$shadow-md:   0 4px 16px rgba(0,0,0,0.08);
+$shadow-lg:   0 8px 28px rgba(0,0,0,0.08);
+$shadow-xl:   0 20px 48px rgba(0,0,0,0.10);
+$shadow-glow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 
 // ---- Transitions ----
 $t-fast: 150ms ease;
