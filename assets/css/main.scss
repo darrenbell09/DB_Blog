@@ -43,26 +43,15 @@
   }
 
   &__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: $sp-2;
-    padding: $sp-2 $sp-4;
-    border-radius: $radius-full;
-    background: rgba(91, 155, 213, 0.08);
-    border: 1px solid rgba(91, 155, 213, 0.2);
+    display: block;
     font-size: $fs-xs;
     font-weight: $fw-semibold;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: $accent-amber;
-    margin-bottom: $sp-6;
+    color: $text-muted;
+    margin-bottom: $sp-5;
 
-    .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: $radius-full;
-      background: $accent-amber;
-    }
+    .dot { display: none; }
   }
 
   &__title {

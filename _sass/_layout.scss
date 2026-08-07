@@ -87,8 +87,6 @@
   &__text {
     display: flex;
     flex-direction: column;
-
-    @media (max-width: 500px) { display: none; }
   }
 
   &__name {
