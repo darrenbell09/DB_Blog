@@ -1,0 +1,19 @@
+# Lychee config for DAR-50 (used by docs/ci-workflow.yml -> .github/workflows/ci.yml)
+
+verbose = true
+no_progress = true
+max_concurrency = 8
+timeout = 20
+retry_wait_time = 3
+accept = [200, 206, 429]
+exclude_mail = true
+offline = true
+
+exclude = [
+  '^https?://(localhost|127\.0\.0\.1)',
+  '^https://twitter\.com',
+  '^https://x\.com',
+  '^https://www\.linkedin\.com/sharing',
+  '^https://linkedin\.com/sharing',
+  '^https://www\.facebook\.com/sharer',
+]
