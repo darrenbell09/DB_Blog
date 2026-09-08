@@ -120,4 +120,8 @@ exclude:
   - .jekyll-cache
   - .jekyll-metadata
   - README.md
+  - PUBLISH.md
+  - SKILLS.md
+  - lychee.toml
+  - docs
   - "*.sh"
