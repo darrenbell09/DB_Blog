@@ -67,7 +67,41 @@ bundle exec jekyll serve
 - Deleting or force-pushing `main` would affect production; avoid without backup.
 - Raw paths like `/about.html` may 404; pretty URLs (`/about/`) are the intended links.
 
+## DAR-50 notes (validation)
+
+### Automated CI (pending install)
+
+Template: `docs/ci-workflow.yml` + `lychee.toml`.
+
+Install (requires a token/app with GitHub **workflows** write permission — the audit agent’s Contents API returned 404 for `.github/workflows/*`):
+
+```bash
+cp docs/ci-workflow.yml .github/workflows/ci.yml
+git add .github/workflows/ci.yml lychee.toml
+git commit -m "ci: enable Jekyll build + lychee (DAR-50)"
+git push
+```
+
+That workflow runs `bundle exec jekyll build --baseurl ""` then offline lychee on `_site`.
+
+### Live spot-check (2026-09-07 CT)
+
+| URL | Status |
+|-----|--------|
+| `/`, `/blog/`, `/about/`, `/contact/`, `/categories/`, `/tags/`, `/search/` | 200 |
+| `/atom.xml`, `/assets/css/main.css` | 200 |
+| Sample post permalinks + `/blog/page2/`, `/blog/page3/` | 200 |
+| `/assets/images/1769196097959.jpg`, `/assets/images/og-default-v3.png` | checked in follow-up |
+| `/about.html`, `/contact.html` | **404** (pretty URLs only — expected) |
+| https://darrenbell09.github.io/DB_Blog/ | 200 (same deployment) |
+
+### Deferred
+
+- Interactive mobile layout QA (CSS has `@media` breakpoints and `.nav-toggle` / `.mobile-menu`; visual pass deferred).
+- Full offline `_site` lychee until `ci.yml` is installed under `.github/workflows/`.
+
 ## Related
 
 - Deploy workflow: `.github/workflows/deploy.yml`
-- Build/link CI: `.github/workflows/ci.yml` (DAR-50)
+- CI template: `docs/ci-workflow.yml` → copy to `.github/workflows/ci.yml`
+- Lychee config: `lychee.toml`
