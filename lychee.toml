@@ -8,6 +8,7 @@ retry_wait_time = 3
 accept = [200, 206, 429]
 include_mail = false
 offline = true
+root_dir = "_site"
 
 exclude = [
   '^https?://(localhost|127\.0\.0\.1)',
