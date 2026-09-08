@@ -1,0 +1,39 @@
+name: Jekyll Build & Link Check
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-links:
+    name: Build + lychee
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@e65c17d16e57e481586a6a5a0282698790062f92
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl ""
+        env:
+          JEKYLL_ENV: production
+
+      - name: Link check (lychee)
+        uses: lycheeverse/lychee-action@c53fe5f1a554e5160fc7e5a82e7f2014a0c6b303
+        with:
+          args: --config lychee.toml --verbose --no-progress ./_site
+          fail: true
