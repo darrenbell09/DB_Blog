@@ -6,7 +6,7 @@ max_concurrency = 8
 timeout = 20
 retry_wait_time = 3
 accept = [200, 206, 429]
-exclude_mail = true
+include_mail = false
 offline = true
 
 exclude = [
