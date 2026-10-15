@@ -124,4 +124,5 @@ exclude:
   - SKILLS.md
   - lychee.toml
   - docs
+  - site
   - "*.sh"
