@@ -1,11 +1,9 @@
-name: Deploy Jekyll Blog to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
-  schedule:
-    - cron: '0 13 * * *'  # 7am Central (CDT) / 8am CST daily
 
 permissions:
   contents: read
@@ -13,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -23,23 +21,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@e65c17d16e57e481586a6a5a0282698790062f92  # v1
-        with:
-          ruby-version: "3.3"
-          bundler-cache: true   # reads BUNDLED WITH from Gemfile.lock
-
-      - name: Setup GitHub Pages
-        id: pages
-        uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d  # v4
-
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl ""
-        env:
-          JEKYLL_ENV: production
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa  # v3
+        with:
+          path: site
 
   deploy:
     environment:

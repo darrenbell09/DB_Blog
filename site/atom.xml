@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Darren Bell</title>
+  <link rel="self" type="application/atom+xml" href="https://darrenbell.net/atom.xml"/>
+  <link rel="alternate" type="text/html" href="https://darrenbell.net/"/>
+  <id>https://darrenbell.net/</id>
+  <updated>2026-10-15T18:49:07.318Z</updated>
+  <author><name>Darren Bell</name></author>
+  <entry>
+    <title>Complexity Is a Choice, Not an Inheritance</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/complexity-is-a-choice-not-an-inheritance"/>
+    <id>https://darrenbell.net/blog/complexity-is-a-choice-not-an-inheritance</id>
+    <updated>2026-09-08T12:00:00Z</updated>
+    <summary>Most IT complexity was never designed. It accumulated, one reasonable decision at a time, until nobody could explain why half of it exists. Two weeks into running a small IT team, here is the five-step framework I am using to question, cut, and simplify before automating anything.</summary>
+    <content type="text">Two weeks into a new role running IT for a small team, and the job is exactly what I expected, because I have spent my career in environments built this way. Small IT teams do not have the luxury of a specialist for every domain. One person, or a small handful of people, is expected to be competent across networking, endpoint management, identity and access, cloud infrastructure, phone systems, physical security, vendor contracts, and compliance, all at once, plus whatever breaks on a Tuesday afternoon. The job is not depth in one domain. It is breadth across all of them, with the judgment to know which one deserves depth right now.
+
+That breadth does not get easier with experience. What changes is how deliberately you manage it. The instinct in any small team is to solve every problem as it appears: add whatever tool fixes today's issue, keep every process that was already running, and figure out the rest later. Do that consistently for a few years and you get an environment that works, technically, but that nobody could fully explain if you asked them to draw it on a whiteboard. That is not a failure of the people who built it. It is what happens when complexity accumulates one reasonable decision at a time and nobody goes back to ask whether the sum of those decisions still makes sense.
+
+---
+
+## Complexity Is Rarely Designed. It Accumulates.
+
+Most of what a new IT leader inherits was never designed as a whole system. It was assembled incrementally, under time pressure, by people solving the problem directly in front of them. Each individual decision was defensible. The approval step existed because of a specific incident years ago. The extra tool got added because migrating off the old one felt riskier than living with two. The manual process stuck around because automating it never made it to the top of anyone's list. None of that is negligence. It is just how systems grow when nobody is deliberately asking whether they should keep growing that way.
+
+The mistake most new leaders make is treating inherited complexity as fixed. They assume it exists because someone smarter than them decided it needed to. Sometimes that is true. Often it is not. The only way to find out is to ask.
+
+---
+
+## A Framework for Asking the Right Question First
+
+Elon Musk has described a five step process he uses at Tesla and SpaceX for engineering decisions, and it has stuck with me because it puts the steps in an order most organizations get backwards. Question every requirement. Delete any part or process you can. Simplify or optimize what remains. Speed up the cycle time. Automate last, only after the first four steps are done.
+
+The order matters more than the individual steps. Most organizations reach for automation first because it feels like progress. But automating a process that should not exist just makes the waste run faster and quieter. It becomes harder to see, which makes it harder to eventually remove. Speeding up a process before simplifying it locks in the extra steps at a faster pace. Simplifying before questioning the requirement means polishing something that should have been deleted. The sequence exists because each step only makes sense once the step before it has actually been done.
+
+Applied to a small IT team, the first move is not a technology decision at all. It is a question: why does this exist? Why does an approval require three people instead of one? Why does a request take five steps to resolve instead of two? Why do two tools end up doing the same job? In a lot of cases, the honest answer has nothing to do with anyone's competence. The requirement made sense once, and it simply outlived the reason for it. That is the signal to delete it, not automate around it.
+
+---
+
+## Why This Matters More With a Small Team
+
+In a large organization, unnecessary steps get absorbed. There are enough people that a redundant process is an inconvenience, not a crisis. A small team does not have that cushion. Every step that should not exist is a direct tax on the capacity of people who are already covering more ground than their job title suggests. The margin for waste is much smaller, which means the return on removing it is much bigger.
+
+That is also the real advantage of a small team, if it gets used deliberately. There is no bureaucratic weight protecting a bad process just because it has existed for years. There are fewer stakeholders to convince before questioning something. The size that makes the breadth of the job harder is the same size that makes it possible to move fast on fixing it, as long as the questions come before the changes.
+
+---
+
+Two weeks is not enough time to have all the answers. It is enough time to start asking the right questions, in the right order, before complexity has a chance to calcify into "how we've always done it" again. The instinct when the workload is this broad is to reach for more of everything at once: more tools, more process, more people. None of those instincts are wrong. They are just premature until the questioning happens first. Question what exists, remove what does not need to, simplify what is left, speed it up, and then decide what mix of automation, tooling, and headcount the work actually calls for.
+
+What has your experience been stepping into an environment you did not build? How much of what you inherited turned out to be necessary once you actually asked?</content>
+  </entry>
+  <entry>
+    <title>Show the AI Once. It Runs It Every Time.</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/show-the-ai-once-it-runs-it-every-time"/>
+    <id>https://darrenbell.net/blog/show-the-ai-once-it-runs-it-every-time</id>
+    <updated>2026-08-04T12:00:00Z</updated>
+    <summary>Most organizations have AI subscriptions and still cannot answer the question: what should we actually automate? The bottleneck was never capability. It was discovery. A new category of tool is closing that gap by watching how work actually gets done.</summary>
+    <content type="text">Most organizations running AI pilots can point to some wins. A faster first draft. A summarized meeting. A report that used to take an afternoon and now takes twenty minutes. Those are real. They are also the smallest version of what AI can do, and most leaders know it. The harder question nobody has a clean answer to is: what do we actually hand over? Which workflows, which processes, which repeatable tasks should an AI be running instead of a person? That question has stalled more AI programs than any technical limitation. A new category of tooling is answering it directly, and the major platforms are all moving toward the same idea: show the AI how the work gets done, and it figures out the rest.
+
+---
+
+## The Discovery Problem Has Always Been the Real Blocker
+
+The conversation around AI ROI usually starts in the wrong place. It focuses on the model, the vendor, the subscription tier. Those are not the constraint. The constraint is organizational imagination, and that is a harder problem to solve than picking a platform.
+
+Knowledge workers know their jobs intimately. They do not naturally think about their jobs as sequences of discrete, transferable steps. When you ask someone what they do, they describe outcomes, not workflows. They tell you they manage reporting, or they own QBR prep, or they handle onboarding. The workflow underneath those outcomes is invisible to them because they have executed it so many times it stopped feeling like a series of steps.
+
+That gap between "I manage reporting" and "here are the seventeen steps I follow to produce the report" is exactly where AI adoption stalls. AI is capable of running the process. The process only exists in someone's head.
+
+---
+
+## What These Tools Actually Do
+
+All three work from the same core idea: instead of asking a knowledge worker to describe their workflow in a format AI can use, observe the workflow happening and build the automation from what you see.
+
+**OpenAI Codex record and replay**, launched in June 2026, is currently available on macOS. A knowledge worker performs the task the way they always have. Codex watches: what platforms they touch, what they pull, what they combine, what the output looks like. From that observation, it generates a reusable skill that can be triggered on demand or run on a schedule. Those skills are shareable, so one person's recorded workflow becomes an asset the entire team can run.
+
+**Microsoft Skill Recorder** is the equivalent for organizations in the Microsoft ecosystem. It is a desktop app that records your on-screen work session: the clicks, the app switches, the pages visited, and optionally your spoken narration describing what you are doing and why. The GitHub Copilot CLI then reconstructs that recording as a clear intent plus an ordered list of steps, and converts it into a reusable Skill or Automation that runs inside Copilot Studio, Microsoft Scout, or Copilot Cowork. The output is not a fragile screen-click replay. It generalizes from your one recorded example, so the agent understands the task well enough to handle variations.
+
+**Anthropic's Claude Cowork** added the same capability with "Record a Skill, " which shipped July 21, 2026 inside the Claude desktop app. The mechanism is identical: screen-record yourself performing the task, narrate what you are doing and why, and Claude converts that into a reusable Skill saved to your library. Available to Pro, Max, and Team subscribers.
+
+The platform differs. The mechanism is the same across all three: do the work once in front of the AI, and the AI owns it from there.
+
+---
+
+## The QBR Example Makes It Concrete
+
+Quarterly business review preparation exists in almost every organization, and it is one of the clearest candidates for this kind of automation.
+
+The task is pulling together reports from multiple platforms, CRM data, financial summaries, operational metrics, project status, formatting them consistently, and assembling them into a presentable package. Done manually, this takes hours. It requires logging into several systems, exporting or copying data, reformatting across different structures, and reconciling numbers that live in different places. It happens every quarter under deadline pressure. It follows the same logic every time.
+
+Record it once. The AI learns which systems, which reports, which fields, which format. Every subsequent quarter, the skill runs the process. The person responsible for QBR prep shifts from executing the assembly to reviewing the output.
+
+The time savings are measurable. The more important outcome is that the process becomes reliable and delegatable. It no longer depends on one person knowing all the steps. And once that skill exists, it can be shared with every team running the same process across the organization.
+
+---
+
+## The Snowball Effect Is Real
+
+The organizations that will get the most from this category of tooling are not the ones with the most sophisticated AI strategy. They are the ones that give people permission to try it on everything.
+
+The first workflow you automate does something important beyond saving time. It shows you that automation is possible for things you assumed were too complex, too judgment-heavy, or too dependent on human context. That realization changes how people look at everything else they do. The question shifts from "can AI do this?" to "have we tried it yet?"
+
+That shift is the snowball effect. It does not come from a top-down AI strategy. It comes from frontline AI champions in departments who are empowered to record, test, and share. The QBR example becomes fifteen more examples. The skill one person built becomes the template others build from. The organization that encourages that behavior at scale finds more ROI than it was looking for.
+
+The teams that stay cautious, that wait for a defined use case before experimenting, stay where they are. Capability is not the limit. Appetite is.
+
+---
+
+The ROI from AI programs has been smaller than it should be not because the technology is not ready, but because organizations have not solved the discovery problem. This category of tooling does not require a new strategy. It requires a different starting point: let your people show the AI how the work gets done, and let the machine take the volume from there. The capability exists today across the platforms most organizations are already paying for.
+
+What workflows in your organization would you capture first? And what has been the biggest barrier to getting your teams experimenting with automation at this level?</content>
+  </entry>
+  <entry>
+    <title>The Admin Portal Is a View. Microsoft Graph Is the Management Plane.</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/the-admin-portal-is-a-view-microsoft-graph-is-the-management-plane"/>
+    <id>https://darrenbell.net/blog/the-admin-portal-is-a-view-microsoft-graph-is-the-management-plane</id>
+    <updated>2026-07-24T12:00:00Z</updated>
+    <summary>Every action you take in the Microsoft 365 admin center is an API call to Microsoft Graph. The portal is just the interface that initiates it. AI has changed what administrators can do with the layer underneath.</summary>
+    <content type="text">Most IT administrators manage Microsoft 365 through the admin portals. That is a reasonable starting point. The portals expose the most common tasks through a graphical interface, and they work. But the portals are not the management plane. Microsoft Graph is the management plane. The portals are a view of it.
+
+Understanding that distinction changes what you can do as an administrator. It also changes how you think about automation, reporting, and governance at scale.
+
+---
+
+## What Microsoft Graph Actually Is
+
+Every action you take in the Microsoft 365 admin center, the Entra portal, or the SharePoint admin center is an API call to Microsoft Graph. The portal is a client application. Graph is the underlying service. When you assign a license, disable a user, or configure a policy, you are triggering an API call that Graph processes. The portal is the interface that initiates it.
+
+Graph is a single REST API endpoint that provides access to data and management operations across the entire Microsoft 365 surface: users, groups, devices, mail, calendars, files, Teams, security policies, compliance settings. One authenticated API layer for everything Microsoft 365 manages.
+
+The reason most administrators have not engaged with Graph directly is that working with an API traditionally required development skills. You needed to understand authentication flows, write code, handle responses, and debug endpoints. That friction kept Graph in the developer lane and left administrators working through the portal UI.
+
+I am not a software developer. For years, Graph was something I knew existed but treated as someone else's tool. AI has changed that calculation significantly, and it has changed it for administrators specifically.
+
+---
+
+## The Tool That Shows You What the Portal Is Doing
+
+Merill Fernando built a browser extension called Graph X-Ray. It runs in the background while you navigate the Microsoft 365 admin portals. Every time the portal makes a call to Microsoft Graph, Graph X-Ray captures it: the method, the endpoint, the request body, the response. It also generates the corresponding code, including Microsoft Graph PowerShell.
+
+What this means in practice: you perform any admin task normally through the portal, then open Graph X-Ray and see exactly what API call the portal made to accomplish it. You get the endpoint, the payload, and a starting point for turning that action into a script or automation.
+
+This is the bridge most administrators have not had. The portal becomes a teaching tool for Graph. Every click you have been making for years has been calling an endpoint. Now you can see which one.
+
+---
+
+## The Tool That Keeps AI Honest About Graph Endpoints
+
+One of the persistent problems with using AI to write Graph-based code is hallucinated endpoints. The Microsoft Graph API is large and changes frequently. Models trained on older data confidently generate endpoints that have been deprecated, renamed, or never existed. The code looks correct. It fails at runtime.
+
+Merill Fernando also built a Microsoft Graph Skill for AI agents. It gives the AI agent access to a current, searchable Graph API reference so it is working from accurate documentation rather than training data. The result is code that actually runs against live endpoints instead of code that only looks plausible.
+
+Both tools address the same underlying problem from different directions: getting administrators closer to the API layer without requiring them to be developers.
+
+---
+
+## A Practical Workflow
+
+The combination of Graph X-Ray, the Graph Skill, and AI assistance creates a workflow that does not require a development background.
+
+Start with a task you already know how to do in the portal. Something repeatable: bulk license assignment, pulling a report of inactive accounts, auditing group membership. Do it once while Graph X-Ray is running.
+
+Open Graph X-Ray and review the calls the portal made. Note the endpoint and the request structure. That is your starting material.
+
+Bring that endpoint to an AI assistant with the Graph Skill enabled. Ask it to generate the PowerShell logic you need. Review what it produces.
+
+Run it in a test environment. Validate the output. Then operationalize it.
+
+This process does not require writing code from scratch. It requires understanding what you are trying to accomplish and using AI to handle the translation work.
+
+---
+
+## The Consolidation That Is Not Complete
+
+Graph is the direction Microsoft is moving everything toward, but the consolidation is not finished. Exchange Online, SharePoint, Teams, Microsoft Purview, and Microsoft Defender all still have workload-specific APIs and PowerShell modules that run alongside Graph endpoints. Some administrative operations are only available through those workload-specific paths today.
+
+The direction is clear. Graph is becoming the primary management surface. Workload-specific APIs will persist during the transition, but the long-term investment is in Graph. Administrators who build familiarity with it now are building familiarity with the management plane everything else is converging toward.
+
+---
+
+The portal is useful. It is also a ceiling. Every time you use the admin center to accomplish something, you are one layer away from the actual management surface. AI has made that layer more accessible than it has ever been.
+
+The question is whether you are using Graph as the tool it is, or treating the portal as the end of the road.
+
+What has your experience been with Microsoft Graph? Are you using it for automation, or is most of your administration still happening through the portal?</content>
+  </entry>
+  <entry>
+    <title>AI Is Not a Search Engine. It Is a Digital Employee.</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/ai-is-not-a-search-engine-it-is-a-digital-employee"/>
+    <id>https://darrenbell.net/blog/ai-is-not-a-search-engine-it-is-a-digital-employee</id>
+    <updated>2026-07-02T12:00:00Z</updated>
+    <summary>Most organizations are using AI to make individual workflows faster. That is real value, but it is also the smallest version of what AI can do. The bigger opportunity is not in how your team works. It is in how your business runs.</summary>
+    <content type="text">People are using AI to draft emails faster, summarize meeting notes, and get first drafts off the blank page. That is real. It saves time. But it is also the smallest version of what AI can do for an organization. The organizations treating AI as a personal productivity tool are leaving the most significant opportunities untouched. The question most leaders are not asking is: what work is the business doing right now that a digital employee could own?
+
+---
+
+## The Search Engine Mental Model Caps What You Look For
+
+Most people's first experience with AI was asking it a question and getting an answer. That interaction looks a lot like using a search engine, and the mental model stuck. If AI is a search engine, you use it to find information faster. You query it. You close the tab. It has no workflow. It owns nothing. It runs nothing.
+
+That framing limits what you go looking for. Leaders who think of AI as a better search engine look for opportunities at the query level: what questions can my team answer faster? They find small wins. They measure them in minutes saved per employee per week.
+
+The organizations getting real ROI from AI are not asking that question. They are asking what functions the business runs continuously and where a digital employee could take on part of that function. That is a completely different question. It leads to completely different answers.
+
+---
+
+## Personal Workflows vs Company Systems
+
+There is a meaningful difference between a personal workflow and a company system.
+
+A personal workflow belongs to an individual. Drafting your weekly report. Summarizing the meeting you just left. Generating a first draft of a proposal. AI makes all of these faster. The value is real and the friction is low. That is why most organizations start there.
+
+A company system belongs to the business. It runs whether or not any specific person is at their desk. It has inputs, outputs, and a measurable cost. It consumes headcount. It produces results the business depends on. Lead generation is a company system. Invoice processing is a company system. Customer onboarding is a company system. Support ticket triage is a company system.
+
+These systems run every day. They have defined logic. A significant portion of what humans do inside them is pattern matching, volume work, and repetitive judgment. That is exactly where AI performs well.
+
+When AI augments a personal workflow, one person works faster. When AI augments a company system, the business operates differently.
+
+---
+
+## Lead Generation Is the Example Everyone Walks Past
+
+Lead generation is one of the clearest system-level AI opportunities most organizations have not seriously evaluated.
+
+It runs continuously. It has defined inputs: a target customer profile, a market segment, a set of signals that indicate buying intent. It has defined outputs: qualified contacts, outreach, pipeline. A significant portion of what a sales development team does inside that process is research, pattern matching, and personalized outreach at volume. High repetition, clear logic, measurable results.
+
+AI can research prospects at scale against a defined profile. It can draft personalized outreach based on triggers and signals. It can qualify inbound leads against criteria and surface the highest-priority contacts from a pipeline. The human stays in the loop for relationship, context, and judgment. The machine handles the volume work that currently consumes most of the headcount hours.
+
+That is a digital employee doing a defined job inside a business system. It is not a search engine answering a question.
+
+Lead generation is the easy example because the logic is clear and the ROI is measurable. But the same analysis applies to dozens of other systems inside most organizations. The question is whether leadership is looking at that level.
+
+---
+
+## How to Find the Real Opportunities
+
+The framing question that surfaces system-level AI opportunities is not "how can my team work faster?" It is "what does this business run continuously, and where is the logic repetitive enough that a digital employee could own part of it?"
+
+Start with processes that have high volume, defined inputs and outputs, and a measurable cost in headcount or time. Ask what a new employee would spend their first 90 days learning to do in that function. If the answer is largely pattern recognition and judgment within defined rules, that is a strong candidate.
+
+The organizations getting this right are thinking about how the machine operates, not just how their role within it functions. That shift is not technical. It is organizational.
+
+---
+
+AI is not a productivity tool bolted onto the side of your business. It is a category of worker that can own functions your business depends on. The technology is capable. The limiting factor is whether leadership is asking the right question.
+
+Most are still asking how to make their team work faster. The better question is what the business runs every day that a digital employee could take on.
+
+What has your experience been with finding AI opportunities in your organization? Are you seeing teams look at the system level, or is most of the conversation still about personal productivity?</content>
+  </entry>
+  <entry>
+    <title>Open Source AI Has Closed the Gap. Where You Run It Is the Decision.</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/open-source-ai-where-you-run-it"/>
+    <id>https://darrenbell.net/blog/open-source-ai-where-you-run-it</id>
+    <updated>2026-07-02T12:00:00Z</updated>
+    <summary>Open source AI models now match or exceed closed frontier models on major benchmarks. For businesses, that changes the strategic question entirely. It is no longer which subscription to buy. It is where to run the model and who controls the data.</summary>
+    <content type="text">Last month, Zhipu AI released GLM-5.2 and it outscored GPT-5.5 on SWE-bench Pro, one of the most rigorous AI coding benchmarks in use. It is open weight, MIT licensed, and free. Before that, Alibaba's Qwen 3 pushed the benchmarks further. Before that, DeepSeek R1 matched GPT-4 class performance in January 2025.
+
+The performance gap between open source models and closed frontier models has narrowed significantly, and on some of the most demanding benchmarks, open source models are now winning.
+
+For businesses deciding how to adopt AI, that changes the strategic question entirely. It is no longer "which frontier model subscription do we buy?" It is "which open source model do we run, and where do we run it?"
+
+---
+
+## The Problem With the API
+
+The open weight models coming out of Chinese labs are genuinely capable. They are also free to download and run yourself. Most businesses are not doing that. They are using the API or the web interface, which means the inference is happening on servers in China.
+
+China's National Intelligence Law, passed in 2017, requires organizations operating in China to cooperate with state intelligence work. The Chinese government can compel access to data stored on those servers. DeepSeek, Qwen, and GLM all carry this exposure when accessed through their hosted APIs. GLM-5.2 ships under an MIT license that lets anyone download the weights, but running 744 billion parameters on your own hardware is not a realistic option for most organizations without a deliberate infrastructure strategy.
+
+The answer is not to avoid these models. The answer is to not use their API.
+
+---
+
+## Running Open Source Models on Infrastructure You Control
+
+When the model weights are open, you decide where the inference happens. The options range from managed cloud services to dedicated hardware, and the right fit depends on what your organization already operates and how much control you need over the stack.
+
+For organizations in the Microsoft ecosystem, Azure AI Foundry provides access to thousands of open source models from Hugging Face deployed directly within your Azure tenant. Inference runs inside your cloud boundary under your existing data governance policies, with no data leaving your Azure environment. AWS Bedrock offers a comparable approach for organizations already invested in AWS infrastructure. Both are managed paths that remove the complexity of building and maintaining the inference stack yourself.
+
+Beyond the major hyperscalers, dedicated GPU cloud providers, on-premises hardware, and hybrid approaches all represent viable paths depending on data residency requirements, latency needs, and existing infrastructure investments. The common thread across all of them is that inference happens in an environment your organization controls, under terms you negotiated, in a jurisdiction you chose.
+
+---
+
+## The Co-Location Transition Nobody Is Talking About Yet
+
+Traditional co-location providers have been losing ground to Azure and AWS for the better part of a decade. The hyperscaler value proposition of managed infrastructure, global scale, and consumption-based pricing has steadily eroded the case for maintaining your own hardware in a third-party facility.
+
+AI inference is going to reverse that pressure, but not in the way most people assume.
+
+The transition is not about co-lo facilities hosting customer-owned GPU rigs. It is about co-lo providers owning the hardware themselves and renting inference capacity directly. That is a more significant business model shift, and it is a natural one. These facilities already have what inference workloads require: dense power capacity, precision cooling, physical security, and high-bandwidth connectivity. The missing piece has been the economics of the GPU hardware itself.
+
+That is changing. As next-generation inference chips reach the market and fabrication capacity expands, GPU hardware costs are coming down and supply is increasing. The two go directly hand in hand. When the economics reach an inflection point, co-lo providers can invest in GPU hardware at competitive prices and offer rented inference capacity at rates that undercut hyperscaler pricing, without the global redundancy overhead and margin requirements that make cloud inference expensive.
+
+For co-location providers, this is the transition that stops the erosion. They already have the physical plant, the enterprise customer relationships, and the operational expertise. Adding rentable inference hardware turns them from passive real estate into active infrastructure providers competing directly in the AI compute market.
+
+For businesses, it opens a path to frontier-grade inference capacity without purchasing and maintaining the hardware, without routing data through a hyperscaler, and with contractual jurisdiction guarantees a cloud API cannot provide.
+
+---
+
+## This Is an Infrastructure Decision, Not a Software Purchase
+
+The businesses that get this right over the next two years are going to treat AI adoption as an infrastructure strategy, not a subscription decision.
+
+The open source models are already frontier-quality. Azure AI Foundry and AWS Bedrock make self-hosted inference accessible today without building the stack from scratch. The co-location path is coming as hardware economics shift. Organizations that build the internal capability to evaluate, deploy, and govern open source models on infrastructure they control will have cost flexibility, data sovereignty, and architectural independence as the model landscape continues to evolve.
+
+Organizations that sign multi-year API contracts with frontier labs are going to find themselves paying for a performance advantage that no longer exists, under data handling terms they did not fully evaluate, at a moment when a capable and self-hostable alternative was already available.
+
+The capability is free. Where you run it is the decision.
+
+How is your organization approaching AI infrastructure? Are you running models in your own environment or relying on frontier API providers?</content>
+  </entry>
+  <entry>
+    <title>HIPAA in the Cloud: What Healthcare IT Actually Requires at the Operational Level</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/sre-in-practice-from-concepts-to-culture"/>
+    <id>https://darrenbell.net/blog/sre-in-practice-from-concepts-to-culture</id>
+    <updated>2026-04-27T12:00:00Z</updated>
+    <summary>Most healthcare IT compliance failures aren't technical failures. They're operational ones: gaps in process, gaps in documentation, and gaps in the daily discipline that keeps a compliance posture intact. Here's what it actually takes.</summary>
+    <content type="text">HIPAA compliance failures rarely happen because the technology was wrong.
+
+They happen because someone shared a file the wrong way. Because a terminated employee's account wasn't deprovisioned on the same day their badge was deactivated. Because a vendor relationship existed without a signed BAA because procurement didn't flag it. Because audit logs existed but no one was actually reviewing them.
+
+The technology can be configured correctly, and an organization can still fail an audit, because the compliance posture is not the configuration. It's the operational discipline that keeps the configuration meaningful over time.
+
+I spent six years owning the IT compliance posture in a healthcare environment. Here's what I learned about what it actually takes.
+
+---
+
+## Compliance Is an Operational State, Not a Project Outcome
+
+The most dangerous framing in healthcare IT compliance is treating it as a project.
+
+Projects have completion dates. You implement the controls, you document them, you pass the audit, you move on. But HIPAA doesn't have a completion date. The threat landscape changes. Personnel turn over. New systems get added. Vendors change their practices. Each of these events is a potential gap in your compliance posture if you're not actively maintaining it.
+
+The organizations that maintain clean compliance postures treat it as a continuous operational discipline:
+
+- **Access reviews happen on a schedule**, not just after incidents
+- **New vendor relationships trigger a BAA review process automatically**, not as an afterthought
+- **Terminated employees lose access same-day** because the process is automated, not because IT manually handles every offboarding
+- **Policy exceptions are documented** because the documentation requirement is built into the exception process
+
+None of these require expensive tooling. They require process discipline and the organizational authority to enforce it consistently.
+
+---
+
+## Microsoft 365 in Healthcare: What the Configuration Actually Needs to Include
+
+M365 is the dominant productivity suite in healthcare, and Microsoft's HIPAA BAA covers most M365 services. That coverage is meaningful, but it doesn't configure compliance for you.
+
+The M365 features that matter most for HIPAA operational compliance:
+
+**Data Loss Prevention (DLP) policies.** PHI takes many forms: patient names with diagnoses, dates of birth with account numbers, Social Security Numbers. DLP policies can detect and block sharing of PHI patterns through email, Teams, and SharePoint. The default policies Microsoft provides are a starting point; the policies that protect your specific organization require customization based on your data patterns.
+
+The critical configuration decision: **block vs. audit**. A block policy stops the sharing attempt. An audit policy logs it and notifies. In my experience, starting with audit-then-block gives you visibility into existing sharing patterns before enforcement, which prevents the operational disruption that comes from blocking workflows people didn't know were non-compliant.
+
+**Retention policies and litigation holds.** HIPAA requires a 6-year retention period for compliance documentation: policies, procedures, and training records. Medical record retention periods are governed by state law and vary, but are typically longer. M365 retention policies can enforce both, automatically preventing premature deletion and managing accumulation. Litigation hold capability is essential for legal and compliance purposes and should be tested before it's needed.
+
+**Microsoft Defender for M365.** Phishing and business email compromise are the leading vectors for healthcare data breaches. Defender's anti-phishing, safe links, and safe attachments controls are not optional in a healthcare environment. They're table stakes. The configuration that matters most: impersonation protection for executive and clinical leadership, whose email accounts are the highest-value targets.
+
+**Communication Compliance.** For organizations subject to additional regulatory oversight or with specific compliance requirements, Communication Compliance provides the supervisory review capability that HIPAA-covered entities sometimes need. This is not a universal requirement, but it's one to understand before an auditor asks whether you have it.
+
+---
+
+## Conditional Access: The Identity Layer That Makes Everything Else Defensible
+
+The most important security control in a Microsoft-first healthcare environment is Conditional Access.
+
+A correctly configured Conditional Access policy answers the auditor's core access control questions: who can access clinical systems, from what devices, under what conditions, and what happens when those conditions aren't met?
+
+**The policies that matter most in a healthcare environment:**
+
+**Require MFA for all users accessing clinical systems.** This is not optional. The authentication event creates the audit record that demonstrates the person accessing the system was verified at the time of access. Multi-factor authentication is the most effective single control against credential-based compromise.
+
+**Require compliant or Microsoft Entra hybrid joined devices.** A compliant device policy ensures that devices accessing clinical systems meet a minimum security standard: encrypted, up to date, managed by Intune. This prevents the scenario where a personal device, potentially compromised, potentially shared, accesses patient data without any organizational visibility.
+
+**Block legacy authentication protocols.** Basic Auth doesn't support MFA. Any device or application authenticating via Basic Auth, including IMAP and POP3 clients that haven't been migrated to OAuth2, is a gap in your MFA coverage regardless of how well your Conditional Access policies are configured. Blocking Basic Auth and requiring Modern Authentication closes that gap. Microsoft has been deprecating Basic Auth for Exchange Online protocols since 2022.
+
+**Implement risk-based Conditional Access for high-risk sign-ins.** Entra ID evaluates sign-in risk in real time based on factors like impossible travel, anonymous IP usage, and known malicious IP ranges. A risk-based policy that requires step-up verification for high-risk sign-ins catches credential compromise scenarios that static policies miss.
+
+The configuration of these policies is not the hard part. The hard part is maintaining them as the organization changes: new applications added to the tenant, new devices types introduced, new vendor access requirements. Conditional Access policy drift is a real operational risk.
+
+**Operational discipline required:** a quarterly policy review, documented, that verifies the policy set still matches the current environment and access requirements.
+
+---
+
+## The Vendor Management Problem
+
+Healthcare organizations work with dozens of vendors who have some level of access to systems containing or adjacent to PHI. Each of those relationships requires a Business Associate Agreement.
+
+The compliance failure mode I've seen most often: a vendor relationship exists without a current, signed BAA because the relationship predated the compliance program, or because procurement didn't understand the BAA requirement when the contract was signed.
+
+**The operational fix is process, not technology:**
+
+Every new vendor relationship involving access to organizational systems goes through a review that includes: does this vendor have access to PHI? If yes, is a BAA in place? If no BAA exists, the relationship doesn't proceed until one is executed.
+
+That process needs to exist independently of any individual's knowledge of the requirement, which means it needs to be documented, communicated to everyone involved in procurement and vendor onboarding, and owned by someone with the authority to stop a vendor relationship that hasn't met the requirement.
+
+At Premier Health, building that process into the vendor onboarding workflow eliminated the category of risk entirely. The BAA question became automatic, not exceptional.
+
+---
+
+## What Auditors Actually Look For
+
+HIPAA audits, whether OCR audits or third-party assessments, are fundamentally documentation reviews. The auditor wants to see:
+
+1. **That controls exist.** The policies, the configurations, the technical controls.
+2. **That controls are maintained.** Access reviews, policy updates, documentation that reflects the current state.
+3. **That incidents were handled appropriately.** Documentation of any security incidents, the assessment of whether PHI was affected, and the breach notification decision.
+4. **That training happened.** Evidence that employees received HIPAA training and understood their obligations.
+
+The organizations that struggle with audits are usually the ones where controls exist technically but aren't documented consistently, or where the documentation reflects an earlier state of the environment that doesn't match what's actually deployed.
+
+**The audit readiness discipline:** treat every control change as a documentation event. When a Conditional Access policy changes, document why. When an access review happens, document the results. When a vendor BAA is signed, file it. The documentation burden is light if you do it continuously; it's overwhelming if you try to reconstruct it before an audit.
+
+---
+
+## The Leadership Dimension
+
+Compliance is ultimately a leadership problem, not a technical one.
+
+Technical controls can be configured correctly and still fail if leadership doesn't enforce them consistently. If a senior clinical staff member is exempt from MFA because they complained loudly enough, the MFA policy has a hole. If a vendor relationship bypasses the BAA process because a department head wants to move fast, the vendor management process has a hole.
+
+The IT leader's job is to build the processes, configure the controls, and then hold the line when the organization pushes back, which it will.
+
+The most useful thing I've found for holding that line: framing compliance requirements as organizational protection, not IT bureaucracy. The controls exist to protect the organization, the patients, and the staff, not to create friction. When that framing is consistent and credible, the compliance culture develops. When it's absent, compliance becomes an adversarial relationship between IT and the rest of the organization.
+
+---
+
+**The bottom line:** HIPAA compliance in a cloud environment is achievable and maintainable. The technology, M365, Azure, Entra ID, provides the controls. What keeps those controls meaningful is the operational discipline to maintain them, the process to enforce them, and the leadership to make the organization take them seriously.
+
+Get the process right. The technical configuration is the easier part.
+
+---
+
+*Operating Microsoft 365 or Azure in a healthcare environment? The compliance requirements are real, but there are clear patterns that work. [I'm happy to talk through specifics.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>Copilot Is Ready. Your Tenant Isn't.</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/microsoft-365-ai-readiness-permissions"/>
+    <id>https://darrenbell.net/blog/microsoft-365-ai-readiness-permissions</id>
+    <updated>2026-04-23T12:00:00Z</updated>
+    <summary>Everyone thinks their Microsoft 365 environment is locked down enough to deploy AI tools. MFA is on. Permissions are set. What they haven't looked at is the sharing sprawl underneath: the Anyone links that never expired, the contractor guest accounts still sitting in SharePoint groups. Copilot follows Microsoft's permissions exactly. The problem is the permissions you forgot you set.</summary>
+    <content type="text">Your Microsoft 365 environment has MFA enabled. Roles are assigned. You've done the security basics. On paper, it looks ready for Copilot.
+
+It probably isn't.
+
+Not because your intentional security configuration is wrong, but because underneath it, there's a layer of sharing decisions nobody made deliberately. Links that were created and never expired. Guest accounts provisioned for a contractor six months ago and never disabled. SharePoint libraries with default permissions that nobody changed because nobody knew the default was the problem.
+
+Microsoft Copilot respects Microsoft's permissions model exactly. It won't surface a file to someone who doesn't have access. The problem is that in most Microsoft 365 environments, more people have access to more files than anyone intended, and nobody audited it before turning on a tool that can search and summarize everything.
+
+---
+
+## How Oversharing Happens Without Anyone Trying
+
+The most common blind spot I see across Microsoft 365 environments isn't a misconfiguration someone made deliberately. It's the configuration nobody changed.
+
+**"People in your organization" links are often set as the org-level default, and many tenants have never changed it.** When a user shares a document in SharePoint or OneDrive, the default link type in tenants that haven't been hardened is one that grants access to any authenticated member of the organization. The user clicks share, copies the link, pastes it into an email, and sends it to one person. What they actually created is a link that any colleague can redeem.
+
+**The default permission on those links is Edit, not Read.** The employee who shared a budget document with their manager didn't intend to give any colleague who receives that link write access to a budget spreadsheet. But that's what the link does.
+
+Here's how the exposure plays out. That link is in an email. The email gets forwarded: to a broader team, to someone cc'd by mistake, to a distribution list. Any org member who clicks it can redeem it and gain access. Once they do, Copilot can surface that document for them. An employee who was never supposed to see that file asks Copilot a question about budgets. Copilot finds it. Copilot answers with it.
+
+No one breached anything. The permissions worked exactly as configured. That's the problem.
+
+---
+
+## Guest Accounts Are the Quiet Side of the Same Risk
+
+Shared links are visible when you know to look. Stale guest accounts are quieter.
+
+**Every contractor, vendor, and partner who was granted guest access to your Microsoft 365 tenant is still there until someone removes them.** Most organizations provision guest accounts when the relationship starts and forget them when it ends. The account stays active. The group memberships stay intact. The SharePoint library permissions set up for that engagement are still assigned.
+
+Copilot with Graph access traverses your SharePoint environment without distinguishing between an active employee and a guest account that hasn't been used in eight months. If the permissions say accessible, it's accessible.
+
+The engineers in your organization who manage Microsoft 365 already know this. The audit hasn't happened because it's not on the priority list, and it won't be until leadership makes it one.
+
+---
+
+## What AI-Ready Actually Looks Like
+
+Getting ready for Copilot isn't a one-time project. It's a posture shift that requires ongoing discipline. Here's what the organizations that do it right actually change:
+
+**Harden the global sharing configuration.** Set the default link type to Specific people. Change the default permission to Read. Microsoft changed the out-of-the-box default to Specific people in July 2024, but any tenant created before that may still be running the old default, and even new tenants need this verified. These two settings stop new oversharing before it accumulates. They don't fix what's already there, but they stop it from getting worse.
+
+**Set link expiration policies.** Sharing links should have a maximum lifetime. External links especially. Most tenants have no expiration configured, which means links created three years ago are still live and still granting access.
+
+**Audit and disable unused guest accounts.** Pull the guest account report, filter for accounts with no sign-in activity in 90 days, and disable them. Then make this a quarterly process, not a cleanup you do once before a Copilot rollout.
+
+**Disable resharing.** If you send someone a link, they shouldn't be able to forward it to someone else and extend that access further. This is often enabled by default.
+
+**Require admin consent for third-party applications.** Any app requesting Microsoft Graph permissions to read SharePoint or OneDrive data, including AI tools and the third-party model providers now available through Copilot, should require explicit approval before it gets access.
+
+**Treat least privilege as a standing operating principle, not a project.** Every permission decision should start with the question: does this person actually need this access? That mindset doesn't take hold from the engineering team up. It has to come from leadership down.
+
+---
+
+## The Reason This Can't Wait
+
+Permission sprawl in Microsoft 365 has always been a governance problem. Most organizations have tolerated it because the practical consequences were manageable: the occasional file accessible to someone who shouldn't have it, noticed when it caused a problem.
+
+Copilot changes the consequence, not the root cause.
+
+A forgotten "People in your organization" link used to mean one document was more accessible than intended: a risk that materialized only if someone stumbled across it. With Copilot, the risk materializes the moment that link gets forwarded to someone who wasn't supposed to have it. They redeem it. They have access. Copilot can now answer their questions using content they were never meant to see.
+
+The exposure risk most organizations aren't thinking about is internal. It's an employee in one department using Copilot to surface information from another department that was never meant to be shared, because someone sent an email with the wrong default link three years ago.
+
+That's the AI readiness problem. It isn't glamorous. It's an audit and a settings review and a governance conversation that most organizations have been deferring. The right time to have it is before you roll out the tool that makes the consequences visible.
+
+---
+
+*Getting ready for Copilot or trying to understand where your Microsoft 365 permissions actually stand? [I'm happy to walk through what a readiness assessment looks like.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>The Gap Between Technical Expert and Operational Leader</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/from-engineer-to-director-lessons-in-tech-leadership"/>
+    <id>https://darrenbell.net/blog/from-engineer-to-director-lessons-in-tech-leadership</id>
+    <updated>2026-04-19T12:00:00Z</updated>
+    <summary>Technical expertise gets you into IT leadership. The ability to think about business outcomes, own operational risk, and develop other people is what determines whether you succeed once you're there.</summary>
+    <content type="text">Technical expertise gets you into leadership. It is not what keeps you there.
+
+I've watched technically strong engineers step into IT management roles and struggle, not because they couldn't architect the systems, but because the job changed and they didn't realize it. The problems that mattered most weren't architecture problems. They were people problems, budget problems, communication problems, and operational discipline problems.
+
+I've also watched people with less technical depth succeed at the manager and director level because they understood something essential: **at some point, your value shifts from your own output to the output of the organization you lead.**
+
+This post is about that shift: what it actually looks like, why it's hard, and what it means for anyone building toward executive-level IT leadership.
+
+---
+
+## What Changes When You Lead a Team
+
+When you're an individual contributor, your output is largely under your control. You design the system, write the script, configure the service. When you have a productive day, you know it.
+
+When you're leading a 12-person IT organization, as I did in a healthcare environment, your output is the team. You move at the speed of other people's growth, which is slow, non-linear, and only partially under your influence. The feedback loop on your decisions stretches from weeks to years.
+
+This is uncomfortable if you're used to the fast feedback of technical work. The instinct is to drop into the technical problems because that's where you can see immediate impact. You know the answer. You can fix it faster than explaining it to someone else.
+
+That instinct is worth resisting.
+
+Every time you solve a problem that someone on your team could have solved, even more slowly, even less elegantly, you've chosen your own short-term productivity over their long-term capability. Do that consistently and you've built a team that waits for direction instead of developing judgment.
+
+**The shift to make:** from being the best technical resource in the room, to being the environment in which good technical decisions get made without you.
+
+---
+
+## The Problems That Actually Consume Your Time
+
+Nobody tells you how much of IT leadership is non-technical.
+
+In a healthcare environment, I spent significant time on:
+
+- **Vendor management**: negotiating contracts, holding vendors accountable under BAAs, managing relationships when something goes wrong
+- **Budget ownership**: building and defending the annual budget, explaining variances, making the case for investment
+- **Compliance accountability**: owning the organization's HIPAA posture, not just the technical controls but the policies, the training, the audit documentation
+- **Stakeholder communication**: translating technical risk into language that means something to clinical leadership and finance
+- **Personnel decisions**: hiring, performance management, having difficult conversations, developing people toward their next level
+
+None of that is architecture work. But all of it directly determines whether your IT organization earns the trust and resources it needs to do good technical work.
+
+The leader who is only comfortable with technical problems will treat everything else as distraction. The leader who understands that these *are* the job will develop the operational and organizational skills that define executive effectiveness.
+
+---
+
+## Budget Ownership Changes How You Think
+
+Owning a budget is clarifying in a way nothing else is.
+
+When you have budget accountability, cost stops being an abstract concern and becomes a concrete one. You stop thinking "that's expensive" and start thinking "is that the best use of these dollars compared to the alternatives?" You develop instincts about where money gets wasted, what vendors actually deliver value, and how to make a business case that leadership will approve.
+
+Managing cost in a healthcare IT environment taught me that the discipline of cost optimization is almost entirely operational, not technical. Most waste exists because no one owns the outcome. Licenses accumulate because there's no process to reclaim them. Environments stay up because decommissioning requires effort and no one has assigned the work.
+
+When I eliminated a $79K annual Azure Virtual Desktop environment and documented $48K in licensing savings through a rigorous audit, the technical work was straightforward. What made it possible was having the organizational authority to own the outcome, the budget visibility to identify the waste, and the stakeholder relationships to make the change without friction.
+
+Technical skill got me to the point where I could identify those opportunities. Budget ownership and operational authority are what let me capture them.
+
+---
+
+## Translating Between Technical and Executive
+
+One of the most undervalued skills in IT leadership is the ability to move fluently between technical detail and business framing.
+
+Most technical people can explain what they built. Fewer can explain why it matters to someone who doesn't care about the technology.
+
+When I presented the case for a cloud analytics platform at Premier Health, the conversation with clinical leadership wasn't about the underlying architecture. It was about: clinical staff currently wait [X amount of time] to generate reports that inform patient care decisions. This solution reduces that to [Y amount of time]. Here's what that's worth to the organization.
+
+The technical architecture enabled the outcome. The business case got the investment approved.
+
+This translation capability, understanding the technical depth well enough to be credible with engineers, and understanding the business impact well enough to be credible with executives, is what separates IT leaders who get resources from those who complain about not having them.
+
+**The discipline to develop:** every significant technical initiative should have a clear answer to "what business problem does this solve, and how will we know we solved it?"
+
+---
+
+## Building a Team That Outlasts You
+
+The most durable thing a leader builds is a team with the judgment to operate effectively without constant direction.
+
+This means investing in people in ways that don't pay off immediately:
+- Taking time to explain the reasoning behind decisions, not just the decisions
+- Giving people problems that stretch them before they're fully ready
+- Letting people make mistakes in controlled contexts and learn from them
+- Creating explicit development paths so people can see where the work leads
+
+In a healthcare IT environment, this also means building the operational documentation and processes that survive personnel transitions. A 12-person team running HIPAA-compliant operations cannot be dependent on any individual's knowledge. The organization needs to be able to function when someone leaves, gets sick, or moves on.
+
+That kind of institutional durability is an executive concern, not a technical one. It requires thinking about the organization as a system: one that needs to be reliable and resilient, just like the infrastructure it manages.
+
+---
+
+## The Mindset Shift That Matters Most
+
+The engineers I've seen struggle in leadership roles tend to have one thing in common: they still measure their own value by their personal technical output.
+
+The leaders I've seen succeed at the manager and director level share a different orientation: they measure their value by the outcomes the organization achieves, and they're willing to do whatever the organization needs, technical or otherwise, to drive those outcomes.
+
+That's a mindset shift, not a skill upgrade. And it's one worth making deliberately, before a leadership role forces the issue.
+
+The technology is usually the easy part. The operational and organizational work is where it gets hard, and where the real leverage is.
+
+---
+
+*I write about technology leadership and cloud architecture from the perspective of someone building toward operational executive roles: connecting technical decisions to business outcomes, and sharing what I've learned along the way. [Get in touch](/contact/) if you're navigating a similar path.*</content>
+  </entry>
+  <entry>
+    <title>FinOps in Practice: What Actually Works When Cloud Costs Get Out of Control</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/finops-cloud-cost-optimization"/>
+    <id>https://darrenbell.net/blog/finops-cloud-cost-optimization</id>
+    <updated>2026-04-15T12:00:00Z</updated>
+    <summary>Most cloud cost problems don't start with architecture. They start with ownership. Here's the four-phase operational framework that actually delivers lasting results.</summary>
+    <content type="text">Cloud cost problems rarely start with architecture. They start with operations.
+
+Most organizations don't have a cost problem because they chose the wrong services or instance types. They have a cost problem because **no one owns the outcome**. Engineers provision resources without cost visibility. Finance tracks spend but can't influence decisions. Waste accumulates because there's no accountability.
+
+The pattern is consistent: tooling gets added, dashboards get built, but nothing changes. Costs continue to climb.
+
+Fixing cloud spend is not a tooling problem. It's an operational discipline problem.
+
+I've applied the framework below across healthcare and managed services environments and documented over **$127K in annual savings**, from licensing audits, environment rationalization, and storage tier optimization, without changing any core architecture. The work is organizational, not technical.
+
+---
+
+## The Reality of Cloud Cost Optimization
+
+Cloud cost optimization is mostly behavioral, not technical.
+
+If the people creating resources don't understand cost, and the people tracking cost can't enforce change, optimization will fail. It doesn't matter how advanced the tooling is.
+
+The foundation requires four things to be true simultaneously:
+
+- **Visibility** exists at the team level
+- **Ownership** is clearly defined
+- **Waste** has consequences
+- **Cost** is treated as an engineering metric, not a finance problem
+
+Without all four, everything else is noise.
+
+---
+
+## Phase 1: Establish Visibility
+
+Before anything can be optimized, it has to be understood. In practice, most environments lack even basic visibility.
+
+**The common failure point is tagging.**
+
+Without consistent tagging, there is no way to attribute cost. You cannot answer basic questions like:
+
+- What does a specific system cost to run?
+- Which team is responsible for a spend spike?
+- Where is non-production spend occurring?
+
+Once tagging is enforced and tied to accountability, cost visibility becomes actionable instead of theoretical. A useful forcing mechanism: route untagged spend to a separate cost center owned by the VP of Engineering. Nothing motivates tagging compliance faster than a CFO asking questions.
+
+At the same time, enable anomaly detection early. Unexpected spend is common, forgotten GPU clusters, misconfigured autoscaling, runaway data transfer, and catching it quickly prevents avoidable loss.
+
+> This phase is less about optimization and more about creating a reliable view of reality. You cannot improve what you cannot see.
+
+---
+
+## Phase 2: Eliminate Obvious Waste
+
+Once visibility exists, the first meaningful reductions come from removing waste that should never have existed.
+
+Typical patterns in almost every environment:
+
+| Waste Category | Common Cause |
+|---|---|
+| Idle compute running indefinitely | No lifecycle policy |
+| Detached storage still accruing cost | Forgotten after instance termination |
+| Snapshots with no retention limit | Default settings never changed |
+| Temporary infrastructure never cleaned up | No ownership, no expiry |
+| Non-production environments running 24/7 | No scheduled shutdown |
+
+These are not complex problems. They are operational gaps.
+
+Cleaning this up does not require architectural changes. It requires discipline, communication, and enforcement. This phase consistently produces fast, defensible cost reduction, typically 15-25% of total spend, with minimal risk.
+
+**Real-world example:** A licensing audit in a healthcare environment identified $48, 000 in annual spend on unassigned or inactive licenses: accounts that had accumulated through turnover, role changes, and service trials that were never cleaned up. In the same environment, an Azure Virtual Desktop deployment audit found a $79, 000 annual cost with utilization patterns that didn't justify the deployment; the legitimate use cases were addressed through better Conditional Access policies at a fraction of the cost. Neither required new tooling. They required visibility and the willingness to act on what the data showed.
+
+---
+
+## Phase 3: Align Spend With Reality
+
+After waste is removed, the next step is aligning pricing models with actual usage.
+
+Cloud providers charge a premium for flexibility. Most production workloads are not fully variable. They have predictable baselines. You are paying on-demand rates for stability you already know you need.
+
+Optimizing this layer involves:
+
+1. **Understanding steady-state usage**: measure actual consumption patterns over 60-90 days after rightsizing
+2. **Applying commitment-based discounts** where usage is stable and predictable
+3. **Maintaining flexibility** for variable workloads: don't over-commit
+
+**A critical sequencing note:** commit to pricing *after* rightsizing, not before. A common and expensive mistake is locking in commitment-based discounts before workloads are properly sized. That locks in inefficiency at a discount: you still overpay, just less visibly.
+
+Done correctly, this phase can reduce cost 30-70% on committed workloads without changing any architecture: only how it is paid for. Azure Reserved Instances alone offer up to 72% savings versus on-demand pricing on eligible VM families.
+
+---
+
+## Phase 4: Optimize Architecture Where It Matters
+
+The deeper savings require engineering changes. This is where effort increases and trade-offs become real.
+
+**Common high-impact areas:**
+
+**Data transfer costs** are frequently the hidden driver of bills that don't respond to compute optimization. Poor resource placement, cross-AZ traffic, and uncompressed origin responses are typical culprits. Audit data movement before assuming compute is the problem.
+
+**Storage tiering** is consistently overlooked. Not all data is hot. Object storage lifecycle policies and archival tiers exist for a reason, use them. Most environments keep years of data on the highest-cost tier by default. In a healthcare data environment, implementing lifecycle policies that moved clinical data older than 90 days to cold storage tiers produced $1, 500 per month in immediate, ongoing savings, from a one-time configuration effort against data that had been accumulating for years.
+
+**Managed service economics** cut both ways. Sometimes managed services save money once operational overhead is factored in. Sometimes they're egregiously overpriced at scale compared to self-hosted alternatives. Evaluate each category on its own merits rather than applying a blanket policy.
+
+**Over-engineered systems** carry overhead that compounds. A distributed system with more moving parts than the problem requires costs more to run and more to maintain. Simplicity is a cost optimization strategy.
+
+These optimizations are selective, not universal. Focus effort where it materially impacts total spend, not where it's technically interesting.
+
+---
+
+## What Makes It Stick
+
+Most cost optimization efforts fail because they are treated as one-time projects instead of ongoing operational practices. The cost comes back. Sometimes faster than it left.
+
+Sustainable outcomes require structural change:
+
+- **Teams see and own their cost**: weekly visibility, not quarterly reports
+- **Cost is reviewed regularly**, not reactively after a budget breach
+- **Optimization is built into engineering cycles**, not a separate initiative
+- **Cross-team collaboration exists** to share patterns and decisions
+- **Cost sits alongside performance and reliability** as a first-class engineering metric
+
+When cost becomes part of how systems are built and operated, improvements persist. When it doesn't, regression is guaranteed: usually within two quarters of the project being declared complete.
+
+---
+
+## Bottom Line
+
+Cloud cost optimization is not a technical challenge. It is an operational one.
+
+If ownership, visibility, and accountability are not in place first, no amount of tooling or architectural sophistication will produce lasting results. I've seen organizations spend six figures on FinOps platforms while their bill continued to grow, because the platform couldn't fix the fact that no one was accountable for the outcome.
+
+Get the operational foundation right. The technical optimizations are straightforward once you do.
+
+**The question to answer before starting any cost reduction effort:** *Who is accountable for this number, and what can they actually change?* If you can't answer that clearly, start there.
+
+---
+
+*Have a cost problem that's resisted previous optimization attempts? The cause is almost always organizational, not architectural. [I'm happy to talk through it.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>Why File Servers Are a Leadership Problem, Not a Storage Problem</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/sharepoint-digital-transformation-file-servers"/>
+    <id>https://darrenbell.net/blog/sharepoint-digital-transformation-file-servers</id>
+    <updated>2026-04-11T12:00:00Z</updated>
+    <summary>Every organization knows file servers are a problem. Most treat it as a storage or technology decision. The ones that successfully migrate to SharePoint treat it as a leadership and organizational design decision first.</summary>
+    <content type="text">Every organization knows file servers are a problem. The evidence is visible in daily work: shared drives full of folders named "OLD, " documents circulated via email because no one trusts the shared drive to have the current version, remote workers who need a VPN and a specific mapped drive to access files they should be able to reach from anywhere.
+
+The solution is well understood. SharePoint Online, as part of Microsoft 365, provides the document management, collaboration, and accessibility that file servers don't. The technology is available. Most organizations already have the licensing.
+
+The migration doesn't happen, or happens badly, because it's treated as an IT project.
+
+IT can migrate the files. IT cannot migrate the behavior. And behavior is what determines whether the new environment works.
+
+---
+
+## What File Servers Actually Cost Organizations
+
+The visible costs of file servers are the storage infrastructure, the backup systems, and the VPN access that remote work made more expensive and more fragile. These are real but not the primary cost.
+
+The invisible costs are larger.
+
+**Knowledge accessibility.** Files on a shared drive are only accessible to people who know where to look and who have been given explicit permission to look there. Institutional knowledge lives in folder structures that made sense to the person who created them years ago. New employees spend weeks learning where things are. People who leave take navigational knowledge with them.
+
+**Version chaos.** "Final, " "Final_v2, " "Final_USE THIS ONE, " "Final_ACTUALLY FINAL": every organization with file servers has this problem. The cost isn't just the frustration; it's the time spent confirming which version is current, the errors that come from working on the wrong version, and the meetings that exist primarily to establish which document is the authoritative one.
+
+**Collaboration friction.** Two people cannot edit the same document simultaneously on a file server. The workflow becomes: download, edit, re-upload, notify. Or email the document back and forth. Or put it in a Teams chat. The result is version proliferation and collaboration that's slower and more error-prone than it needs to be.
+
+**Remote access dependency.** File servers were designed for on-premises access. Remote access requires VPN, which is a performance and security overhead that became much more expensive when remote work normalized. Organizations that didn't address this before 2020 discovered the hard way how brittle file server-dependent workflows are.
+
+None of these costs show up cleanly in IT budgets. They show up in productivity, in employee frustration, and in the quiet organizational dysfunction that comes from people working around their tools rather than with them.
+
+---
+
+## Why Migrations Fail
+
+The technical migration, moving files from a file server to SharePoint, is not the hard part. Tools exist. The process is well-documented. Microsoft provides migration tooling that handles the mechanics.
+
+Migrations fail for organizational reasons:
+
+**Migrating the folder structure instead of redesigning it.** The instinct is to replicate the existing shared drive structure in SharePoint. This is the worst outcome: it preserves all the organizational dysfunction of the file server, minus the benefits of SharePoint's search, metadata, and collaboration features. If you migrate a broken folder structure, you get a broken SharePoint.
+
+**No information architecture decision before migration.** SharePoint is not just a place to store files. It's a platform for organizing and surfacing information. How you structure site collections, document libraries, and metadata determines how usable the result is. This is a design decision that requires input from the people who will use it, not just IT.
+
+**Treating it as a project with an end date.** The migration might have an end date. The adoption work doesn't. People who've been using shared drives for years will default back to old behaviors unless there's consistent reinforcement, training, and, most importantly, leadership that uses the new environment visibly.
+
+**No champions outside IT.** A SharePoint migration that is owned entirely by IT will be perceived as an IT initiative that was done to people, not with them. The organizations that succeed have champions in each business unit: people who were involved in the design, understand the value, and can support adoption within their teams.
+
+---
+
+## What a Successful Migration Actually Requires
+
+The starting point is not file inventory. It's stakeholder conversations.
+
+Who are the heaviest users of the current shared drives? What do they actually need to do with documents, who needs to access them, who needs to create and edit them, how do they need to find them? What does the governance model look like, who is accountable for keeping content current and organized?
+
+The answers to those questions drive the information architecture. The architecture drives the migration design. The migration is the last step, not the first.
+
+The technical implementation, site structure, library design, permissions through security groups rather than direct assignments, metadata taxonomy, search configuration, follows from knowing what the organization actually needs rather than from copying what it had.
+
+The permissions model deserves particular attention. File server permissions tend to accumulate complexity over years of individual exceptions. A SharePoint migration is an opportunity to clean this up: move to security group-based permissions managed through Entra ID, establish a governance model for who can create new sites and libraries, and document the model so it can be maintained.
+
+---
+
+## The Outcome Is Organizational, Not Technical
+
+A successful SharePoint migration is visible in how people work, not in a dashboard.
+
+People stop emailing documents back and forth because co-authoring in SharePoint is easier. Remote workers stop complaining about VPN because SharePoint is browser-accessible from anywhere. Search starts returning useful results because files are named and organized consistently. Onboarding new employees takes less time because institutional knowledge is findable rather than requiring someone to walk you through the folder structure.
+
+The technology enables all of this. But the technology doesn't create it on its own. The information architecture decisions, the adoption work, and the organizational commitment to using the new environment: these are what separate a file migration from a transformation.
+
+That's why this is a leadership problem. IT can build the right platform. Leadership has to make the organizational decision to actually use it differently.
+
+---
+
+*Planning a SharePoint migration or trying to revive one that stalled? The organizational design questions are usually where the project is stuck. [I'm happy to think through the approach.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>Azure in a Healthcare Environment: Architecture Decisions That Actually Matter</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/multi-cloud-architecture-patterns"/>
+    <id>https://darrenbell.net/blog/multi-cloud-architecture-patterns</id>
+    <updated>2026-04-09T12:00:00Z</updated>
+    <summary>Cloud architecture in healthcare isn't just about what works technically. It's about what holds up under a compliance audit, what your BAAs actually cover, and what you can defend to clinical leadership. Here's the framework I use.</summary>
+    <content type="text">Cloud architecture in a regulated environment changes the decision calculus in ways that are hard to appreciate until you've owned the compliance posture yourself.
+
+In a typical enterprise environment, an architecture decision is evaluated on performance, cost, reliability, and operational complexity. In healthcare, every one of those dimensions has a compliance overlay. The question isn't just "does this work?". It's "does this work *and* can we audit it *and* is it covered by our BAAs *and* can we explain it to a HIPAA compliance officer who doesn't care about the technical elegance?"
+
+I've spent six years making those decisions in a healthcare IT environment, and the patterns that held up consistently were the ones that treated compliance as a first-class architectural constraint, not something layered on afterward.
+
+---
+
+## Start with Identity, Not Infrastructure
+
+The most consequential architecture decision in a Microsoft-first healthcare environment is not what Azure services you use. It's how you structure identity.
+
+**Entra ID (formerly Azure AD) is the foundation for everything.** Access to M365, access to Azure resources, Conditional Access policy enforcement, device compliance through Intune: all of it runs through Entra ID. If your identity architecture is loose, your compliance posture is loose, regardless of how well everything else is configured.
+
+In a healthcare environment, this means:
+
+**Conditional Access policies are non-negotiable, not optional.** Every user accessing PHI-adjacent systems needs MFA. Compliant device requirements should be enforced wherever clinically feasible. Location-based policies add a meaningful layer of control for systems with access to sensitive data.
+
+**Privileged Identity Management (PIM) for administrative access.** Standing admin privileges are a HIPAA risk. Just-in-time elevation with approval workflows and audit logging gives you the access control story auditors want to see.
+
+**Group-based licensing and access provisioning.** In a 12-person IT organization, manual licensing and access management doesn't scale and doesn't produce the consistent audit trail you need. Dynamic groups based on HR attributes keep provisioning accurate without manual maintenance.
+
+The identity architecture is where healthcare compliance either holds together or falls apart. Get this right before building anything else on top of it.
+
+---
+
+## Cloud Analytics Infrastructure for Clinical Reporting
+
+One of the more impactful projects I delivered at Premier Health was building the Azure infrastructure that enabled a clinical data analytics solution.
+
+The business problem: clinical staff were waiting unacceptable amounts of time to generate reports that directly informed care decisions. The underlying cause was a combination of legacy on-premises infrastructure and data spread across systems that didn't communicate efficiently.
+
+**My role was the infrastructure layer:**
+
+Designing the Azure environment that a cloud analytics solution could actually run on in a HIPAA-regulated context. That meant: storage architecture with the right access tiers, networking and private endpoints, Entra ID integration for role-based access control, encryption at rest and in transit, and the audit logging configuration that HIPAA requires. In healthcare, none of this is optional: it's table stakes before you can run anything clinical on top of it.
+
+The compliance architecture work is what makes the project possible. You can have the best analytics platform in the world; if the infrastructure underneath it can't pass a HIPAA audit, it doesn't get deployed.
+
+**The outcome:** the clinical reporting solution went live on infrastructure that was compliant, auditable, and operationally maintainable by a small IT team. Clinical staff got faster access to the data they needed to make care decisions.
+
+The lesson: in healthcare IT, the infrastructure and compliance layer isn't the interesting part of the project, but it's the part that determines whether the project happens at all.
+
+---
+
+## Cold Storage and Data Tiering: Where the Savings Are
+
+Healthcare organizations accumulate data at scale. Clinical records, imaging, diagnostic data: retention requirements are long, access patterns are predictable, and storage costs compound over time.
+
+Most healthcare environments have significant data on the wrong storage tier: high-cost active storage for data that hasn't been accessed in years, simply because migrating it requires effort and no one has owned the work.
+
+**Azure's cold storage tiers exist for exactly this use case.**
+
+The architectural pattern is straightforward: classify data by access frequency and retention requirement, then implement lifecycle policies that automatically transition data to Archive or Cold access tiers as it ages. Build the policy once, and the cost reduction is ongoing.
+
+In practice, implementing this across an environment with years of accumulated data that had never been tiered produced $1, 500 per month in storage savings, $18, 000 annually, from a one-time architecture effort. That's not transformational, but it's the kind of defensible, documented savings that build credibility with finance and fund larger initiatives.
+
+**The operational discipline required:** data classification. You cannot implement effective tiering policies without knowing what data you have, how old it is, and what your retention obligations are. In a healthcare environment, that classification work is also required for HIPAA compliance, so the compliance work and the cost optimization work are the same work.
+
+---
+
+## When to Eliminate Rather Than Optimize
+
+Not every Azure cost problem has an optimization solution. Sometimes the right answer is elimination.
+
+Azure Virtual Desktop is a useful service for specific use cases: providing secure remote access to desktop environments, supporting contractors or vendors who need access to internal systems, enabling BYOD scenarios in regulated environments.
+
+It is not the right answer for every remote access requirement, and the costs add up quickly when it's deployed beyond its appropriate use case.
+
+After auditing our AVD environment against actual usage patterns, the finding was clear: the deployment was substantially oversized relative to actual utilization, and a significant portion of the use cases it was solving could be addressed through better Conditional Access policies and Intune-managed devices at a fraction of the cost.
+
+Eliminating the over-deployed AVD environment and replacing the legitimate use cases with appropriate alternatives produced $79, 000 in annual savings.
+
+**The principle:** before optimizing an Azure service, ask whether the service is solving the right problem. Sometimes the most cost-effective architectural decision is the decommission.
+
+---
+
+## The Compliance Audit as Architecture Review
+
+The most useful feedback mechanism I've found for cloud architecture in healthcare is the compliance audit.
+
+An auditor reviewing your HIPAA technical controls is, in effect, reviewing your architecture. They're asking: where is PHI stored? Who can access it? How do you know who accessed it? What happens if someone's credentials are compromised? How would you detect unauthorized access?
+
+If your architecture has gaps, the audit finds them. If your architecture is solid, the audit is documentation.
+
+The organizations I've seen struggle with HIPAA audits are usually the ones that built the technical controls first and tried to map them to compliance requirements afterward. The ones that pass audits cleanly built the compliance requirements into the architecture from the beginning.
+
+**The questions to design against:**
+
+- Can you produce an access log for any PHI system, for any time range, for any user?
+- Can you demonstrate that terminated employees lost access within a defined window?
+- Can you show that encryption is enforced in transit and at rest?
+- Can you demonstrate that your vendors handling PHI have active, signed BAAs?
+
+If you can answer those questions clearly, with evidence, your architecture is in good shape. If you can't, the audit will tell you where the gaps are: ideally before the external auditor does.
+
+---
+
+## Bottom Line
+
+Healthcare cloud architecture is not fundamentally different from enterprise cloud architecture. The services are the same. The principles are the same.
+
+What's different is the weight of compliance requirements, the consequences of getting it wrong, and the need to translate technical decisions into outcomes that clinical and executive stakeholders understand.
+
+The architects who thrive in regulated environments are the ones who see compliance not as a constraint on architecture but as a design requirement: one that, when taken seriously, produces systems that are more auditable, more secure, and easier to defend when it matters.
+
+---
+
+*Building cloud infrastructure in a healthcare environment? The compliance requirements are real but navigable. [I'm happy to talk through the specifics.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>Multi-Tenant Doesn't Have to Mean Multi-Login</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/cross-tenant-sync-mfa-trust"/>
+    <id>https://darrenbell.net/blog/cross-tenant-sync-mfa-trust</id>
+    <updated>2026-03-19T12:00:00Z</updated>
+    <summary>A holding company with multiple subsidiaries needed their people to access SharePoint files across tenants without multiple logins, duplicate licenses, or MFA fatigue. Here's the architecture that got them there.</summary>
+    <content type="text">A holding company running multiple subsidiaries on separate Microsoft 365 tenants has a collaboration problem that looks simple on the surface and isn't. The same problem shows up after acquisitions that haven't consolidated yet, in private equity portfolio structures, and anywhere organizations need to stay operationally distinct but work closely together.
+
+The people doing the work need files from multiple tenants. They don't know or care what a tenant boundary is. They just want access. What they get instead is repeated MFA prompts every time they cross a tenant boundary, a confusing login experience that varies depending on which subsidiary's resources they're trying to reach, and IT fielding a steady stream of access requests and guest account issues.
+
+The obvious fixes are all expensive in different ways. License users in every tenant they need access to, now you're paying for the same person three times. Consolidate the tenants, a project that takes months, disrupts operations, and may not be feasible if the entities need to remain operationally distinct. Use guest access everywhere: you've just traded licensing cost for management burden and you still haven't fixed the MFA friction.
+
+There's a fourth option. It's just not the first thing most people reach for.
+
+---
+
+## The Business Problem
+
+The holding company I worked with had subsidiaries on separate M365 tenants. Each subsidiary had its own SharePoint environment with files that holding company staff needed to access regularly, not occasionally, not for a specific project, but as part of their normal workday.
+
+Two things were non-negotiable:
+
+- Users should not be licensed in multiple tenants. The cost wasn't justified when the same person already had an M365 license in the holding company tenant.
+- There should be one MFA prompt. Getting challenged every time you cross a tenant boundary trains users to resent security controls. That resentment eventually becomes pressure on IT to weaken them.
+
+The goal was a single sign-on experience with a single access point, where holding company staff could reach files in any subsidiary SharePoint without re-authenticating.
+
+---
+
+## The Architecture: Three Components Working Together
+
+**Cross-tenant synchronization** starts in Entra ID. You configure a sync from the holding company tenant outbound to each subsidiary tenant. The holding company's users are provisioned in each subsidiary tenant as B2B collaboration users with member-level access, not guests. They show up in directory search, they're manageable at the tenant level, and when someone leaves the holding company, the sync removes their presence in every subsidiary automatically. No manual guest account cleanup across four tenants.
+
+**Inbound MFA trust** is what eliminates the re-authentication problem. In each subsidiary tenant's cross-tenant access policies, you configure inbound trust to accept MFA claims from the holding company tenant. When a synced user completes MFA in their home environment, the holding company tenant, that authentication is honored when they access resources in any subsidiary. The subsidiary tenants aren't skipping MFA. They're trusting that it already happened, which it did, in the right place.
+
+**The SharePoint landing page** is the piece that makes this feel like a single system to the end user. Each subsidiary has its own SharePoint site with its own content. In the holding company tenant, we built a SharePoint hub that functions as the access point: tiles and links out to the relevant subsidiary SharePoint sites, organized the way the business is organized. Users log in once, land on the holding company SharePoint, and navigate to files in any subsidiary from there. The underlying tenant boundaries are invisible.
+
+---
+
+## What the Experience Looks Like
+
+Before: a user needs a document in a subsidiary's SharePoint. They navigate to an unfamiliar URL, get prompted to sign in again, get an MFA challenge they weren't expecting, and either complete the friction or submit a help desk ticket asking why they need to log in twice.
+
+After: they go to the holding company SharePoint landing page they already have bookmarked. They see tiles for each subsidiary's content area. They click through. The files are there. No additional sign-in. No second MFA prompt. The tenant boundary is invisible.
+
+For IT, the management surface simplifies. User provisioning and deprovisioning is managed in one place: the holding company tenant. The sync handles propagation. Offboarding a user removes their access across all subsidiary tenants as part of the standard process, not as a separate checklist item.
+
+---
+
+## What to Watch
+
+This architecture is not a permanent set-it-and-forget-it configuration. A few things to maintain:
+
+The cross-tenant access policies and sync scope need to match organizational reality. If a subsidiary is acquired, divested, or restructured, the identity trust relationship needs to be updated. Trust that outlives the organizational relationship that justified it becomes an unnecessary access vector.
+
+Scope the sync carefully. Not every holding company user needs to be provisioned in every subsidiary tenant. Sync the users who actually need access to each tenant's resources. The principle of least privilege applies at the tenant level, not just the file level.
+
+The SharePoint landing page architecture requires governance like any other SharePoint environment: someone needs to own it, keep the links current, and manage what gets surfaced where. It's not complex, but it's not self-maintaining.
+
+---
+
+*Running a multi-tenant M365 environment and dealing with cross-tenant access friction? The licensing and authentication architecture matters more than most people realize before they've tried to untangle it. [Happy to talk through the specifics.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>Scaling MSP Operations Without Scaling Headcount: Standardizing Microsoft 365 with CIPP</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/standardizing-msp-client-environments-cipp"/>
+    <id>https://darrenbell.net/blog/standardizing-msp-client-environments-cipp</id>
+    <updated>2026-03-05T12:00:00Z</updated>
+    <summary>Every MSP reaches the same inflection point: the number of client environments outpaces the team's ability to manage them individually. The answer isn't more people. It's operational standardization. Here's how we used CIPP to get there.</summary>
+    <content type="text">Every MSP reaches the same inflection point: you've grown the client base, but the way you manage each environment hasn't changed. Every new client is onboarded slightly differently. Security policies that should be consistent vary by who did the setup. Something changes in a client tenant, a conditional access policy gets modified, a licensing assignment shifts, and you find out when the client calls, not before.
+
+At that point, you're not running a scalable business. You're running a collection of individual consulting relationships, each requiring its own institutional knowledge, each carrying its own risk of configuration drift. Growth makes it worse, not better.
+
+The operational problem isn't lack of capability. It's lack of standardization.
+
+---
+
+## The Business Problem with Manual Multi-Tenant Management
+
+In a managed services environment, the hidden cost isn't the time spent on each task. It's the cognitive overhead of managing environments that don't conform to a standard.
+
+When every client is configured differently, every support interaction starts with "let me check how this tenant is set up." Onboarding a new team member means teaching them the quirks of each environment rather than handing them a playbook. A security incident in one tenant triggers a manual audit of all tenants, because there's no automated way to know which ones have the affected configuration.
+
+The deeper problem is that configuration drift is invisible until it isn't. Tenants that were set up correctly at onboarding accumulate changes: admin settings toggled for troubleshooting, security defaults modified for a specific use case, licensing changes that create coverage gaps. Without a system to detect and surface drift, you're operating on the assumption that things are still configured the way you think they are.
+
+That assumption fails at the worst possible times.
+
+---
+
+## The Approach: Centralized Management and Drift Detection with CIPP
+
+The CyberDrain CIPP (CyberDrain Improved Partner Portal) platform addresses the core operational problem directly: it provides a single management interface across all Microsoft 365 tenants, with the ability to deploy standardized configuration templates and monitor for drift from those standards.
+
+The operational shift this enables:
+
+**Standardized onboarding templates.** Rather than configuring each new client tenant from scratch, onboarding becomes a matter of applying a baseline template, conditional access policies, security defaults, licensing assignments, Teams settings, Exchange configurations, and then customizing from a known starting point. The work shifts from configuration to exception management.
+
+**Drift detection and alerting.** When a setting changes in a client tenant, whether through admin error, a vendor making changes, or a user with elevated privileges, CIPP surfaces that deviation from the standard. You know the configuration drifted before the client does, and before it becomes a security issue.
+
+**Cross-tenant operations at scale.** Tasks that previously required logging into each tenant individually, password resets, license assignments, security group changes, can be executed from a single interface across multiple tenants simultaneously.
+
+---
+
+## What Actually Changed
+
+The operational impact was most visible in two places.
+
+First, onboarding. The time to stand up a new client environment dropped significantly, and more importantly, the result became consistent. The first hour after a new client signs isn't figuring out what they need. It's applying what we already know they need, plus their specific requirements on top.
+
+Second, the reactive-to-proactive shift. Drift detection changed the nature of client interactions around security and compliance. Instead of responding to configuration issues when clients notice something wrong, the conversation becomes: "We detected a change to your conditional access policy last week: here's what it was, here's why it matters, here's what we did." That's a fundamentally different client relationship.
+
+From a business perspective, that shift matters beyond the operational efficiency. Clients who see proactive management perceive more value in the relationship. The same technical work, catching a configuration change, lands differently when you surface it before it causes a problem.
+
+---
+
+## The Broader Principle
+
+CIPP is a tool. The underlying principle, that scalable MSP operations require standardization before automation, and monitoring before incidents, applies regardless of tooling.
+
+Any MSP managing more than a handful of client environments needs to answer two questions honestly: Do we have a defined standard that every client environment should conform to? And do we have visibility into which environments have drifted from that standard?
+
+If the answer to either question is no, growth is working against you. Every new client adds complexity rather than leverage, and the team that felt manageable at 20 clients feels overwhelmed at 50.
+
+Standardization isn't a constraint on serving clients well. It's what makes serving clients well at scale possible.
+
+---
+
+*Managing Microsoft 365 environments across multiple clients or tenants? The standardization and drift detection problems are solvable. [I'm happy to compare approaches.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>PowerShell as Operational Discipline: Automation Lessons from MSP-Scale IT</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/infrastructure-as-code-at-scale"/>
+    <id>https://darrenbell.net/blog/infrastructure-as-code-at-scale</id>
+    <updated>2026-02-26T12:00:00Z</updated>
+    <summary>The value of PowerShell automation in a Microsoft-first environment isn't the hours saved on individual tasks. It's the operational consistency it produces across every client and every environment you manage. Here's how to build it right.</summary>
+    <content type="text">PowerShell gets underestimated.
+
+In conversations about automation and infrastructure as code, the tools that get attention are usually the ones with cloud-native integrations, declarative configurations, and CI/CD pipelines. PowerShell, the workhouse of Microsoft-first environments, tends to get positioned as a legacy automation tool rather than a strategic capability.
+
+That framing is wrong, and expensive.
+
+In a Microsoft-first environment, M365, Azure, Entra ID, Intune, PowerShell is not just the most practical automation tool. It's often the *only* tool that provides the access depth the work requires. And in a managed services context, where you're operating across multiple client environments, the discipline of PowerShell automation is what separates teams that scale from teams that hire more people to keep up with volume.
+
+---
+
+## The Operational Problem Automation Solves
+
+The promise of automation is usually framed as time savings: "this task takes 45 minutes manually, but 2 minutes with the script." That framing undervalues what automation actually delivers.
+
+The real value of automation is **operational consistency**.
+
+When a process runs from a script, it runs the same way every time. The same security groups get assigned. The same licenses get applied. The same compliance policies get attached. The same documentation gets generated. There's no variation because someone was rushing, forgot a step, or applied the process slightly differently than the last person who did it.
+
+In an MSP context, where you're onboarding users and managing configurations across multiple client environments with different standards, that consistency is the difference between an operation that scales and one that depends on institutional knowledge that walks out the door when someone leaves.
+
+In practice, building consistent PowerShell-based provisioning workflows can cut onboarding time significantly. The reduction in hours matters, but the more important outcome is that the process becomes reliable enough to delegate. Any team member with the script can execute a complete onboarding without tribal knowledge.
+
+---
+
+## What PowerShell Actually Covers in a Microsoft Environment
+
+The Microsoft Graph API and the Exchange, SharePoint, Teams, Intune, and Azure PowerShell modules provide comprehensive programmatic access to the Microsoft ecosystem. In practice, this means you can automate nearly any administrative operation that you'd otherwise perform manually.
+
+**The highest-leverage automation targets in M365 and Azure:**
+
+**User lifecycle management.** New user creation, license assignment, security group membership, Intune enrollment trigger, Teams membership: all driven from a single script that takes HR attributes as input and produces a fully provisioned user as output. The same script handles offboarding: license reclaim, group removal, mailbox conversion, account disable, litigation hold if required.
+
+Lifecycle automation is particularly high-value in healthcare and regulated environments because it produces the audit trail that compliance requires. Every provisioning and deprovisioning event is logged in the script execution record, which is something auditors look for.
+
+**License management and reporting.** M365 licensing is expensive and consistently over-provisioned. A weekly script that queries assigned licenses against last sign-in data and flags accounts that haven't been active in 30+ days gives you continuous visibility into licensing waste. The same query, run before a licensing audit, is the starting point for meaningful cost reduction.
+
+When I ran a systematic licensing audit using this approach, the output was $48, 000 in annual savings from reclaiming licenses on accounts that had accumulated through turnover, role changes, and service trials that were never cleaned up. The script took a few hours to write. The savings were immediate and permanent.
+
+**Security posture reporting.** Entra ID and Microsoft 365 Defender expose security configuration data through PowerShell and the Graph API. A weekly report that surfaces accounts without MFA, devices out of compliance with Intune policy, or sign-in risk flags gives the IT team the visibility to act before a problem becomes an incident.
+
+In a healthcare environment, this reporting is also the evidence base for compliance conversations. Being able to pull an MFA adoption report on demand, showing percentage of users enrolled, broken down by department, is the kind of data that makes HIPAA compliance conversations concrete rather than theoretical.
+
+**Azure resource tagging and cost attribution.** Cost governance in Azure depends on accurate tagging. A script that audits resources against your tagging standard and reports on untagged or incorrectly tagged resources, run weekly and piped to a shared dashboard or email report, keeps tagging compliance from drifting. Cost attribution is only as good as the tagging it's based on.
+
+---
+
+## Building Scripts That Are Operationally Maintainable
+
+The failure mode for PowerShell automation isn't writing scripts that don't work. It's writing scripts that work initially and then become unmaintainable.
+
+Scripts that no one understands get abandoned when they break. Scripts that only one person understands create single points of failure. Scripts that work in one environment and fail in another create incidents when someone runs them in the wrong context.
+
+**The practices that produce maintainable automation:**
+
+**Write for the person who inherits the script, not for yourself.** The most valuable comment in a script isn't "this does X". It's "this does X because of Y, and if you change it you'll break Z." Business context and operational reasoning belong in comments. The code says what it does; the comments say why.
+
+**Parameterize everything that might vary across environments.** Client name, tenant ID, license SKU, group naming convention: these belong in parameters or a configuration section at the top of the script, not scattered throughout the logic. A script that requires editing the body to run against a different client is a script that will eventually run against the wrong client.
+
+**Build in error handling and logging.** A script that fails silently is worse than a script that doesn't exist. Every significant operation should produce output that tells you whether it succeeded, and failures should be logged with enough context to diagnose. In an MSP context, this also means your client-facing reporting can be driven from the script's own output.
+
+**Version control your scripts.** Scripts that live in a shared network folder with names like `provision-user-FINAL-v2-USE THIS ONE.ps1` are an operational risk. Even basic version control, a Git repository, even a simple one, gives you change history, the ability to roll back, and a canonical source of truth.
+
+---
+
+## Automation as a Forcing Function for Standardization
+
+One insight from building MSP-scale automation: **you cannot automate what isn't standardized.**
+
+If every client has a different licensing model, a different group naming convention, and a different onboarding checklist, you cannot build a single provisioning script that works across clients. You build one script per client, which means the automation hasn't reduced your operational complexity. It's just encoded it differently.
+
+This is where automation becomes a business conversation, not just a technical one. The discipline of building reusable, cross-client automation requires working with clients to standardize the configurations and processes the automation depends on. That's a client management conversation, a sales conversation, and an operational design conversation, not just a scripting conversation.
+
+The organizations that get the most leverage from automation are the ones that use the automation requirement as a forcing function for standardization. The discipline makes the operation more consistent and more scalable, not just faster.
+
+---
+
+## The Strategic Case for PowerShell Investment
+
+For IT leaders building the case for automation investment, whether that's time to build scripts, tooling, or dedicated resources, the ROI framing that works with executives is not hours saved per task.
+
+It's this:
+
+**Every manual process that runs from a script is a process that no longer depends on specific individuals, runs consistently at any scale, and produces an audit trail.** That's not a time savings. That's organizational capability.
+
+In a healthcare environment, the audit trail argument alone often carries the investment decision. In a managed services environment, the scaling argument does. The combination, consistent, auditable, scalable operations, is the strongest case for treating automation as an operational priority rather than a nice-to-have.
+
+The tooling investment is modest. The PowerShell modules and Graph API access are included in your Microsoft licensing. What requires investment is the engineering discipline to build automation that's maintainable, the organizational discipline to standardize the processes it runs, and the time to build the library of scripts that covers your operational baseline.
+
+That investment pays back quickly, and it compounds.
+
+---
+
+*Running Microsoft 365 or Azure in an MSP or enterprise environment? PowerShell automation is where operational leverage lives. [I'm happy to compare notes.](/contact/)*</content>
+  </entry>
+  <entry>
+    <title>Why I'm Writing This Blog</title>
+    <link rel="alternate" type="text/html" href="https://darrenbell.net/blog/welcome-to-my-blog"/>
+    <id>https://darrenbell.net/blog/welcome-to-my-blog</id>
+    <updated>2026-02-12T12:00:00Z</updated>
+    <summary>After 10+ years in enterprise IT across healthcare and managed services, I've accumulated lessons that took real pain to learn. This is where I share them.</summary>
+    <content type="text">After more than ten years in enterprise IT, designing systems, managing teams, navigating compliance requirements, and fighting the same cost battles in different organizations, I've accumulated a lot of hard-won opinions.
+
+Not the polished, certification-guide kind. The kind that come from being accountable for a HIPAA audit, from watching a licensing decision turn into a six-figure overspend, from trying to explain to a CFO why the Azure bill doesn't match the forecast, from being the person whose phone rings when something stops working at 2am.
+
+This blog is where I share those opinions.
+
+## What This Blog Is (and Isn't)
+
+**This is a practitioner's blog.** I'm not a vendor advocate, not a conference speaker optimizing for applause, and not a consultant selling frameworks that work great in PowerPoint. I'm someone who has spent the better part of a decade doing this work in healthcare and managed services environments, and I write about what I've found to be true in practice.
+
+**This is about the intersection of technology and leadership.** Cloud architecture isn't just a technical discipline. It's an organizational one. The decisions that shape your infrastructure are shaped by budget cycles, compliance requirements, vendor relationships, team capabilities, and executive priorities. I can't write honestly about cloud architecture without writing about those things too.
+
+**This is not vendor-neutral marketing.** My background is Microsoft-first: Azure, Microsoft 365, Entra ID, Intune, Defender. I'll write about what I actually work with, what works, what doesn't, and when the Microsoft way is the right way versus when it isn't.
+
+## Why Now
+
+I've resisted starting a blog for a while. Partly because the internet already has more infrastructure content than anyone can read. Partly because writing takes time I could spend building things.
+
+But I keep finding myself in conversations, with engineers early in their careers, with IT managers navigating their first healthcare compliance audit, with architects trying to make a cost optimization case to leadership, where I wish I had a place to point people. Where I could say: here's how I've thought about this, here's what worked, here's what I wish I'd known before we spent three months going in the wrong direction.
+
+This blog is that place.
+
+I've spent years operating at the intersection of technical depth and business accountability: owning budgets, driving cost outcomes, making compliance calls, and building teams that outlast any individual. That's the lens this blog is written from. Writing in public is how I articulate and pressure-test ideas that I'm already living in the work.
+
+## What to Expect
+
+I'll write in six areas where I have genuine, hands-on depth:
+
+**Azure Architecture:** Entra ID, cold storage design, analytics infrastructure, cost governance, and the architecture decisions that matter in regulated environments. The real trade-offs, not the vendor diagrams.
+
+**Microsoft 365:** Exchange Online, Teams, SharePoint, Intune, Defender: governance, compliance, and the operational discipline required to run M365 in a way that's actually secure and auditable.
+
+**Healthcare IT & Compliance:** HIPAA isn't a checkbox. It's an operational posture. I've spent six years in a healthcare environment and I'll write about what compliance actually looks like in practice, what auditors actually look for, and how to build systems that hold up.
+
+**IT Leadership:** Budget ownership, team development, stakeholder communication, hiring, and the shift from technical expert to operational leader. The skills that matter at the manager and director level are different from the ones that make you a great engineer, and that gap is rarely discussed honestly.
+
+**FinOps & Cost Optimization:** Cloud cost is one of the most misunderstood problems in enterprise IT. I've documented over $127K in savings across licensing audits, environment rationalization, and storage optimization. I'll share frameworks and tactics that have actually moved the needle.
+
+**Security & Identity:** Entra ID, Conditional Access, MFA strategy, Fortinet, and zero-trust foundations in environments where compliance requirements make security non-negotiable.
+
+## A Note on Perspective
+
+I'm not the most senior person in any room, and I don't pretend to be. What I am is someone who has owned outcomes, budgets, compliance postures, team performance, cost numbers, and has had to develop both technical depth and operational breadth to do that well.
+
+The perspective here is practitioner to practitioner. If you're an IT manager, a senior cloud architect, or a technical leader working through the same problems in healthcare or managed services, I think you'll find something useful.
+
+---
+
+If this resonates, subscribe via RSS or check back regularly. I write when I have something worth saying.
+
+Let's get into it.</content>
+  </entry>
+</feed>
