@@ -6,6 +6,8 @@ date: 2026-03-05
 category: Infrastructure Ops
 tags: [MSP, CIPP, Microsoft 365, standardization, automation, operational discipline, multi-tenant]
 excerpt: "Every MSP reaches the same inflection point: the number of client environments outpaces the team's ability to manage them individually. The answer isn't more people — it's operational standardization. Here's how we used CIPP to get there."
+redirect_from:
+  - /blog/standardizing-msp-client-environments-cipp/
 ---
 
 Every MSP reaches the same inflection point: you've grown the client base, but the way you manage each environment hasn't changed. Every new client is onboarded slightly differently. Security policies that should be consistent vary by who did the setup. Something changes in a client tenant — a conditional access policy gets modified, a licensing assignment shifts — and you find out when the client calls, not before.

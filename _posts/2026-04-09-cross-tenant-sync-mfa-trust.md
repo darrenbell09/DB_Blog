@@ -6,6 +6,8 @@ date: 2026-03-19
 category: Microsoft 365
 tags: [Microsoft 365, Entra ID, cross-tenant sync, MFA trust, SharePoint, identity, collaboration, holding company]
 excerpt: "A holding company with multiple subsidiaries needed their people to access SharePoint files across tenants without multiple logins, duplicate licenses, or MFA fatigue. Here's the architecture that got them there."
+redirect_from:
+  - /blog/cross-tenant-sync-mfa-trust/
 ---
 
 A holding company running multiple subsidiaries on separate Microsoft 365 tenants has a collaboration problem that looks simple on the surface and isn't. The same problem shows up after acquisitions that haven't consolidated yet, in private equity portfolio structures, and anywhere organizations need to stay operationally distinct but work closely together.
