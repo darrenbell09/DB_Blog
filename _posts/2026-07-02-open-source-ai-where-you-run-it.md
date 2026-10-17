@@ -6,6 +6,8 @@ date: 2026-07-02
 category: AI & Automation
 tags: [AI strategy, open source AI, AI infrastructure, Microsoft Azure, AWS, co-location, GLM, DeepSeek, AI adoption, data sovereignty]
 excerpt: "Open source AI models now match or exceed closed frontier models on major benchmarks. For businesses, that changes the strategic question entirely. It is no longer which subscription to buy. It is where to run the model and who controls the data."
+redirect_from:
+  - /blog/open-source-ai-where-you-run-it/
 ---
 
 Last month, Zhipu AI released GLM-5.2 and it outscored GPT-5.5 on SWE-bench Pro, one of the most rigorous AI coding benchmarks in use. It is open weight, MIT licensed, and free. Before that, Alibaba's Qwen 3 pushed the benchmarks further. Before that, DeepSeek R1 matched GPT-4 class performance in January 2025.

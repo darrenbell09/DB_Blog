@@ -6,6 +6,8 @@ date: 2026-04-23
 category: AI & Automation
 tags: [Microsoft 365, Copilot, SharePoint, AI readiness, security, permissions, governance, OneDrive]
 excerpt: "Everyone thinks their Microsoft 365 environment is locked down enough to deploy AI tools. MFA is on. Permissions are set. What they haven't looked at is the sharing sprawl underneath — the Anyone links that never expired, the contractor guest accounts still sitting in SharePoint groups. Copilot follows Microsoft's permissions exactly. The problem is the permissions you forgot you set."
+redirect_from:
+  - /blog/microsoft-365-ai-readiness-permissions/
 ---
 
 Your Microsoft 365 environment has MFA enabled. Roles are assigned. You've done the security basics. On paper, it looks ready for Copilot.
