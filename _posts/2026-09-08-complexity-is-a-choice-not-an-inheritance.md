@@ -6,6 +6,8 @@ date: 2026-09-08 09:00:00 -0500
 category: Technology Leadership
 tags: [IT leadership, small IT teams, process improvement, systems thinking, operational discipline, engineering process, automation, IT operations]
 excerpt: "Most IT complexity was never designed. It accumulated, one reasonable decision at a time, until nobody could explain why half of it exists. Two weeks into running a small IT team, here is the five-step framework I am using to question, cut, and simplify before automating anything."
+redirect_from:
+  - /blog/complexity-is-a-choice-not-an-inheritance/
 ---
 
 Two weeks into a new role running IT for a small team, and the job is exactly what I expected, because I have spent my career in environments built this way. Small IT teams do not have the luxury of a specialist for every domain. One person, or a small handful of people, is expected to be competent across networking, endpoint management, identity and access, cloud infrastructure, phone systems, physical security, vendor contracts, and compliance, all at once, plus whatever breaks on a Tuesday afternoon. The job is not depth in one domain. It is breadth across all of them, with the judgment to know which one deserves depth right now.

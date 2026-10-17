@@ -6,11 +6,14 @@ date: 2026-02-26
 category: Cloud Architecture
 tags: [PowerShell, automation, Microsoft 365, Azure, MSP, operational discipline, Entra ID]
 excerpt: "The value of PowerShell automation in a Microsoft-first environment isn't the hours saved on individual tasks. It's the operational consistency it produces across every client and every environment you manage. Here's how to build it right."
+redirect_from:
+  - /blog/2026/02/26/infrastructure-as-code-at-scale/
+  - /blog/infrastructure-as-code-at-scale/
 ---
 
 PowerShell gets underestimated.
 
-In conversations about automation and infrastructure as code, the tools that get attention are usually the ones with cloud-native integrations, declarative configurations, and CI/CD pipelines. PowerShell — the workhouse of Microsoft-first environments — tends to get positioned as a legacy automation tool rather than a strategic capability.
+In conversations about automation and infrastructure as code, the tools that get attention are usually the ones with cloud-native integrations, declarative configurations, and CI/CD pipelines. PowerShell — the workhorse of Microsoft-first environments — tends to get positioned as a legacy automation tool rather than a strategic capability.
 
 That framing is wrong, and expensive.
 

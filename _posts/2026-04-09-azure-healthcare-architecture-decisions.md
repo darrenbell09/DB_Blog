@@ -6,6 +6,9 @@ date: 2026-04-09
 category: Cloud Architecture
 tags: [Azure, healthcare IT, HIPAA, Entra ID, cloud architecture, compliance, analytics infrastructure]
 excerpt: "Cloud architecture in healthcare isn't just about what works technically — it's about what holds up under a compliance audit, what your BAAs actually cover, and what you can defend to clinical leadership. Here's the framework I use."
+redirect_from:
+  - /blog/2026/04/09/multi-cloud-architecture-patterns/
+  - /blog/multi-cloud-architecture-patterns/
 ---
 
 Cloud architecture in a regulated environment changes the decision calculus in ways that are hard to appreciate until you've owned the compliance posture yourself.

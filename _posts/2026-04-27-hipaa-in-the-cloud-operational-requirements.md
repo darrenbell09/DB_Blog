@@ -6,6 +6,9 @@ date: 2026-04-27
 category: Security
 tags: [HIPAA, healthcare IT, Microsoft 365, compliance, Azure, Entra ID, Conditional Access]
 excerpt: "Most healthcare IT compliance failures aren't technical failures. They're operational ones — gaps in process, gaps in documentation, and gaps in the daily discipline that keeps a compliance posture intact. Here's what it actually takes."
+redirect_from:
+  - /blog/2026/04/27/sre-in-practice-from-concepts-to-culture/
+  - /blog/sre-in-practice-from-concepts-to-culture/
 ---
 
 HIPAA compliance failures rarely happen because the technology was wrong.

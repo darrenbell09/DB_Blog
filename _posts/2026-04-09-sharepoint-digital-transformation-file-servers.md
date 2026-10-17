@@ -6,6 +6,8 @@ date: 2026-04-11
 category: Technology Leadership
 tags: [SharePoint, Microsoft 365, digital transformation, file servers, migration, knowledge management]
 excerpt: "Every organization knows file servers are a problem. Most treat it as a storage or technology decision. The ones that successfully migrate to SharePoint treat it as a leadership and organizational design decision first."
+redirect_from:
+  - /blog/sharepoint-digital-transformation-file-servers/
 ---
 
 Every organization knows file servers are a problem. The evidence is visible in daily work: shared drives full of folders named "OLD," documents circulated via email because no one trusts the shared drive to have the current version, remote workers who need a VPN and a specific mapped drive to access files they should be able to reach from anywhere.

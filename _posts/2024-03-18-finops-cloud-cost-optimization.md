@@ -6,6 +6,8 @@ date: 2026-04-15
 category: FinOps
 tags: [FinOps, cloud costs, Azure, cost optimization, reserved instances, tagging, licensing]
 excerpt: "Most cloud cost problems don't start with architecture. They start with ownership. Here's the four-phase operational framework that actually delivers lasting results."
+redirect_from:
+  - /blog/finops-cloud-cost-optimization/
 ---
 
 Cloud cost problems rarely start with architecture. They start with operations.

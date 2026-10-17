@@ -6,6 +6,8 @@ date: 2026-07-24
 category: Microsoft 365
 tags: [Microsoft Graph, Microsoft 365, automation, IT administration, AI, PowerShell, Graph X-Ray, API, identity]
 excerpt: "Every action you take in the Microsoft 365 admin center is an API call to Microsoft Graph. The portal is just the interface that initiates it. AI has changed what administrators can do with the layer underneath."
+redirect_from:
+  - /blog/the-admin-portal-is-a-view-microsoft-graph-is-the-management-plane/
 ---
 
 Most IT administrators manage Microsoft 365 through the admin portals. That is a reasonable starting point. The portals expose the most common tasks through a graphical interface, and they work. But the portals are not the management plane. Microsoft Graph is the management plane. The portals are a view of it.

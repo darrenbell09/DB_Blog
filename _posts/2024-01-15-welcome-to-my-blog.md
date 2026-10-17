@@ -6,6 +6,8 @@ date: 2026-02-12
 category: Technology Leadership
 tags: [blog, cloud architecture, Microsoft 365, Azure, leadership, healthcare IT]
 excerpt: "After 10+ years in enterprise IT across healthcare and managed services, I've accumulated lessons that took real pain to learn. This is where I share them."
+redirect_from:
+  - /blog/welcome-to-my-blog/
 ---
 
 After more than ten years in enterprise IT — designing systems, managing teams, navigating compliance requirements, and fighting the same cost battles in different organizations — I've accumulated a lot of hard-won opinions.
