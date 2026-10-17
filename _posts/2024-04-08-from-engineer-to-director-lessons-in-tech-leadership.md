@@ -6,6 +6,8 @@ date: 2026-04-19
 category: Technology Leadership
 tags: [leadership, IT management, career development, team building, executive thinking]
 excerpt: "Technical expertise gets you into IT leadership. The ability to think about business outcomes, own operational risk, and develop other people is what determines whether you succeed once you're there."
+redirect_from:
+  - /blog/from-engineer-to-director-lessons-in-tech-leadership/
 ---
 
 Technical expertise gets you into leadership. It is not what keeps you there.
@@ -72,7 +74,7 @@ One of the most undervalued skills in IT leadership is the ability to move fluen
 
 Most technical people can explain what they built. Fewer can explain why it matters to someone who doesn't care about the technology.
 
-When I presented the case for a cloud analytics platform at Premier Health, the conversation with clinical leadership wasn't about the underlying architecture. It was about: clinical staff currently wait [X amount of time] to generate reports that inform patient care decisions. This solution reduces that to [Y amount of time]. Here's what that's worth to the organization.
+When I presented the case for a cloud analytics platform at Premier Health, the conversation with clinical leadership wasn't about the underlying architecture. It was about how long clinical staff were waiting on the reports that inform patient care decisions, how much sooner this would get those reports into their hands, and what that was worth to the organization.
 
 The technical architecture enabled the outcome. The business case got the investment approved.
 
