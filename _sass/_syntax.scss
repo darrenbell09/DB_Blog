@@ -4,7 +4,7 @@
 
 .highlight {
   background: $bg-code !important;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   border-radius: $radius-lg;
   margin-bottom: $sp-8;
   overflow: hidden;
@@ -15,7 +15,7 @@
     display: block;
     padding: $sp-2 $sp-5;
     background: rgba(255,255,255,0.04);
-    border-bottom: 1px solid $border;
+    border-bottom: 0.0625rem solid $border;
     font-family: $font-mono;
     font-size: $fs-xs;
     color: $text-muted;
@@ -36,7 +36,7 @@
       user-select: none;
       color: $text-muted;
       padding-right: $sp-5;
-      border-right: 1px solid $border;
+      border-right: 0.0625rem solid $border;
       margin-right: $sp-5;
     }
   }
@@ -107,5 +107,5 @@
   color: $accent-cyan;
   padding: 0.15em 0.4em;
   border-radius: $radius-sm;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
 }
