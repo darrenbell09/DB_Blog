@@ -36,9 +36,9 @@
   z-index: 1000;
   height: $nav-height;
   background: $bg-nav;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  border-bottom: 0.0625rem solid transparent;
   transition: border-color $t-base, box-shadow $t-base;
 
   &.scrolled {
@@ -62,8 +62,8 @@
   text-decoration: none;
 
   &__logo {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: $radius-full;
     background: $gradient-brand;
     display: flex;
@@ -149,8 +149,8 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 1.5rem;
+  height: 1.125rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -160,16 +160,16 @@
 
   span {
     display: block;
-    height: 2px;
+    height: 0.125rem;
     background: $text-secondary;
     border-radius: $radius-full;
     transition: transform $t-base, opacity $t-base;
   }
 
   &.open {
-    span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    span:nth-child(1) { transform: translateY(0.5rem) rotate(45deg); }
     span:nth-child(2) { opacity: 0; }
-    span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    span:nth-child(3) { transform: translateY(-0.5rem) rotate(-45deg); }
   }
 }
 
@@ -181,7 +181,7 @@
   left: 0;
   right: 0;
   background: $bg-secondary;
-  border-bottom: 1px solid $border;
+  border-bottom: 0.0625rem solid $border;
   padding: $sp-4;
   z-index: 999;
 
@@ -211,7 +211,7 @@
 
 .site-footer {
   background: $bg-secondary;
-  border-top: 1px solid $border;
+  border-top: 0.0625rem solid $border;
   padding: $sp-16 0 $sp-8;
   margin-top: auto;
 
@@ -259,7 +259,7 @@
 
   &__bottom {
     padding-top: $sp-8;
-    border-top: 1px solid $border;
+    border-top: 0.0625rem solid $border;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -277,11 +277,11 @@
     gap: $sp-3;
 
     a {
-      width: 36px;
-      height: 36px;
+      width: 2.25rem;
+      height: 2.25rem;
       border-radius: $radius-md;
       background: $bg-card;
-      border: 1px solid $border;
+      border: 0.0625rem solid $border;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -305,7 +305,7 @@
 .page-hero {
   padding: ($nav-height + $sp-16) 0 $sp-16;
   background: $gradient-hero-bg;
-  border-bottom: 1px solid $border;
+  border-bottom: 0.0625rem solid $border;
   position: relative;
   overflow: hidden;
 
@@ -321,7 +321,7 @@
   p {
     font-size: $fs-md;
     color: $text-secondary;
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-bottom: 0;
   }
 }
@@ -335,7 +335,7 @@
   top: 0;
   left: 0;
   z-index: 2000;
-  height: 3px;
+  height: 0.1875rem;
   background: $gradient-brand;
   width: 0%;
   transition: width 0.1s linear;
@@ -349,8 +349,8 @@
   position: fixed;
   bottom: $sp-8;
   right: $sp-8;
-  width: 44px;
-  height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: $radius-full;
   background: $gradient-brand;
   color: #fff;
@@ -362,7 +362,7 @@
   font-size: $fs-lg;
   box-shadow: $shadow-lg;
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(1rem);
   transition: opacity $t-base, transform $t-base;
   z-index: 500;
 
@@ -371,7 +371,7 @@
     transform: translateY(0);
   }
 
-  &:hover { transform: translateY(-2px); }
+  &:hover { transform: translateY(-0.125rem); }
 
   @media (max-width: $bp-md) {
     bottom: $sp-5;
@@ -404,13 +404,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
-    height: 40px;
+    min-width: 2.5rem;
+    height: 2.5rem;
     padding: 0 $sp-3;
     border-radius: $radius-md;
     font-size: $fs-sm;
     font-weight: $fw-medium;
-    border: 1px solid $border;
+    border: 0.0625rem solid $border;
     transition: all $t-fast;
   }
 

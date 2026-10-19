@@ -68,7 +68,7 @@ permalink: /categories/
 {% for cat in all_cats %}
   {% assign cat_posts = site.posts | where: "category", cat %}
   {% if cat_posts.size > 0 %}
-<section class="section--sm" style="border-top:1px solid #252638;">
+<section class="section--sm" style="border-top:0.0625rem solid #252638;">
   <div class="container">
     <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:2rem;" id="{{ cat | slugify }}-posts">
       All {{ cat }} Posts

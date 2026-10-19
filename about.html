@@ -51,7 +51,7 @@ permalink: /about/
 <!-- About Content -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:start;" class="about-content-grid">
+    <div style="display:grid;grid-template-columns:1fr 21.25rem;gap:4rem;align-items:start;" class="about-content-grid">
 
       <div class="about-content">
 
@@ -145,7 +145,7 @@ permalink: /about/
           terrain, I hope you find something useful here.
         </p>
 
-        <div style="margin-top:2rem;padding:1.25rem 1.5rem;background:#f0f0ee;border:1px solid #e2e8f0;border-radius:12px;">
+        <div style="margin-top:2rem;padding:1.25rem 1.5rem;background:#f0f0ee;border:0.0625rem solid #e2e8f0;border-radius:0.75rem;">
           <p style="font-size:0.8125rem;color:#64748b;margin:0;line-height:1.6;">
             <strong style="color:#475569;">A note on how this blog is written:</strong>
             I use AI as a writing collaborator. The ideas, experiences, technical decisions,
@@ -160,20 +160,20 @@ permalink: /about/
       <!-- Sidebar -->
       <div style="position:sticky;top:calc(4.5rem + 2rem);">
 
-        <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;">
+        <div style="background:#ffffff;border:0.0625rem solid #e2e8f0;border-radius:1rem;padding:1.5rem;margin-bottom:1.5rem;">
           <p style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#94a3b8;margin-bottom:1rem;">Quick Links</p>
           <div style="display:flex;flex-direction:column;gap:0.5rem;">
-            <a href="{{ site.baseurl }}/blog/" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:8px;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
+            <a href="{{ site.baseurl }}/blog/" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.5rem;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
               All Blog Posts
             </a>
-            <a href="{{ site.baseurl }}/categories/" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:8px;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
+            <a href="{{ site.baseurl }}/categories/" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.5rem;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
               Browse Topics
             </a>
-            <a href="{{ site.baseurl }}/contact/" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:8px;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
+            <a href="{{ site.baseurl }}/contact/" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.5rem;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
               Get in Touch
             </a>
             {% if site.author.linkedin %}
-            <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:8px;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
+            <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" style="font-size:0.875rem;color:#475569;display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.5rem;transition:all 0.15s;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">
               LinkedIn Profile ↗
             </a>
             {% endif %}
@@ -181,10 +181,10 @@ permalink: /about/
         </div>
 
         <!-- Recent posts -->
-        <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:1.5rem;">
+        <div style="background:#ffffff;border:0.0625rem solid #e2e8f0;border-radius:1rem;padding:1.5rem;">
           <p style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#94a3b8;margin-bottom:1rem;">Recent Posts</p>
           {% for post in site.posts limit: 5 %}
-          <div style="margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid #e2e8f0;">
+          <div style="margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:0.0625rem solid #e2e8f0;">
             <a href="{{ post.url | prepend: site.baseurl }}" style="font-size:0.8125rem;color:#475569;line-height:1.4;display:block;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#475569'">{{ post.title }}</a>
             <span style="font-size:0.7rem;color:#94a3b8;">{{ post.date | date: "%b %Y" }}</span>
           </div>

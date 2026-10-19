@@ -16,7 +16,7 @@
   font-weight: $fw-semibold;
   line-height: 1;
   text-decoration: none;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   cursor: pointer;
   transition: all $t-base;
   white-space: nowrap;
@@ -103,7 +103,7 @@
 
 .post-card {
   background: $bg-card;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   border-radius: $radius-xl;
   overflow: hidden;
   display: flex;
@@ -112,7 +112,7 @@
   transition: transform $t-base, box-shadow $t-base, border-color $t-base;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
     box-shadow: $shadow-md;
     border-color: $border-light;
   }
@@ -168,7 +168,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: $sp-4;
-    border-top: 1px solid $border;
+    border-top: 0.0625rem solid $border;
     font-size: $fs-xs;
     color: $text-muted;
     gap: $sp-3;
@@ -216,7 +216,7 @@
 
 .skill-card {
   background: $bg-card;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   border-radius: $radius-lg;
   padding: $sp-5;
   transition: border-color $t-fast, background $t-fast;
@@ -227,8 +227,8 @@
   }
 
   &__icon {
-    width: 44px;
-    height: 44px;
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: $radius-md;
     display: flex;
     align-items: center;
@@ -257,7 +257,7 @@
 
 .newsletter {
   background: $bg-card;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   border-radius: $radius-2xl;
   padding: $sp-12;
   text-align: center;
@@ -270,8 +270,8 @@
     top: -50%;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    height: 400px;
+    width: 37.5rem;
+    height: 25rem;
     background: radial-gradient(ellipse at center, rgba(59,130,246,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
@@ -285,14 +285,14 @@
   p {
     color: $text-secondary;
     font-size: $fs-md;
-    max-width: 480px;
+    max-width: 30rem;
     margin: 0 auto $sp-8;
   }
 
   &__form {
     display: flex;
     gap: $sp-3;
-    max-width: 480px;
+    max-width: 30rem;
     margin: 0 auto;
 
     @media (max-width: $bp-sm) { flex-direction: column; }
@@ -302,7 +302,7 @@
     flex: 1;
     padding: $sp-3 $sp-4;
     background: $bg-secondary;
-    border: 1px solid $border;
+    border: 0.0625rem solid $border;
     border-radius: $radius-md;
     color: $text-primary;
     font-size: $fs-base;
@@ -332,7 +332,7 @@
 
 .stat-box {
   background: $bg-card;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   border-radius: $radius-lg;
   padding: $sp-6;
   text-align: center;
@@ -358,14 +358,14 @@
 
 .search-box {
   position: relative;
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: 0 auto;
 
   &__input {
     width: 100%;
     padding: $sp-4 $sp-5 $sp-4 $sp-12;
     background: $bg-card;
-    border: 1px solid $border;
+    border: 0.0625rem solid $border;
     border-radius: $radius-lg;
     color: $text-primary;
     font-size: $fs-base;
@@ -395,7 +395,7 @@
 
   .search-result-item {
     background: $bg-card;
-    border: 1px solid $border;
+    border: 0.0625rem solid $border;
     border-radius: $radius-lg;
     padding: $sp-5;
     margin-bottom: $sp-4;
@@ -437,7 +437,7 @@
 
 .category-block {
   background: $bg-card;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   border-radius: $radius-xl;
   padding: $sp-6;
   transition: border-color $t-fast, background $t-fast;
@@ -474,7 +474,7 @@
     li {
       margin-bottom: $sp-2;
       padding-bottom: $sp-2;
-      border-bottom: 1px solid $border;
+      border-bottom: 0.0625rem solid $border;
       &:last-child { border-bottom: none; margin-bottom: 0; }
     }
 
@@ -503,7 +503,7 @@
 
 .author-card {
   background: $bg-card;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   border-radius: $radius-xl;
   padding: $sp-8;
   display: flex;
@@ -514,8 +514,8 @@
   @media (max-width: $bp-sm) { flex-direction: column; }
 
   &__avatar {
-    width: 72px;
-    height: 72px;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: $radius-full;
     background: $gradient-brand;
     display: flex;
@@ -575,7 +575,7 @@
 
 .animate-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
   transition: opacity 0.5s ease, transform 0.5s ease;
 
   &.visible {
