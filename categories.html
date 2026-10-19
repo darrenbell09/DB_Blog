@@ -33,15 +33,6 @@ permalink: /categories/
         <div class="category-block" id="{{ cat_slug }}">
           <div class="category-block__header">
             <h2 class="category-block__title">
-              {% case cat %}
-                {% when 'Cloud Architecture' %}☁️&nbsp;
-                {% when 'Microsoft 365' %}📧&nbsp;
-                {% when 'Infrastructure Ops' %}⚙️&nbsp;
-                {% when 'Technology Leadership' %}🏛️&nbsp;
-                {% when 'FinOps' %}💰&nbsp;
-                {% when 'Security' %}🔒&nbsp;
-                {% when 'AI & Automation' %}🤖&nbsp;
-              {% endcase %}
               {{ cat }}
             </h2>
             <span class="category-block__count">{{ cat_posts.size }} post{% if cat_posts.size != 1 %}s{% endif %}</span>
