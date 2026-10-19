@@ -23,7 +23,6 @@ author:
   location: Baton Rouge, Louisiana
   email: ""
   linkedin: "https://www.linkedin.com/in/belldarren/"
-  twitter: "darrenbell09"
 
 # URLs — adjust baseurl if you move to a custom domain or username repo
 url: "https://darrenbell.net"
@@ -67,8 +66,6 @@ feed:
   posts_limit: 20
 
 # SEO defaults
-twitter:
-  username: darrenbell09
 og_image: /assets/images/og-default-v3.png
 image: /assets/images/og-default-v3.png
 
