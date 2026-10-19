@@ -369,3 +369,36 @@
     @media (max-width: $bp-sm) { grid-template-columns: 1fr; }
   }
 }
+
+// =============================================================================
+// LARGE DISPLAYS — 27" (2560px) and 32" 4K (3840px) monitors
+// Everything below only applies at 2200px+ wide, so phones, laptops and
+// 1080p screens are unchanged. Type and spacing are rem-based, so raising the
+// root size scales the whole layout evenly; fixed-px widths are restated in
+// rem so line lengths stay the same as on a 1080p screen.
+// =============================================================================
+
+@media (min-width: 2200px) {
+  html { font-size: 18px; }
+
+  .container        { max-width: 80rem; }      // 1440px at 18px
+  .container--prose { max-width: 46.25rem; }   // same measure as 740px at 16px
+
+  .hero {
+    min-height: min(80vh, 60rem);
+    &__title    { max-width: 50rem; }
+    &__subtitle { max-width: 37.5rem; }
+  }
+  .post-hero__title     { max-width: 50rem; }
+  .page-hero p          { max-width: 37.5rem; }
+  .about-hero__inner    { grid-template-columns: 1fr 17.5rem; }
+  .about-hero p         { max-width: 36.25rem; }
+  .about-hero__avatar   { width: 7.5rem; height: 7.5rem; }
+  .newsletter p,
+  .newsletter__form     { max-width: 30rem; }
+  .search-box           { max-width: 37.5rem; }
+}
+
+@media (min-width: 3200px) {
+  html { font-size: 22px; }                    // container ≈ 1760px at 22px
+}
